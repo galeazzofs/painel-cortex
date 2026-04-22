@@ -25,7 +25,6 @@
     --warning: #92400E;
     --warning-soft: #FEF3C7;
     --shadow-sm: 0 1px 2px rgba(12, 10, 9, 0.04);
-    --shadow-md: 0 1px 3px rgba(12, 10, 9, 0.04), 0 2px 8px rgba(12, 10, 9, 0.03);
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html, body {
@@ -41,12 +40,7 @@
   .app { max-width: 1320px; margin: 0 auto; padding: 32px 40px 80px; }
 
   /* LOADING & ERROR */
-  .state-screen {
-    min-height: 60vh;
-    display: grid;
-    place-items: center;
-    text-align: center;
-  }
+  .state-screen { min-height: 60vh; display: grid; place-items: center; text-align: center; }
   .state-screen .title { font-family: 'Fraunces', serif; font-size: 28px; color: var(--text-2); margin-bottom: 8px; }
   .state-screen .sub   { color: var(--text-3); font-size: 14px; max-width: 480px; }
   .spinner {
@@ -90,7 +84,7 @@
     display: flex; align-items: center; justify-content: space-between;
     padding-bottom: 28px;
     border-bottom: 1px solid var(--border);
-    margin-bottom: 40px;
+    margin-bottom: 24px;
   }
   .brand { display: flex; align-items: baseline; gap: 14px; }
   .brand-mark {
@@ -112,6 +106,62 @@
     animation: pulse 2s infinite;
   }
   @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+  /* PORTE FILTER */
+  .porte-filter-bar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+    padding: 12px 14px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+  }
+  .porte-filter-label {
+    font-size: 11px;
+    color: var(--text-3);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+    padding-left: 6px;
+  }
+  .porte-tabs {
+    display: flex;
+    gap: 4px;
+    flex: 1;
+  }
+  .porte-tab {
+    padding: 8px 16px;
+    font-size: 13px;
+    font-family: inherit;
+    color: var(--text-3);
+    background: transparent;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.15s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .porte-tab:hover { background: var(--surface-2); color: var(--text-2); }
+  .porte-tab.active {
+    background: var(--text-1);
+    color: #fff;
+  }
+  .porte-tab.active .porte-count { color: rgba(255,255,255,0.7); }
+  .porte-count {
+    font-size: 11px;
+    color: var(--text-4);
+    font-variant-numeric: tabular-nums;
+  }
+  .porte-share-note {
+    font-size: 11px;
+    color: var(--text-4);
+    padding-right: 10px;
+  }
 
   /* MATURITY */
   .maturity {
@@ -140,10 +190,7 @@
     display: flex; justify-content: space-between;
     font-size: 11px; color: var(--text-3); margin-bottom: 6px;
   }
-  .maturity-bar {
-    height: 4px; background: var(--surface-2);
-    border-radius: 2px; overflow: hidden;
-  }
+  .maturity-bar { height: 4px; background: var(--surface-2); border-radius: 2px; overflow: hidden; }
   .maturity-bar-fill {
     height: 100%; background: var(--accent); border-radius: 2px;
     transition: width 0.8s cubic-bezier(.4,0,.2,1);
@@ -161,10 +208,7 @@
   .section-sub { font-size: 12px; color: var(--text-4); }
 
   /* KPIs */
-  .kpi-grid {
-    display: grid; grid-template-columns: repeat(5, 1fr);
-    gap: 12px; margin-bottom: 8px;
-  }
+  .kpi-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-bottom: 8px; }
   .kpi {
     background: var(--surface); border: 1px solid var(--border);
     border-radius: 10px; padding: 20px 22px;
@@ -174,10 +218,7 @@
     transition: border-color 0.15s, transform 0.15s;
   }
   .kpi:hover { border-color: var(--border-strong); transform: translateY(-1px); }
-  .kpi-label {
-    font-size: 12px; color: var(--text-3);
-    display: flex; align-items: center; gap: 6px;
-  }
+  .kpi-label { font-size: 12px; color: var(--text-3); display: flex; align-items: center; gap: 6px; }
   .kpi-tag {
     font-size: 9px; font-weight: 500;
     text-transform: uppercase; letter-spacing: 0.06em;
@@ -185,16 +226,10 @@
     background: var(--accent-soft); color: var(--accent);
   }
   .kpi-tag.lagging { background: var(--warning-soft); color: var(--warning); }
-  .kpi-value {
-    font-size: 36px; letter-spacing: -0.03em; line-height: 1;
-    margin-top: auto;
-  }
+  .kpi-value { font-size: 36px; letter-spacing: -0.03em; line-height: 1; margin-top: auto; }
   .kpi-value.muted { color: var(--text-4); }
   .kpi-value small { font-size: 18px; color: var(--text-3); margin-left: 2px; }
-  .kpi-delta {
-    font-size: 12px; color: var(--text-3);
-    display: flex; align-items: center; gap: 6px;
-  }
+  .kpi-delta { font-size: 12px; color: var(--text-3); display: flex; align-items: center; gap: 6px; }
   .delta-up { color: var(--positive); }
   .delta-down { color: var(--negative); }
   .kpi-muted { color: var(--text-4); font-size: 13px; }
@@ -208,14 +243,8 @@
   }
   .funnel-title { font-size: 13px; font-weight: 500; margin-bottom: 4px; }
   .funnel-caption { font-size: 12px; color: var(--text-3); margin-bottom: 20px; }
-  .funnel-legend {
-    display: flex; gap: 18px; font-size: 11px;
-    color: var(--text-3); margin-bottom: 18px;
-  }
-  .legend-dot {
-    display: inline-block; width: 8px; height: 8px;
-    border-radius: 50%; margin-right: 6px; vertical-align: middle;
-  }
+  .funnel-legend { display: flex; gap: 18px; font-size: 11px; color: var(--text-3); margin-bottom: 18px; }
+  .legend-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
   .legend-cortex   { background: var(--accent); }
   .legend-baseline { background: var(--text-4); }
   .stage-row {
@@ -227,32 +256,16 @@
   .stage-name { color: var(--text-2); }
   .stage-count { color: var(--text-4); font-size: 11px; }
   .stage-bars { display: flex; flex-direction: column; gap: 4px; }
-  .stage-bar-row {
-    display: grid; grid-template-columns: 1fr 44px;
-    gap: 8px; align-items: center;
-  }
-  .bar-outer {
-    height: 6px; background: var(--surface-2);
-    border-radius: 3px; overflow: hidden;
-  }
-  .bar-inner {
-    height: 100%; border-radius: 3px;
-    transition: width 0.8s cubic-bezier(.4,0,.2,1);
-  }
+  .stage-bar-row { display: grid; grid-template-columns: 1fr 44px; gap: 8px; align-items: center; }
+  .bar-outer { height: 6px; background: var(--surface-2); border-radius: 3px; overflow: hidden; }
+  .bar-inner { height: 100%; border-radius: 3px; transition: width 0.8s cubic-bezier(.4,0,.2,1); }
   .bar-cortex   { background: var(--accent); }
   .bar-baseline { background: var(--text-4); opacity: 0.5; }
-  .bar-label {
-    font-size: 11px; color: var(--text-3); text-align: right;
-  }
-  .stage-rate {
-    font-size: 13px; font-weight: 500;
-    text-align: right; color: var(--text-1);
-  }
+  .bar-label { font-size: 11px; color: var(--text-3); text-align: right; }
+  .stage-rate { font-size: 13px; font-weight: 500; text-align: right; color: var(--text-1); }
   .stage-rate.positive { color: var(--positive); }
   .stage-rate.negative { color: var(--negative); }
-  .stage-rate .delta {
-    display: block; font-size: 10px; font-weight: 400; margin-top: 2px;
-  }
+  .stage-rate .delta { display: block; font-size: 10px; font-weight: 400; margin-top: 2px; }
 
   .handoff-alert {
     margin: 16px 0; padding: 14px 18px;
@@ -265,36 +278,16 @@
   /* VELOCITY */
   .velocity-card {
     background: var(--surface); border: 1px solid var(--border);
-    border-radius: 10px; padding: 24px 26px;
-    box-shadow: var(--shadow-sm);
+    border-radius: 10px; padding: 24px 26px; box-shadow: var(--shadow-sm);
   }
-  .velocity-grid {
-    display: grid; grid-template-columns: repeat(11, 1fr);
-    gap: 8px; margin-top: 20px;
-  }
-  .velocity-col {
-    display: flex; flex-direction: column;
-    align-items: center; gap: 8px; min-width: 0;
-  }
-  .velocity-stage {
-    font-size: 10px; color: var(--text-3);
-    text-align: center; height: 32px;
-    line-height: 1.2; overflow: hidden;
-  }
-  .velocity-bar-container {
-    display: flex; flex-direction: column;
-    gap: 3px; align-items: center; width: 100%;
-  }
-  .velocity-bar {
-    width: 100%; max-width: 24px;
-    background: var(--accent); border-radius: 2px;
-  }
+  .velocity-grid { display: grid; grid-template-columns: repeat(11, 1fr); gap: 8px; margin-top: 20px; }
+  .velocity-col { display: flex; flex-direction: column; align-items: center; gap: 8px; min-width: 0; }
+  .velocity-stage { font-size: 10px; color: var(--text-3); text-align: center; height: 32px; line-height: 1.2; overflow: hidden; }
+  .velocity-bar-container { display: flex; flex-direction: column; gap: 3px; align-items: center; width: 100%; }
+  .velocity-bar { width: 100%; max-width: 24px; background: var(--accent); border-radius: 2px; }
   .velocity-bar.baseline { background: var(--text-4); opacity: 0.4; }
   .velocity-bar.empty    { opacity: 0.2; }
-  .velocity-value {
-    font-size: 11px; color: var(--text-2);
-    font-weight: 500; font-variant-numeric: tabular-nums;
-  }
+  .velocity-value { font-size: 11px; color: var(--text-2); font-weight: 500; font-variant-numeric: tabular-nums; }
   .velocity-value.muted { color: var(--text-4); }
   .velocity-value small { color: var(--text-4); font-weight: 400; font-size: 10px; }
 
@@ -302,8 +295,7 @@
   .dual-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 16px; }
   .card {
     background: var(--surface); border: 1px solid var(--border);
-    border-radius: 10px; padding: 24px 26px;
-    box-shadow: var(--shadow-sm);
+    border-radius: 10px; padding: 24px 26px; box-shadow: var(--shadow-sm);
   }
   .card-title { font-size: 13px; font-weight: 500; margin-bottom: 4px; }
   .card-sub   { font-size: 12px; color: var(--text-3); margin-bottom: 20px; }
@@ -317,17 +309,11 @@
   .roi-row:last-child { border-bottom: none; }
   .roi-label { font-size: 12px; color: var(--text-3); display: flex; align-items: center; gap: 8px; }
   .roi-label-main { font-size: 13px; color: var(--text-1); margin-bottom: 2px; }
-  .roi-value {
-    font-family: 'Fraunces', serif; font-size: 22px;
-    letter-spacing: -0.02em;
-  }
+  .roi-value { font-family: 'Fraunces', serif; font-size: 22px; letter-spacing: -0.02em; }
   .roi-value small { font-size: 13px; color: var(--text-3); margin-left: 2px; }
   .roi-value.muted { color: var(--text-4); }
   .roi-value.positive { color: var(--positive); }
-  .roi-footnote {
-    font-size: 11px; color: var(--text-4);
-    margin-top: 6px; line-height: 1.5;
-  }
+  .roi-footnote { font-size: 11px; color: var(--text-4); margin-top: 6px; line-height: 1.5; }
   .projection-chip {
     display: inline-block; font-size: 10px; font-weight: 500;
     color: var(--text-3); background: var(--surface-2);
@@ -337,33 +323,15 @@
 
   /* SEGMENTS */
   .segments { display: flex; flex-direction: column; gap: 18px; }
-  .segment-row {
-    display: grid; grid-template-columns: 100px 1fr 50px;
-    gap: 14px; align-items: center; font-size: 13px;
-  }
-  .segment-label {
-    color: var(--text-2);
-    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
-  }
-  .segment-bar {
-    height: 10px; background: var(--surface-2);
-    border-radius: 3px; overflow: hidden; position: relative;
-  }
-  .segment-fill {
-    height: 100%; background: var(--accent); border-radius: 3px;
-    transition: width 0.8s cubic-bezier(.4,0,.2,1);
-  }
-  .segment-count {
-    text-align: right; color: var(--text-3);
-    font-size: 12px; font-variant-numeric: tabular-nums;
-  }
+  .segment-row { display: grid; grid-template-columns: 100px 1fr 50px; gap: 14px; align-items: center; font-size: 13px; }
+  .segment-label { color: var(--text-2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .segment-bar { height: 10px; background: var(--surface-2); border-radius: 3px; overflow: hidden; position: relative; }
+  .segment-fill { height: 100%; background: var(--accent); border-radius: 3px; transition: width 0.8s cubic-bezier(.4,0,.2,1); }
+  .segment-count { text-align: right; color: var(--text-3); font-size: 12px; font-variant-numeric: tabular-nums; }
 
   /* TEAM */
   .team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  table.perf {
-    width: 100%; border-collapse: collapse;
-    font-size: 13px; margin-top: 14px;
-  }
+  table.perf { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 14px; }
   table.perf th {
     text-align: left; font-size: 10px;
     text-transform: uppercase; letter-spacing: 0.08em;
@@ -371,11 +339,7 @@
     padding: 10px 12px; border-bottom: 1px solid var(--border);
   }
   table.perf th:last-child, table.perf td:last-child { text-align: right; }
-  table.perf td {
-    padding: 14px 12px;
-    border-bottom: 1px solid var(--border);
-    color: var(--text-2);
-  }
+  table.perf td { padding: 14px 12px; border-bottom: 1px solid var(--border); color: var(--text-2); }
   table.perf tr:last-child td { border-bottom: none; }
   table.perf tr:hover td { background: var(--surface-2); }
   .person { display: flex; align-items: center; gap: 10px; }
@@ -384,11 +348,7 @@
     background: var(--surface-2); display: grid; place-items: center;
     font-size: 10px; color: var(--text-2); font-weight: 500;
   }
-  .perf-mini-bar {
-    display: inline-block; width: 60px; height: 4px;
-    background: var(--surface-2); border-radius: 2px;
-    overflow: hidden; vertical-align: middle; margin-right: 8px;
-  }
+  .perf-mini-bar { display: inline-block; width: 60px; height: 4px; background: var(--surface-2); border-radius: 2px; overflow: hidden; vertical-align: middle; margin-right: 8px; }
   .perf-mini-bar-fill { height: 100%; background: var(--accent); border-radius: 2px; }
   .rate-pill { font-size: 12px; font-weight: 500; }
   .empty-row td { color: var(--text-4); text-align: center; padding: 24px; font-size: 12px; }
@@ -401,9 +361,9 @@
     font-size: 11px; color: var(--text-4);
   }
 
-  .fade-in { animation: fadeUp 0.5s cubic-bezier(.4,0,.2,1) backwards; }
+  .fade-in { animation: fadeUp 0.4s cubic-bezier(.4,0,.2,1) backwards; }
   @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(6px); }
+    from { opacity: 0; transform: translateY(4px); }
     to { opacity: 1; transform: translateY(0); }
   }
 
@@ -416,7 +376,6 @@
 </head>
 <body>
 
-<!-- Estado inicial: loading -->
 <div id="root">
   <div class="state-screen">
     <div>
@@ -429,27 +388,23 @@
 
 <script>
 // ============================================================================
-// PAINEL CORTEX — Renderização dinâmica do data.json
+// PAINEL CORTEX v2 — com filtro por porte
 // ============================================================================
 
 const DATA_URL = './data.json';
+const STORAGE_KEY = 'painel-cortex-porte-filter';
+let currentData = null;
+let currentView = 'all';
 
 // --- Formatters -------------------------------------------------------------
 const DASH = '—';
-
-function isNil(v) {
-  return v === null || v === undefined || (typeof v === 'number' && !isFinite(v));
-}
+const isNil = v => v === null || v === undefined || (typeof v === 'number' && !isFinite(v));
 
 function fmt(v, type = 'auto') {
   if (isNil(v)) return DASH;
   switch (type) {
-    case 'int':
-      return Number(v).toLocaleString('pt-BR');
-    case 'pct': {
-      const pct = Number(v) * 100;
-      return `${pct.toFixed(1).replace('.', ',')}%`;
-    }
+    case 'int':          return Number(v).toLocaleString('pt-BR');
+    case 'pct':          return `${(Number(v) * 100).toFixed(1).replace('.', ',')}%`;
     case 'pp': {
       const pp = Number(v) * 100;
       const sign = pp > 0 ? '+' : pp < 0 ? '−' : '';
@@ -461,16 +416,10 @@ function fmt(v, type = 'auto') {
       if (Math.abs(n) >= 1000) return `R$ ${(n / 1000).toFixed(1).replace('.', ',')}k`;
       return `R$ ${n.toFixed(0)}`;
     }
-    case 'currencyFull':
-      return `R$ ${Number(v).toLocaleString('pt-BR', { maximumFractionDigits: 0 })}`;
-    case 'days': {
-      const n = Number(v);
-      return `${n.toFixed(1).replace('.', ',')}d`;
-    }
-    case 'multiplier':
-      return `${Number(v).toFixed(1).replace('.', ',')}x`;
-    default:
-      return String(v);
+    case 'currencyFull': return `R$ ${Number(v).toLocaleString('pt-BR', { maximumFractionDigits: 0 })}`;
+    case 'days':         return `${Number(v).toFixed(1).replace('.', ',')}d`;
+    case 'multiplier':   return `${Number(v).toFixed(1).replace('.', ',')}x`;
+    default:             return String(v);
   }
 }
 
@@ -479,37 +428,55 @@ function fmtDate(iso) {
   const d = new Date(iso);
   const dd = String(d.getDate()).padStart(2, '0');
   const months = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
-  const mm = months[d.getMonth()];
-  const yyyy = d.getFullYear();
-  const hh = String(d.getHours()).padStart(2, '0');
-  const mi = String(d.getMinutes()).padStart(2, '0');
-  return `${dd} ${mm} ${yyyy} · ${hh}:${mi} BRT`;
+  return `${dd} ${months[d.getMonth()]} ${d.getFullYear()} · ${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')} BRT`;
 }
 
 function timeAgo(iso) {
   if (!iso) return DASH;
-  const diffMs = Date.now() - new Date(iso).getTime();
-  const mins = Math.floor(diffMs / 60000);
+  const mins = Math.floor((Date.now() - new Date(iso).getTime()) / 60000);
   if (mins < 1) return 'agora mesmo';
   if (mins < 60) return `há ${mins} min`;
   const hrs = Math.floor(mins / 60);
   if (hrs < 24) return `há ${hrs} h`;
-  const days = Math.floor(hrs / 24);
-  return `há ${days} d`;
+  return `há ${Math.floor(hrs / 24)} d`;
 }
 
-function initialsOf(name) {
+const initialsOf = name => {
   if (!name) return '?';
   const parts = name.split(' ').filter(Boolean);
   return ((parts[0]?.[0] || '') + (parts[parts.length - 1]?.[0] || '')).toUpperCase().slice(0, 2);
+};
+
+// --- PORTE FILTER -----------------------------------------------------------
+function renderPorteFilter(data) {
+  const portes = data.meta.availablePortes || [];
+  const counts = data.meta.porteCounts || {};
+  const tabs = [
+    { id: 'all', label: 'Todos', count: counts.all ?? 0 },
+    ...portes.map(p => ({ id: p, label: p, count: counts[p] ?? 0 }))
+  ];
+
+  const view = data.views[currentView] || data.views.all;
+  const shareNote = currentView !== 'all' && view.leadShare !== undefined
+    ? `Custo rateado: ${fmt(view.costShare, 'currencyK')} (${(view.leadShare * 100).toFixed(0)}% dos leads)`
+    : '';
+
+  return `
+    <div class="porte-filter-bar fade-in">
+      <span class="porte-filter-label">Recorte</span>
+      <div class="porte-tabs">
+        ${tabs.map(t => `
+          <button class="porte-tab ${currentView === t.id ? 'active' : ''}" data-view="${t.id}">
+            ${t.label} <span class="porte-count">${fmt(t.count, 'int')}</span>
+          </button>
+        `).join('')}
+      </div>
+      ${shareNote ? `<span class="porte-share-note">${shareNote}</span>` : ''}
+    </div>
+  `;
 }
 
-function deltaPP(cortexRate, baselineRate) {
-  if (isNil(cortexRate) || isNil(baselineRate)) return null;
-  return cortexRate - baselineRate;
-}
-
-// --- Components -------------------------------------------------------------
+// --- TOP BAR ----------------------------------------------------------------
 function renderTopbar(data) {
   return `
     <div class="topbar fade-in">
@@ -539,7 +506,7 @@ function renderMaturity(data) {
     ? 'Campanha madura o suficiente para análise de métricas de fechamento.'
     : 'Métricas de fechamento ainda em formação — foque nos indicadores <em>leading</em> (topo de funil e qualificação).';
   return `
-    <div class="maturity fade-in" style="animation-delay:.05s">
+    <div class="maturity fade-in">
       <div>
         <div class="maturity-label">Maturidade da campanha</div>
         <div class="maturity-text">
@@ -559,26 +526,26 @@ function renderMaturity(data) {
   `;
 }
 
-function renderKPIs(data) {
-  const k = data.kpis;
-  const baselineRate = data.roi?.baselineConvRate;
-  const qualDelta = !isNil(k.qualifiedRate) && !isNil(baselineRate)
-    ? k.qualifiedRate - baselineRate
-    : null;
+// --- KPIs -------------------------------------------------------------------
+function renderKPIs(data, view) {
+  const k = view.kpis;
+  const baselineRate = view.roi?.baselineConvRate;
+  const qualDelta = !isNil(k.qualifiedRate) && !isNil(baselineRate) ? k.qualifiedRate - baselineRate : null;
+  const viewSuffix = currentView === 'all' ? '' : ` · porte ${currentView}`;
 
   return `
     <div class="section-header">
-      <div class="section-title">Visão geral</div>
-      <div class="section-sub">vs. Carteira 2025 · últimos ${data.meta.daysElapsed} dias</div>
+      <div class="section-title">Visão geral${viewSuffix}</div>
+      <div class="section-sub">vs. Carteira 2025${currentView !== 'all' ? ` (${currentView})` : ''} · últimos ${data.meta.daysElapsed} dias</div>
     </div>
     <div class="kpi-grid">
-      <div class="kpi fade-in" style="animation-delay:.08s">
+      <div class="kpi fade-in">
         <div class="kpi-label">Leads entregues <span class="kpi-tag">leading</span></div>
         <div class="kpi-value serif">${fmt(k.leadsTotal, 'int')}</div>
-        <div class="kpi-delta"><span class="kpi-muted">${data.meta.daysElapsed > 0 ? `~${(k.leadsTotal / data.meta.daysElapsed).toFixed(1).replace('.', ',')}/dia` : DASH}</span></div>
+        <div class="kpi-delta"><span class="kpi-muted">${data.meta.daysElapsed > 0 && k.leadsTotal > 0 ? `~${(k.leadsTotal / data.meta.daysElapsed).toFixed(1).replace('.', ',')}/dia` : DASH}</span></div>
       </div>
-      <div class="kpi fade-in" style="animation-delay:.12s">
-        <div class="kpi-label">Qualificados (SDR) <span class="kpi-tag">leading</span></div>
+      <div class="kpi fade-in">
+        <div class="kpi-label">Qualificados (CN) <span class="kpi-tag">leading</span></div>
         <div class="kpi-value serif">${fmt(k.qualified, 'int')} <small>/ ${fmt(k.leadsTotal, 'int')}</small></div>
         <div class="kpi-delta">${
           qualDelta !== null
@@ -586,19 +553,17 @@ function renderKPIs(data) {
             : `<span class="kpi-muted">${fmt(k.qualifiedRate, 'pct')} de conversão</span>`
         }</div>
       </div>
-      <div class="kpi fade-in" style="animation-delay:.16s">
+      <div class="kpi fade-in">
         <div class="kpi-label">Em oportunidade <span class="kpi-tag">leading</span></div>
         <div class="kpi-value serif">${fmt(k.inOpportunity, 'int')}</div>
         <div class="kpi-delta"><span class="kpi-muted">${fmt(k.pipelineValue, 'currencyK')} em pipeline ativo</span></div>
       </div>
-      <div class="kpi fade-in" style="animation-delay:.20s">
+      <div class="kpi fade-in">
         <div class="kpi-label">Fechados <span class="kpi-tag lagging">lagging</span></div>
         <div class="kpi-value serif ${k.closed === 0 ? 'muted' : ''}">${fmt(k.closed, 'int')}</div>
-        <div class="kpi-delta"><span class="kpi-muted">${
-          k.closed > 0 ? fmt(k.closedRevenue, 'currencyK') + ' fechados' : 'aguardando 1º fechamento'
-        }</span></div>
+        <div class="kpi-delta"><span class="kpi-muted">${k.closed > 0 ? fmt(k.closedRevenue, 'currencyK') + ' fechados' : 'aguardando 1º fechamento'}</span></div>
       </div>
-      <div class="kpi fade-in" style="animation-delay:.24s">
+      <div class="kpi fade-in">
         <div class="kpi-label">ROI projetado <span class="kpi-tag lagging">lagging</span></div>
         <div class="kpi-value serif">${fmt(k.roiProjected, 'multiplier')}</div>
         <div class="kpi-delta"><span class="kpi-muted">baseado em velocity atual</span></div>
@@ -607,16 +572,15 @@ function renderKPIs(data) {
   `;
 }
 
+// --- FUNNEL -----------------------------------------------------------------
 function renderFunnelCard(title, caption, stagesData, lostCount, handoffAlert) {
   const cortex = stagesData.cortex || [];
   const baseline = stagesData.baseline || [];
 
   const rows = cortex.map((c, i) => {
-    const b = baseline[i] || {};
-    const cortexTop = cortex[0]?.rateFromTop ?? 1;
     const baselineTop = baseline[i]?.rateFromTop ?? 0;
     const cortexRate = c.rateFromTop;
-    const delta = deltaPP(cortexRate, baselineTop);
+    const delta = (!isNil(cortexRate) && !isNil(baselineTop)) ? cortexRate - baselineTop : null;
     const deltaClass = delta === null ? '' : delta > 0.01 ? 'positive' : delta < -0.01 ? 'negative' : '';
 
     return `
@@ -652,20 +616,16 @@ function renderFunnelCard(title, caption, stagesData, lostCount, handoffAlert) {
   `;
 }
 
-function renderFunnel(data) {
-  const f = data.funnel || {};
-  const handoffGap = !isNil(f.handoffRateCortex) && !isNil(f.handoffRateBaseline)
-    ? f.handoffRateBaseline - f.handoffRateCortex
-    : null;
-
+function renderFunnel(view) {
+  const f = view.funnel || {};
+  const handoffGap = !isNil(f.handoffRateCortex) && !isNil(f.handoffRateBaseline) ? f.handoffRateBaseline - f.handoffRateCortex : null;
   const handoffAlert = (handoffGap !== null && handoffGap > 0.05)
     ? `
       <div class="handoff-alert">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1.5L.5 14h15L8 1.5zm0 4l5 8.5H3L8 5.5zm-.5 2.5v3h1v-3h-1zm0 4v1h1v-1h-1z"/></svg>
-        <span><strong>Gap na passagem de bastão:</strong> ${fmt(f.handoffRateCortex, 'pct')} dos leads Cortex qualificados viraram oportunidade, vs. ${fmt(f.handoffRateBaseline, 'pct')} na Carteira 2025. Investigar critério de qualificação e alinhamento SDR × AE.</span>
+        <span><strong>Gap na passagem de bastão:</strong> ${fmt(f.handoffRateCortex, 'pct')} dos leads Cortex qualificados viraram oportunidade, vs. ${fmt(f.handoffRateBaseline, 'pct')} na Carteira 2025. Investigar critério de qualificação e alinhamento CN × EV.</span>
       </div>
-    `
-    : '';
+    ` : '';
 
   return `
     <div class="section-header">
@@ -679,13 +639,13 @@ function renderFunnel(data) {
   `;
 }
 
-function renderVelocity(data) {
-  const v = data.velocity || { stages: [] };
+// --- VELOCITY ---------------------------------------------------------------
+function renderVelocity(view) {
+  const v = view.velocity || { stages: [] };
   const stages = v.stages || [];
-
   const allValues = stages.flatMap(s => [s.cortexDays, s.baselineDays]).filter(x => !isNil(x) && x > 0);
   const max = allValues.length ? Math.max(...allValues) : 1;
-  const scale = 150; // px max height
+  const scale = 150;
 
   const cols = stages.map(s => {
     const cH = !isNil(s.cortexDays) ? Math.max(4, (s.cortexDays / max) * scale) : 12;
@@ -723,24 +683,25 @@ function renderVelocity(data) {
   `;
 }
 
-function renderROI(data) {
-  const r = data.roi || {};
-  const c = data.cost || {};
+// --- ROI --------------------------------------------------------------------
+function renderROI(data, view) {
+  const r = view.roi || {};
   const roiClass = !isNil(r.roi1yProjected) && r.roi1yProjected >= 1 ? 'positive' : '';
+  const costLabel = currentView === 'all'
+    ? `Custo anual: <span class="mono">${fmt(data.cost.annual, 'currencyFull')}</span>`
+    : `Custo rateado (porte ${currentView}): <span class="mono">${fmt(r.costShare, 'currencyFull')}</span>`;
   return `
     <div class="card fade-in">
       <div class="card-title">Retorno financeiro</div>
-      <div class="card-sub">Custo anual da ferramenta: <span class="mono">${fmt(c.annual, 'currencyFull')}</span></div>
+      <div class="card-sub">${costLabel}</div>
       <div class="roi-stack">
         <div class="roi-row">
           <div>
             <div class="roi-label-main">CAC realizado</div>
-            <div class="roi-label">custo anual ÷ deals fechados</div>
+            <div class="roi-label">custo ÷ deals fechados</div>
           </div>
           <div class="roi-value ${isNil(r.cacRealized) ? 'muted' : ''}">${
-            isNil(r.cacRealized)
-              ? `${DASH}<small> aguardando 1º fechamento</small>`
-              : fmt(r.cacRealized, 'currencyK')
+            isNil(r.cacRealized) ? `${DASH}<small> aguardando 1º fechamento</small>` : fmt(r.cacRealized, 'currencyK')
           }</div>
         </div>
         <div class="roi-row">
@@ -767,34 +728,27 @@ function renderROI(data) {
         <div class="roi-row">
           <div>
             <div class="roi-label-main">ROI 1º ano projetado</div>
-            <div class="roi-label">receita projetada ÷ custo anual</div>
+            <div class="roi-label">receita projetada ÷ custo</div>
           </div>
           <div class="roi-value ${roiClass}">${fmt(r.roi1yProjected, 'multiplier')}</div>
         </div>
       </div>
       <div class="roi-footnote">
-        Projeções baseadas em ${fmt(r.closedYearProjected, 'int')} fechamentos esperados no 1º ano (${fmt(r.revenueYearProjected, 'currencyK')} de receita), considerando a taxa de progressão atual aplicada ao volume de leads previsto.
+        Projeções baseadas em ${fmt(r.closedYearProjected, 'int')} fechamentos esperados no 1º ano (${fmt(r.revenueYearProjected, 'currencyK')} de receita).
       </div>
     </div>
   `;
 }
 
-function renderSegments(data) {
-  const s = data.segments || { byPorte: [], bySetor: [] };
-  const byPorte = s.byPorte || [];
+// --- SEGMENTS ---------------------------------------------------------------
+function renderSegments(data, view) {
+  const s = view.segments || { byPorte: [], bySetor: [] };
   const bySetor = s.bySetor || [];
-  const totalPorte = byPorte.reduce((acc, r) => acc + r.count, 0) || 1;
-  const totalSetor = bySetor.reduce((acc, r) => acc + r.count, 0) || 1;
+  const byPorte = s.byPorte || [];
+  const showPorteBlock = currentView === 'all' && byPorte.length > 0;
 
-  const porteRows = byPorte.length === 0
-    ? `<div class="segment-count" style="text-align:center; padding:20px 0; color:var(--text-4)">Sem dados de porte</div>`
-    : byPorte.map(r => `
-        <div class="segment-row">
-          <div class="segment-label" title="${r.name}">${r.name}</div>
-          <div class="segment-bar"><div class="segment-fill" style="width:${(r.count / totalPorte) * 100}%"></div></div>
-          <div class="segment-count">${fmt(r.count, 'int')}</div>
-        </div>
-      `).join('');
+  const totalSetor = bySetor.reduce((acc, r) => acc + r.count, 0) || 1;
+  const totalPorte = byPorte.reduce((acc, r) => acc + r.count, 0) || 1;
 
   const setorRows = bySetor.length === 0
     ? `<div class="segment-count" style="text-align:center; padding:20px 0; color:var(--text-4)">Sem dados de setor</div>`
@@ -806,48 +760,61 @@ function renderSegments(data) {
         </div>
       `).join('');
 
+  const porteRows = byPorte.map(r => `
+    <div class="segment-row">
+      <div class="segment-label" title="${r.name}">${r.name}</div>
+      <div class="segment-bar"><div class="segment-fill" style="width:${(r.count / totalPorte) * 100}%"></div></div>
+      <div class="segment-count">${fmt(r.count, 'int')}</div>
+    </div>
+  `).join('');
+
   return `
     <div class="card fade-in">
       <div class="card-title">Perfil das empresas</div>
-      <div class="card-sub">Distribuição dos ${fmt(data.kpis.leadsTotal, 'int')} leads Cortex por porte</div>
-      <div class="segments">${porteRows}</div>
-      <div style="margin-top:28px; padding-top:20px; border-top:1px solid var(--border)">
-        <div class="card-sub" style="margin-bottom:14px">Top setores</div>
+      <div class="card-sub">Distribuição dos ${fmt(view.kpis.leadsTotal, 'int')} leads${currentView !== 'all' ? ` do porte ${currentView}` : ''}</div>
+      ${showPorteBlock ? `
+        <div style="margin-bottom:18px">
+          <div style="font-size:11px; color:var(--text-3); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:10px">Por porte</div>
+          <div class="segments">${porteRows}</div>
+        </div>
+        <div style="margin-top:20px; padding-top:20px; border-top:1px solid var(--border)">
+          <div style="font-size:11px; color:var(--text-3); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:10px">Top setores</div>
+          <div class="segments">${setorRows}</div>
+        </div>
+      ` : `
+        <div style="font-size:11px; color:var(--text-3); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:10px">Top setores</div>
         <div class="segments">${setorRows}</div>
-      </div>
+      `}
     </div>
   `;
 }
 
-function renderROIAndSegments(data) {
+function renderROIAndSegments(data, view) {
   return `
     <div class="section-header">
       <div class="section-title">Qualidade e retorno</div>
-      <div class="section-sub">CAC, ROI e perfil das empresas capturadas</div>
+      <div class="section-sub">CAC, ROI e perfil das empresas</div>
     </div>
     <div class="dual-grid">
-      ${renderROI(data)}
-      ${renderSegments(data)}
+      ${renderROI(data, view)}
+      ${renderSegments(data, view)}
     </div>
   `;
 }
 
-function renderTeam(data) {
-  const t = data.team || { cns: [], evs: [] };
+// --- TEAM -------------------------------------------------------------------
+function renderTeam(view) {
+  const t = view.team || { cns: [], evs: [] };
   const cns = t.cns || [];
   const evs = t.evs || [];
   const maxRate = cns.length ? Math.max(...cns.map(c => c.rate || 0), 0.01) : 0.01;
+  const suffix = currentView === 'all' ? '' : ` (porte ${currentView})`;
 
   const cnRows = cns.length === 0
-    ? `<tr class="empty-row"><td colspan="4">Nenhum CN com deals Cortex ainda</td></tr>`
+    ? `<tr class="empty-row"><td colspan="4">Nenhum CN com deals Cortex${suffix} ainda</td></tr>`
     : cns.slice(0, 10).map(c => `
         <tr>
-          <td>
-            <div class="person">
-              <div class="avatar">${c.initials || initialsOf(c.name)}</div>
-              ${c.name}
-            </div>
-          </td>
+          <td><div class="person"><div class="avatar">${c.initials || initialsOf(c.name)}</div>${c.name}</div></td>
           <td>${fmt(c.leads, 'int')}</td>
           <td>${fmt(c.qualified, 'int')}</td>
           <td>
@@ -858,15 +825,10 @@ function renderTeam(data) {
       `).join('');
 
   const evRows = evs.length === 0
-    ? `<tr class="empty-row"><td colspan="4">Nenhum EV com oportunidades Cortex ainda</td></tr>`
+    ? `<tr class="empty-row"><td colspan="4">Nenhum EV com oportunidades Cortex${suffix} ainda</td></tr>`
     : evs.slice(0, 10).map(e => `
         <tr>
-          <td>
-            <div class="person">
-              <div class="avatar">${e.initials || initialsOf(e.name)}</div>
-              ${e.name}
-            </div>
-          </td>
+          <td><div class="person"><div class="avatar">${e.initials || initialsOf(e.name)}</div>${e.name}</div></td>
           <td>${fmt(e.opportunities, 'int')}</td>
           <td>${fmt(e.pipeline, 'currencyK')}</td>
           <td><span class="rate-pill">${e.topStage || DASH}</span></td>
@@ -875,7 +837,7 @@ function renderTeam(data) {
 
   return `
     <div class="section-header">
-      <div class="section-title">Performance por pessoa</div>
+      <div class="section-title">Performance por pessoa${suffix}</div>
       <div class="section-sub">quem está capitalizando melhor os leads Cortex</div>
     </div>
     <div class="team-grid">
@@ -883,14 +845,7 @@ function renderTeam(data) {
         <div class="card-title">Consultores de Negócio (CN)</div>
         <div class="card-sub">conversão Mapeamento → Qualificação Realizada</div>
         <table class="perf">
-          <thead>
-            <tr>
-              <th>CN</th>
-              <th>Leads</th>
-              <th>Qualif.</th>
-              <th>Taxa</th>
-            </tr>
-          </thead>
+          <thead><tr><th>CN</th><th>Leads</th><th>Qualif.</th><th>Taxa</th></tr></thead>
           <tbody>${cnRows}</tbody>
         </table>
       </div>
@@ -898,14 +853,7 @@ function renderTeam(data) {
         <div class="card-title">Executivos de Vendas (EV)</div>
         <div class="card-sub">oportunidades ativas e valor em pipeline</div>
         <table class="perf">
-          <thead>
-            <tr>
-              <th>EV</th>
-              <th>Oport.</th>
-              <th>Pipeline</th>
-              <th>Stage atual</th>
-            </tr>
-          </thead>
+          <thead><tr><th>EV</th><th>Oport.</th><th>Pipeline</th><th>Stage atual</th></tr></thead>
           <tbody>${evRows}</tbody>
         </table>
       </div>
@@ -915,38 +863,53 @@ function renderTeam(data) {
 
 function renderFooter(data) {
   const d = data.debug || {};
+  const unporteWarning = d.cortexDealsWithoutPorte > 0
+    ? ` · ⚠ ${d.cortexDealsWithoutPorte} deals sem porte definido`
+    : '';
   return `
     <div class="footer">
-      <div>Fonte: HubSpot · <span class="mono">fatores_de_score = Campanha Cortex</span> + filtro por nome do deal</div>
-      <div>Sync a cada 1h · ${fmt(d.cortexDealsCount, 'int')} deals Cortex / ${fmt(d.baselineDealsCount, 'int')} deals Carteira 2025</div>
+      <div>Fonte: HubSpot · filtro por <span class="mono">fatores_de_score</span> + nome do deal</div>
+      <div>Sync a cada 1h · ${fmt(d.cortexDealsCount, 'int')} Cortex / ${fmt(d.baselineDealsCount, 'int')} Carteira 2025${unporteWarning}</div>
     </div>
   `;
 }
 
-// --- Main render ------------------------------------------------------------
-function render(data) {
+// --- MAIN RENDER ------------------------------------------------------------
+function render() {
+  if (!currentData) return;
   const root = document.getElementById('root');
+  const view = currentData.views[currentView] || currentData.views.all;
+
   root.innerHTML = `
     <div class="app">
-      ${renderTopbar(data)}
-      ${renderMaturity(data)}
-      ${renderKPIs(data)}
-      ${renderFunnel(data)}
-      ${renderVelocity(data)}
-      ${renderROIAndSegments(data)}
-      ${renderTeam(data)}
-      ${renderFooter(data)}
+      ${renderTopbar(currentData)}
+      ${renderPorteFilter(currentData)}
+      ${renderMaturity(currentData)}
+      ${renderKPIs(currentData, view)}
+      ${renderFunnel(view)}
+      ${renderVelocity(view)}
+      ${renderROIAndSegments(currentData, view)}
+      ${renderTeam(view)}
+      ${renderFooter(currentData)}
     </div>
   `;
+
+  // Bind filter clicks
+  document.querySelectorAll('.porte-tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      currentView = btn.dataset.view;
+      try { localStorage.setItem(STORAGE_KEY, currentView); } catch (e) {}
+      render();
+    });
+  });
 }
 
 function renderError(msg) {
-  const root = document.getElementById('root');
-  root.innerHTML = `
+  document.getElementById('root').innerHTML = `
     <div class="state-screen">
       <div>
         <div class="title serif">Não foi possível carregar o painel</div>
-        <div class="sub">O arquivo <span class="mono">data.json</span> não foi encontrado ou está inválido. Verifique se o sync do n8n executou com sucesso.</div>
+        <div class="sub">O arquivo <span class="mono">data.json</span> não foi encontrado ou está inválido.</div>
         <div class="error-box">${msg}</div>
         <button class="retry-btn" onclick="loadData()">Tentar novamente</button>
       </div>
@@ -955,32 +918,28 @@ function renderError(msg) {
 }
 
 async function loadData() {
-  const root = document.getElementById('root');
-  root.innerHTML = `
-    <div class="state-screen">
-      <div>
-        <div class="spinner"></div>
-        <div class="title serif">Carregando painel…</div>
-        <div class="sub">Buscando dados mais recentes da campanha</div>
-      </div>
-    </div>
-  `;
   try {
     const url = `${DATA_URL}?t=${Date.now()}`;
     const resp = await fetch(url, { cache: 'no-store' });
     if (!resp.ok) throw new Error(`HTTP ${resp.status} ao buscar ${DATA_URL}`);
     const data = await resp.json();
-    if (!data.meta || !data.kpis) throw new Error('Estrutura do data.json inválida (faltando meta ou kpis)');
-    render(data);
+    if (!data.meta || !data.views) throw new Error('Estrutura do data.json inválida (faltando meta ou views)');
+
+    currentData = data;
+
+    // Recupera filtro salvo
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved && data.views[saved]) currentView = saved;
+    } catch (e) {}
+
+    render();
   } catch (e) {
     renderError(e.message || String(e));
   }
 }
 
-// Kick off
 loadData();
-
-// Auto-reload a cada 15 minutos pra pegar dados novos sem precisar F5
 setInterval(loadData, 15 * 60 * 1000);
 </script>
 
