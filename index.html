@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Campanha Cortex · Painel Executivo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #FAFAF9;
+    --surface: #FFFFFF;
+    --surface-2: #F5F5F4;
+    --border: #E7E5E4;
+    --border-strong: #D6D3D1;
+    --text-1: #0C0A09;
+    --text-2: #44403C;
+    --text-3: #78716C;
+    --text-4: #A8A29E;
+    --accent: #1F5F3F;
+    --accent-soft: #E8F2EC;
+    --positive: #15803D;
+    --negative: #991B1B;
+    --warning: #92400E;
+    --warning-soft: #FEF3C7;
+    --shadow-sm: 0 1px 2px rgba(12, 10, 9, 0.04);
+    --shadow-md: 0 1px 3px rgba(12, 10, 9, 0.04), 0 2px 8px rgba(12, 10, 9, 0.03);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: var(--bg); color: var(--text-1);
+    font-family: 'Geist', -apple-system, sans-serif;
+    font-size: 14px; line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-variant-numeric: tabular-nums;
+  }
+  .serif { font-family: 'Fraunces', Georgia, serif; font-weight: 400; letter-spacing: -0.02em; }
+  .mono { font-family: 'Geist Mono', monospace; }
+
+  .app { max-width: 1320px; margin: 0 auto; padding: 32px 40px 80px; }
+
+  /* LOADING & ERROR */
+  .state-screen {
+    min-height: 60vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+  }
+  .state-screen .title { font-family: 'Fraunces', serif; font-size: 28px; color: var(--text-2); margin-bottom: 8px; }
+  .state-screen .sub   { color: var(--text-3); font-size: 14px; max-width: 480px; }
+  .spinner {
+    width: 32px; height: 32px;
+    border: 2px solid var(--border);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    animation: spin 0.8s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .error-box {
+    margin-top: 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 16px 20px;
+    border-radius: 8px;
+    max-width: 520px;
+    font-family: 'Geist Mono', monospace;
+    font-size: 12px;
+    color: var(--negative);
+    text-align: left;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+  .retry-btn {
+    margin-top: 16px;
+    background: var(--text-1);
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  .retry-btn:hover { background: var(--text-2); }
+
+  /* TOP BAR */
+  .topbar {
+    display: flex; align-items: center; justify-content: space-between;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 40px;
+  }
+  .brand { display: flex; align-items: baseline; gap: 14px; }
+  .brand-mark {
+    width: 28px; height: 28px; border-radius: 7px;
+    background: linear-gradient(135deg, var(--text-1), var(--text-2));
+    display: inline-grid; place-items: center;
+    color: #fff; font-weight: 600; font-size: 13px;
+    transform: translateY(4px);
+  }
+  .brand-title { font-size: 15px; font-weight: 500; letter-spacing: -0.01em; }
+  .brand-sub   { font-size: 13px; color: var(--text-3); }
+  .topbar-right {
+    display: flex; align-items: center; gap: 20px;
+    font-size: 12px; color: var(--text-3);
+  }
+  .live-dot {
+    display: inline-block; width: 6px; height: 6px; border-radius: 50%;
+    background: var(--positive); margin-right: 6px;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+  /* MATURITY */
+  .maturity {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 10px; padding: 18px 22px;
+    display: grid; grid-template-columns: 1fr auto; gap: 24px;
+    align-items: center; margin-bottom: 32px;
+    box-shadow: var(--shadow-sm);
+  }
+  .maturity-label {
+    font-size: 12px; color: var(--text-3);
+    text-transform: uppercase; letter-spacing: 0.08em;
+    font-weight: 500; margin-bottom: 6px;
+  }
+  .maturity-text { font-size: 14px; color: var(--text-1); }
+  .maturity-text .highlight {
+    background: var(--warning-soft); color: var(--warning);
+    padding: 2px 8px; border-radius: 4px;
+    font-weight: 500; font-size: 12px; margin-right: 8px;
+  }
+  .maturity-text .highlight.mature {
+    background: var(--accent-soft); color: var(--accent);
+  }
+  .maturity-bar-wrap { width: 280px; }
+  .maturity-meta {
+    display: flex; justify-content: space-between;
+    font-size: 11px; color: var(--text-3); margin-bottom: 6px;
+  }
+  .maturity-bar {
+    height: 4px; background: var(--surface-2);
+    border-radius: 2px; overflow: hidden;
+  }
+  .maturity-bar-fill {
+    height: 100%; background: var(--accent); border-radius: 2px;
+    transition: width 0.8s cubic-bezier(.4,0,.2,1);
+  }
+
+  /* SECTION */
+  .section-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    margin-bottom: 16px; margin-top: 40px;
+  }
+  .section-title {
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--text-3); font-weight: 500;
+  }
+  .section-sub { font-size: 12px; color: var(--text-4); }
+
+  /* KPIs */
+  .kpi-grid {
+    display: grid; grid-template-columns: repeat(5, 1fr);
+    gap: 12px; margin-bottom: 8px;
+  }
+  .kpi {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 10px; padding: 20px 22px;
+    box-shadow: var(--shadow-sm);
+    display: flex; flex-direction: column; gap: 10px;
+    min-height: 140px; position: relative;
+    transition: border-color 0.15s, transform 0.15s;
+  }
+  .kpi:hover { border-color: var(--border-strong); transform: translateY(-1px); }
+  .kpi-label {
+    font-size: 12px; color: var(--text-3);
+    display: flex; align-items: center; gap: 6px;
+  }
+  .kpi-tag {
+    font-size: 9px; font-weight: 500;
+    text-transform: uppercase; letter-spacing: 0.06em;
+    padding: 2px 6px; border-radius: 3px;
+    background: var(--accent-soft); color: var(--accent);
+  }
+  .kpi-tag.lagging { background: var(--warning-soft); color: var(--warning); }
+  .kpi-value {
+    font-size: 36px; letter-spacing: -0.03em; line-height: 1;
+    margin-top: auto;
+  }
+  .kpi-value.muted { color: var(--text-4); }
+  .kpi-value small { font-size: 18px; color: var(--text-3); margin-left: 2px; }
+  .kpi-delta {
+    font-size: 12px; color: var(--text-3);
+    display: flex; align-items: center; gap: 6px;
+  }
+  .delta-up { color: var(--positive); }
+  .delta-down { color: var(--negative); }
+  .kpi-muted { color: var(--text-4); font-size: 13px; }
+
+  /* FUNNEL */
+  .funnel-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .funnel-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 10px; padding: 24px 26px;
+    box-shadow: var(--shadow-sm);
+  }
+  .funnel-title { font-size: 13px; font-weight: 500; margin-bottom: 4px; }
+  .funnel-caption { font-size: 12px; color: var(--text-3); margin-bottom: 20px; }
+  .funnel-legend {
+    display: flex; gap: 18px; font-size: 11px;
+    color: var(--text-3); margin-bottom: 18px;
+  }
+  .legend-dot {
+    display: inline-block; width: 8px; height: 8px;
+    border-radius: 50%; margin-right: 6px; vertical-align: middle;
+  }
+  .legend-cortex   { background: var(--accent); }
+  .legend-baseline { background: var(--text-4); }
+  .stage-row {
+    display: grid; grid-template-columns: 180px 1fr 70px;
+    align-items: center; gap: 12px; padding: 10px 0;
+    border-bottom: 1px solid var(--border); font-size: 13px;
+  }
+  .stage-row:last-child { border-bottom: none; }
+  .stage-name { color: var(--text-2); }
+  .stage-count { color: var(--text-4); font-size: 11px; }
+  .stage-bars { display: flex; flex-direction: column; gap: 4px; }
+  .stage-bar-row {
+    display: grid; grid-template-columns: 1fr 44px;
+    gap: 8px; align-items: center;
+  }
+  .bar-outer {
+    height: 6px; background: var(--surface-2);
+    border-radius: 3px; overflow: hidden;
+  }
+  .bar-inner {
+    height: 100%; border-radius: 3px;
+    transition: width 0.8s cubic-bezier(.4,0,.2,1);
+  }
+  .bar-cortex   { background: var(--accent); }
+  .bar-baseline { background: var(--text-4); opacity: 0.5; }
+  .bar-label {
+    font-size: 11px; color: var(--text-3); text-align: right;
+  }
+  .stage-rate {
+    font-size: 13px; font-weight: 500;
+    text-align: right; color: var(--text-1);
+  }
+  .stage-rate.positive { color: var(--positive); }
+  .stage-rate.negative { color: var(--negative); }
+  .stage-rate .delta {
+    display: block; font-size: 10px; font-weight: 400; margin-top: 2px;
+  }
+
+  .handoff-alert {
+    margin: 16px 0; padding: 14px 18px;
+    background: var(--warning-soft); border-radius: 8px;
+    display: flex; gap: 14px; font-size: 12px;
+    color: var(--warning); line-height: 1.5;
+  }
+  .handoff-alert svg { flex-shrink: 0; }
+
+  /* VELOCITY */
+  .velocity-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 10px; padding: 24px 26px;
+    box-shadow: var(--shadow-sm);
+  }
+  .velocity-grid {
+    display: grid; grid-template-columns: repeat(11, 1fr);
+    gap: 8px; margin-top: 20px;
+  }
+  .velocity-col {
+    display: flex; flex-direction: column;
+    align-items: center; gap: 8px; min-width: 0;
+  }
+  .velocity-stage {
+    font-size: 10px; color: var(--text-3);
+    text-align: center; height: 32px;
+    line-height: 1.2; overflow: hidden;
+  }
+  .velocity-bar-container {
+    display: flex; flex-direction: column;
+    gap: 3px; align-items: center; width: 100%;
+  }
+  .velocity-bar {
+    width: 100%; max-width: 24px;
+    background: var(--accent); border-radius: 2px;
+  }
+  .velocity-bar.baseline { background: var(--text-4); opacity: 0.4; }
+  .velocity-bar.empty    { opacity: 0.2; }
+  .velocity-value {
+    font-size: 11px; color: var(--text-2);
+    font-weight: 500; font-variant-numeric: tabular-nums;
+  }
+  .velocity-value.muted { color: var(--text-4); }
+  .velocity-value small { color: var(--text-4); font-weight: 400; font-size: 10px; }
+
+  /* DUAL */
+  .dual-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 16px; }
+  .card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 10px; padding: 24px 26px;
+    box-shadow: var(--shadow-sm);
+  }
+  .card-title { font-size: 13px; font-weight: 500; margin-bottom: 4px; }
+  .card-sub   { font-size: 12px; color: var(--text-3); margin-bottom: 20px; }
+
+  .roi-stack { display: flex; flex-direction: column; gap: 14px; }
+  .roi-row {
+    display: grid; grid-template-columns: 1fr auto;
+    padding: 14px 0; border-bottom: 1px solid var(--border);
+    align-items: center; gap: 20px;
+  }
+  .roi-row:last-child { border-bottom: none; }
+  .roi-label { font-size: 12px; color: var(--text-3); display: flex; align-items: center; gap: 8px; }
+  .roi-label-main { font-size: 13px; color: var(--text-1); margin-bottom: 2px; }
+  .roi-value {
+    font-family: 'Fraunces', serif; font-size: 22px;
+    letter-spacing: -0.02em;
+  }
+  .roi-value small { font-size: 13px; color: var(--text-3); margin-left: 2px; }
+  .roi-value.muted { color: var(--text-4); }
+  .roi-value.positive { color: var(--positive); }
+  .roi-footnote {
+    font-size: 11px; color: var(--text-4);
+    margin-top: 6px; line-height: 1.5;
+  }
+  .projection-chip {
+    display: inline-block; font-size: 10px; font-weight: 500;
+    color: var(--text-3); background: var(--surface-2);
+    padding: 2px 6px; border-radius: 3px;
+    text-transform: uppercase; letter-spacing: 0.06em;
+  }
+
+  /* SEGMENTS */
+  .segments { display: flex; flex-direction: column; gap: 18px; }
+  .segment-row {
+    display: grid; grid-template-columns: 100px 1fr 50px;
+    gap: 14px; align-items: center; font-size: 13px;
+  }
+  .segment-label {
+    color: var(--text-2);
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  }
+  .segment-bar {
+    height: 10px; background: var(--surface-2);
+    border-radius: 3px; overflow: hidden; position: relative;
+  }
+  .segment-fill {
+    height: 100%; background: var(--accent); border-radius: 3px;
+    transition: width 0.8s cubic-bezier(.4,0,.2,1);
+  }
+  .segment-count {
+    text-align: right; color: var(--text-3);
+    font-size: 12px; font-variant-numeric: tabular-nums;
+  }
+
+  /* TEAM */
+  .team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  table.perf {
+    width: 100%; border-collapse: collapse;
+    font-size: 13px; margin-top: 14px;
+  }
+  table.perf th {
+    text-align: left; font-size: 10px;
+    text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--text-4); font-weight: 500;
+    padding: 10px 12px; border-bottom: 1px solid var(--border);
+  }
+  table.perf th:last-child, table.perf td:last-child { text-align: right; }
+  table.perf td {
+    padding: 14px 12px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-2);
+  }
+  table.perf tr:last-child td { border-bottom: none; }
+  table.perf tr:hover td { background: var(--surface-2); }
+  .person { display: flex; align-items: center; gap: 10px; }
+  .avatar {
+    width: 26px; height: 26px; border-radius: 50%;
+    background: var(--surface-2); display: grid; place-items: center;
+    font-size: 10px; color: var(--text-2); font-weight: 500;
+  }
+  .perf-mini-bar {
+    display: inline-block; width: 60px; height: 4px;
+    background: var(--surface-2); border-radius: 2px;
+    overflow: hidden; vertical-align: middle; margin-right: 8px;
+  }
+  .perf-mini-bar-fill { height: 100%; background: var(--accent); border-radius: 2px; }
+  .rate-pill { font-size: 12px; font-weight: 500; }
+  .empty-row td { color: var(--text-4); text-align: center; padding: 24px; font-size: 12px; }
+
+  /* FOOTER */
+  .footer {
+    margin-top: 60px; padding-top: 24px;
+    border-top: 1px solid var(--border);
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 11px; color: var(--text-4);
+  }
+
+  .fade-in { animation: fadeUp 0.5s cubic-bezier(.4,0,.2,1) backwards; }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 1100px) {
+    .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+    .funnel-grid, .dual-grid, .team-grid { grid-template-columns: 1fr; }
+    .velocity-grid { overflow-x: auto; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Estado inicial: loading -->
+<div id="root">
+  <div class="state-screen">
+    <div>
+      <div class="spinner"></div>
+      <div class="title serif">Carregando painel…</div>
+      <div class="sub">Buscando dados mais recentes da campanha</div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ============================================================================
+// PAINEL CORTEX — Renderização dinâmica do data.json
+// ============================================================================
+
+const DATA_URL = './data.json';
+
+// --- Formatters -------------------------------------------------------------
+const DASH = '—';
+
+function isNil(v) {
+  return v === null || v === undefined || (typeof v === 'number' && !isFinite(v));
+}
+
+function fmt(v, type = 'auto') {
+  if (isNil(v)) return DASH;
+  switch (type) {
+    case 'int':
+      return Number(v).toLocaleString('pt-BR');
+    case 'pct': {
+      const pct = Number(v) * 100;
+      return `${pct.toFixed(1).replace('.', ',')}%`;
+    }
+    case 'pp': {
+      const pp = Number(v) * 100;
+      const sign = pp > 0 ? '+' : pp < 0 ? '−' : '';
+      return `${sign}${Math.abs(pp).toFixed(1).replace('.', ',')} pp`;
+    }
+    case 'currencyK': {
+      const n = Number(v);
+      if (Math.abs(n) >= 1_000_000) return `R$ ${(n / 1_000_000).toFixed(1).replace('.', ',')}M`;
+      if (Math.abs(n) >= 1000) return `R$ ${(n / 1000).toFixed(1).replace('.', ',')}k`;
+      return `R$ ${n.toFixed(0)}`;
+    }
+    case 'currencyFull':
+      return `R$ ${Number(v).toLocaleString('pt-BR', { maximumFractionDigits: 0 })}`;
+    case 'days': {
+      const n = Number(v);
+      return `${n.toFixed(1).replace('.', ',')}d`;
+    }
+    case 'multiplier':
+      return `${Number(v).toFixed(1).replace('.', ',')}x`;
+    default:
+      return String(v);
+  }
+}
+
+function fmtDate(iso) {
+  if (!iso) return DASH;
+  const d = new Date(iso);
+  const dd = String(d.getDate()).padStart(2, '0');
+  const months = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
+  const mm = months[d.getMonth()];
+  const yyyy = d.getFullYear();
+  const hh = String(d.getHours()).padStart(2, '0');
+  const mi = String(d.getMinutes()).padStart(2, '0');
+  return `${dd} ${mm} ${yyyy} · ${hh}:${mi} BRT`;
+}
+
+function timeAgo(iso) {
+  if (!iso) return DASH;
+  const diffMs = Date.now() - new Date(iso).getTime();
+  const mins = Math.floor(diffMs / 60000);
+  if (mins < 1) return 'agora mesmo';
+  if (mins < 60) return `há ${mins} min`;
+  const hrs = Math.floor(mins / 60);
+  if (hrs < 24) return `há ${hrs} h`;
+  const days = Math.floor(hrs / 24);
+  return `há ${days} d`;
+}
+
+function initialsOf(name) {
+  if (!name) return '?';
+  const parts = name.split(' ').filter(Boolean);
+  return ((parts[0]?.[0] || '') + (parts[parts.length - 1]?.[0] || '')).toUpperCase().slice(0, 2);
+}
+
+function deltaPP(cortexRate, baselineRate) {
+  if (isNil(cortexRate) || isNil(baselineRate)) return null;
+  return cortexRate - baselineRate;
+}
+
+// --- Components -------------------------------------------------------------
+function renderTopbar(data) {
+  return `
+    <div class="topbar fade-in">
+      <div class="brand">
+        <div class="brand-mark">P</div>
+        <div>
+          <div class="brand-title">Campanha Cortex</div>
+          <div class="brand-sub">Painel executivo · Pipo Saúde</div>
+        </div>
+      </div>
+      <div class="topbar-right">
+        <span><span class="live-dot"></span>Atualizado ${timeAgo(data.meta.updatedAt)}</span>
+        <span class="mono">${fmtDate(data.meta.updatedAt)}</span>
+      </div>
+    </div>
+  `;
+}
+
+function renderMaturity(data) {
+  const m = data.meta;
+  const isMature = m.maturityPct >= 30;
+  const start = new Date(m.campaignStartDate);
+  const end = new Date(start); end.setDate(end.getDate() + m.campaignDurationDays);
+  const startLabel = start.toLocaleDateString('pt-BR', { day: '2-digit', month: 'short' });
+  const endLabel = end.toLocaleDateString('pt-BR', { day: '2-digit', month: 'short', year: 'numeric' });
+  const msg = isMature
+    ? 'Campanha madura o suficiente para análise de métricas de fechamento.'
+    : 'Métricas de fechamento ainda em formação — foque nos indicadores <em>leading</em> (topo de funil e qualificação).';
+  return `
+    <div class="maturity fade-in" style="animation-delay:.05s">
+      <div>
+        <div class="maturity-label">Maturidade da campanha</div>
+        <div class="maturity-text">
+          <span class="highlight ${isMature ? 'mature' : ''}">Dia ${m.daysElapsed} de ${m.campaignDurationDays}</span>
+          ${msg}
+        </div>
+      </div>
+      <div class="maturity-bar-wrap">
+        <div class="maturity-meta">
+          <span>${startLabel}</span>
+          <span class="mono">${m.maturityPct.toFixed(1).replace('.', ',')}%</span>
+          <span>${endLabel}</span>
+        </div>
+        <div class="maturity-bar"><div class="maturity-bar-fill" style="width:${Math.min(100, m.maturityPct)}%"></div></div>
+      </div>
+    </div>
+  `;
+}
+
+function renderKPIs(data) {
+  const k = data.kpis;
+  const baselineRate = data.roi?.baselineConvRate;
+  const qualDelta = !isNil(k.qualifiedRate) && !isNil(baselineRate)
+    ? k.qualifiedRate - baselineRate
+    : null;
+
+  return `
+    <div class="section-header">
+      <div class="section-title">Visão geral</div>
+      <div class="section-sub">vs. Carteira 2025 · últimos ${data.meta.daysElapsed} dias</div>
+    </div>
+    <div class="kpi-grid">
+      <div class="kpi fade-in" style="animation-delay:.08s">
+        <div class="kpi-label">Leads entregues <span class="kpi-tag">leading</span></div>
+        <div class="kpi-value serif">${fmt(k.leadsTotal, 'int')}</div>
+        <div class="kpi-delta"><span class="kpi-muted">${data.meta.daysElapsed > 0 ? `~${(k.leadsTotal / data.meta.daysElapsed).toFixed(1).replace('.', ',')}/dia` : DASH}</span></div>
+      </div>
+      <div class="kpi fade-in" style="animation-delay:.12s">
+        <div class="kpi-label">Qualificados (SDR) <span class="kpi-tag">leading</span></div>
+        <div class="kpi-value serif">${fmt(k.qualified, 'int')} <small>/ ${fmt(k.leadsTotal, 'int')}</small></div>
+        <div class="kpi-delta">${
+          qualDelta !== null
+            ? `<span class="${qualDelta >= 0 ? 'delta-up' : 'delta-down'}">${qualDelta >= 0 ? '↑' : '↓'} ${Math.abs(qualDelta * 100).toFixed(1).replace('.', ',')} pp</span><span>vs. Carteira 2025</span>`
+            : `<span class="kpi-muted">${fmt(k.qualifiedRate, 'pct')} de conversão</span>`
+        }</div>
+      </div>
+      <div class="kpi fade-in" style="animation-delay:.16s">
+        <div class="kpi-label">Em oportunidade <span class="kpi-tag">leading</span></div>
+        <div class="kpi-value serif">${fmt(k.inOpportunity, 'int')}</div>
+        <div class="kpi-delta"><span class="kpi-muted">${fmt(k.pipelineValue, 'currencyK')} em pipeline ativo</span></div>
+      </div>
+      <div class="kpi fade-in" style="animation-delay:.20s">
+        <div class="kpi-label">Fechados <span class="kpi-tag lagging">lagging</span></div>
+        <div class="kpi-value serif ${k.closed === 0 ? 'muted' : ''}">${fmt(k.closed, 'int')}</div>
+        <div class="kpi-delta"><span class="kpi-muted">${
+          k.closed > 0 ? fmt(k.closedRevenue, 'currencyK') + ' fechados' : 'aguardando 1º fechamento'
+        }</span></div>
+      </div>
+      <div class="kpi fade-in" style="animation-delay:.24s">
+        <div class="kpi-label">ROI projetado <span class="kpi-tag lagging">lagging</span></div>
+        <div class="kpi-value serif">${fmt(k.roiProjected, 'multiplier')}</div>
+        <div class="kpi-delta"><span class="kpi-muted">baseado em velocity atual</span></div>
+      </div>
+    </div>
+  `;
+}
+
+function renderFunnelCard(title, caption, stagesData, lostCount, handoffAlert) {
+  const cortex = stagesData.cortex || [];
+  const baseline = stagesData.baseline || [];
+
+  const rows = cortex.map((c, i) => {
+    const b = baseline[i] || {};
+    const cortexTop = cortex[0]?.rateFromTop ?? 1;
+    const baselineTop = baseline[i]?.rateFromTop ?? 0;
+    const cortexRate = c.rateFromTop;
+    const delta = deltaPP(cortexRate, baselineTop);
+    const deltaClass = delta === null ? '' : delta > 0.01 ? 'positive' : delta < -0.01 ? 'negative' : '';
+
+    return `
+      <div class="stage-row">
+        <div class="stage-name">${c.stage}<div class="stage-count">${fmt(c.count, 'int')} deals</div></div>
+        <div class="stage-bars">
+          <div class="stage-bar-row">
+            <div class="bar-outer"><div class="bar-inner bar-cortex" style="width:${Math.min(100, (cortexRate || 0) * 100)}%"></div></div>
+            <div class="bar-label">${fmt(cortexRate, 'pct')}</div>
+          </div>
+          <div class="stage-bar-row">
+            <div class="bar-outer"><div class="bar-inner bar-baseline" style="width:${Math.min(100, (baselineTop || 0) * 100)}%"></div></div>
+            <div class="bar-label">${fmt(baselineTop, 'pct')}</div>
+          </div>
+        </div>
+        <div class="stage-rate ${deltaClass}">${i === 0 ? DASH : fmt(delta, 'pp')}${i === 0 ? '' : '<span class="delta">vs. baseline</span>'}</div>
+      </div>
+    `;
+  }).join('');
+
+  return `
+    <div class="funnel-card fade-in">
+      <div class="funnel-title">${title}</div>
+      <div class="funnel-caption">${caption}</div>
+      <div class="funnel-legend">
+        <span><span class="legend-dot legend-cortex"></span>Cortex</span>
+        <span><span class="legend-dot legend-baseline"></span>Carteira 2025</span>
+      </div>
+      ${handoffAlert || ''}
+      ${rows}
+      ${lostCount > 0 ? `<div class="stage-count" style="margin-top:12px; padding-top:10px; border-top:1px solid var(--border)">${fmt(lostCount, 'int')} deals perdidos (saíram do funil)</div>` : ''}
+    </div>
+  `;
+}
+
+function renderFunnel(data) {
+  const f = data.funnel || {};
+  const handoffGap = !isNil(f.handoffRateCortex) && !isNil(f.handoffRateBaseline)
+    ? f.handoffRateBaseline - f.handoffRateCortex
+    : null;
+
+  const handoffAlert = (handoffGap !== null && handoffGap > 0.05)
+    ? `
+      <div class="handoff-alert">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1.5L.5 14h15L8 1.5zm0 4l5 8.5H3L8 5.5zm-.5 2.5v3h1v-3h-1zm0 4v1h1v-1h-1z"/></svg>
+        <span><strong>Gap na passagem de bastão:</strong> ${fmt(f.handoffRateCortex, 'pct')} dos leads Cortex qualificados viraram oportunidade, vs. ${fmt(f.handoffRateBaseline, 'pct')} na Carteira 2025. Investigar critério de qualificação e alinhamento SDR × AE.</span>
+      </div>
+    `
+    : '';
+
+  return `
+    <div class="section-header">
+      <div class="section-title">Funil comparativo</div>
+      <div class="section-sub">Cortex vs. Carteira 2025 · taxa de conversão do topo do funil</div>
+    </div>
+    <div class="funnel-grid">
+      ${renderFunnelCard('Funil de Leads (CN)', 'Mapeamento → Qualificação Realizada', f.sdr || {}, f.sdr?.cortexLost || 0)}
+      ${renderFunnelCard('Funil de Oportunidades (EV)', 'SAO → Proposta Aceita', f.opp || {}, f.opp?.cortexLost || 0, handoffAlert)}
+    </div>
+  `;
+}
+
+function renderVelocity(data) {
+  const v = data.velocity || { stages: [] };
+  const stages = v.stages || [];
+
+  const allValues = stages.flatMap(s => [s.cortexDays, s.baselineDays]).filter(x => !isNil(x) && x > 0);
+  const max = allValues.length ? Math.max(...allValues) : 1;
+  const scale = 150; // px max height
+
+  const cols = stages.map(s => {
+    const cH = !isNil(s.cortexDays) ? Math.max(4, (s.cortexDays / max) * scale) : 12;
+    const bH = !isNil(s.baselineDays) ? Math.max(4, (s.baselineDays / max) * scale) : 12;
+    return `
+      <div class="velocity-col">
+        <div class="velocity-bar-container">
+          <div class="velocity-bar ${isNil(s.cortexDays) ? 'empty' : ''}" style="height:${cH}px"></div>
+          <div class="velocity-value ${isNil(s.cortexDays) ? 'muted' : ''}">${fmt(s.cortexDays, 'days')}</div>
+          <div class="velocity-bar baseline ${isNil(s.baselineDays) ? 'empty' : ''}" style="height:${bH}px"></div>
+          <div class="velocity-value"><small>${fmt(s.baselineDays, 'days')}</small></div>
+        </div>
+        <div class="velocity-stage">${s.name}</div>
+      </div>
+    `;
+  }).join('');
+
+  return `
+    <div class="section-header">
+      <div class="section-title">Velocidade do funil</div>
+      <div class="section-sub">dias médios em cada stage · Cortex vs. Carteira 2025</div>
+    </div>
+    <div class="velocity-card fade-in">
+      <div class="funnel-legend">
+        <span><span class="legend-dot legend-cortex"></span>Cortex</span>
+        <span><span class="legend-dot legend-baseline"></span>Carteira 2025</span>
+        <span style="margin-left:auto; color:var(--text-4)">menor é melhor</span>
+      </div>
+      <div class="velocity-grid">${cols}</div>
+      <div style="display:flex; justify-content:space-between; margin-top:16px; font-size:11px; color:var(--text-4)">
+        <span>← Funil CN (6 stages) · &nbsp; Funil EV (5 stages) →</span>
+        <span>Ciclo total baseline: <strong style="color:var(--text-2)">${fmt(v.cycleBaselineDays, 'days')}</strong></span>
+      </div>
+    </div>
+  `;
+}
+
+function renderROI(data) {
+  const r = data.roi || {};
+  const c = data.cost || {};
+  const roiClass = !isNil(r.roi1yProjected) && r.roi1yProjected >= 1 ? 'positive' : '';
+  return `
+    <div class="card fade-in">
+      <div class="card-title">Retorno financeiro</div>
+      <div class="card-sub">Custo anual da ferramenta: <span class="mono">${fmt(c.annual, 'currencyFull')}</span></div>
+      <div class="roi-stack">
+        <div class="roi-row">
+          <div>
+            <div class="roi-label-main">CAC realizado</div>
+            <div class="roi-label">custo anual ÷ deals fechados</div>
+          </div>
+          <div class="roi-value ${isNil(r.cacRealized) ? 'muted' : ''}">${
+            isNil(r.cacRealized)
+              ? `${DASH}<small> aguardando 1º fechamento</small>`
+              : fmt(r.cacRealized, 'currencyK')
+          }</div>
+        </div>
+        <div class="roi-row">
+          <div>
+            <div class="roi-label-main">CAC projetado <span class="projection-chip">projeção</span></div>
+            <div class="roi-label">baseado na velocity do funil</div>
+          </div>
+          <div class="roi-value">${fmt(r.cacProjected, 'currencyK')}</div>
+        </div>
+        <div class="roi-row">
+          <div>
+            <div class="roi-label-main">Ticket médio Carteira 2025</div>
+            <div class="roi-label">ACV médio dos deals fechados em 2025</div>
+          </div>
+          <div class="roi-value">${fmt(r.baselineAvgTicket, 'currencyK')}</div>
+        </div>
+        <div class="roi-row">
+          <div>
+            <div class="roi-label-main">Conversão Carteira 2025</div>
+            <div class="roi-label">leads que fecharam no funil completo</div>
+          </div>
+          <div class="roi-value">${fmt(r.baselineConvRate, 'pct')}</div>
+        </div>
+        <div class="roi-row">
+          <div>
+            <div class="roi-label-main">ROI 1º ano projetado</div>
+            <div class="roi-label">receita projetada ÷ custo anual</div>
+          </div>
+          <div class="roi-value ${roiClass}">${fmt(r.roi1yProjected, 'multiplier')}</div>
+        </div>
+      </div>
+      <div class="roi-footnote">
+        Projeções baseadas em ${fmt(r.closedYearProjected, 'int')} fechamentos esperados no 1º ano (${fmt(r.revenueYearProjected, 'currencyK')} de receita), considerando a taxa de progressão atual aplicada ao volume de leads previsto.
+      </div>
+    </div>
+  `;
+}
+
+function renderSegments(data) {
+  const s = data.segments || { byPorte: [], bySetor: [] };
+  const byPorte = s.byPorte || [];
+  const bySetor = s.bySetor || [];
+  const totalPorte = byPorte.reduce((acc, r) => acc + r.count, 0) || 1;
+  const totalSetor = bySetor.reduce((acc, r) => acc + r.count, 0) || 1;
+
+  const porteRows = byPorte.length === 0
+    ? `<div class="segment-count" style="text-align:center; padding:20px 0; color:var(--text-4)">Sem dados de porte</div>`
+    : byPorte.map(r => `
+        <div class="segment-row">
+          <div class="segment-label" title="${r.name}">${r.name}</div>
+          <div class="segment-bar"><div class="segment-fill" style="width:${(r.count / totalPorte) * 100}%"></div></div>
+          <div class="segment-count">${fmt(r.count, 'int')}</div>
+        </div>
+      `).join('');
+
+  const setorRows = bySetor.length === 0
+    ? `<div class="segment-count" style="text-align:center; padding:20px 0; color:var(--text-4)">Sem dados de setor</div>`
+    : bySetor.map(r => `
+        <div class="segment-row">
+          <div class="segment-label" title="${r.name}">${r.name}</div>
+          <div class="segment-bar"><div class="segment-fill" style="width:${(r.count / totalSetor) * 100}%"></div></div>
+          <div class="segment-count">${fmt(r.count, 'int')}</div>
+        </div>
+      `).join('');
+
+  return `
+    <div class="card fade-in">
+      <div class="card-title">Perfil das empresas</div>
+      <div class="card-sub">Distribuição dos ${fmt(data.kpis.leadsTotal, 'int')} leads Cortex por porte</div>
+      <div class="segments">${porteRows}</div>
+      <div style="margin-top:28px; padding-top:20px; border-top:1px solid var(--border)">
+        <div class="card-sub" style="margin-bottom:14px">Top setores</div>
+        <div class="segments">${setorRows}</div>
+      </div>
+    </div>
+  `;
+}
+
+function renderROIAndSegments(data) {
+  return `
+    <div class="section-header">
+      <div class="section-title">Qualidade e retorno</div>
+      <div class="section-sub">CAC, ROI e perfil das empresas capturadas</div>
+    </div>
+    <div class="dual-grid">
+      ${renderROI(data)}
+      ${renderSegments(data)}
+    </div>
+  `;
+}
+
+function renderTeam(data) {
+  const t = data.team || { cns: [], evs: [] };
+  const cns = t.cns || [];
+  const evs = t.evs || [];
+  const maxRate = cns.length ? Math.max(...cns.map(c => c.rate || 0), 0.01) : 0.01;
+
+  const cnRows = cns.length === 0
+    ? `<tr class="empty-row"><td colspan="4">Nenhum CN com deals Cortex ainda</td></tr>`
+    : cns.slice(0, 10).map(c => `
+        <tr>
+          <td>
+            <div class="person">
+              <div class="avatar">${c.initials || initialsOf(c.name)}</div>
+              ${c.name}
+            </div>
+          </td>
+          <td>${fmt(c.leads, 'int')}</td>
+          <td>${fmt(c.qualified, 'int')}</td>
+          <td>
+            <span class="perf-mini-bar"><span class="perf-mini-bar-fill" style="width:${((c.rate || 0) / maxRate) * 100}%"></span></span>
+            <span class="rate-pill">${fmt(c.rate, 'pct')}</span>
+          </td>
+        </tr>
+      `).join('');
+
+  const evRows = evs.length === 0
+    ? `<tr class="empty-row"><td colspan="4">Nenhum EV com oportunidades Cortex ainda</td></tr>`
+    : evs.slice(0, 10).map(e => `
+        <tr>
+          <td>
+            <div class="person">
+              <div class="avatar">${e.initials || initialsOf(e.name)}</div>
+              ${e.name}
+            </div>
+          </td>
+          <td>${fmt(e.opportunities, 'int')}</td>
+          <td>${fmt(e.pipeline, 'currencyK')}</td>
+          <td><span class="rate-pill">${e.topStage || DASH}</span></td>
+        </tr>
+      `).join('');
+
+  return `
+    <div class="section-header">
+      <div class="section-title">Performance por pessoa</div>
+      <div class="section-sub">quem está capitalizando melhor os leads Cortex</div>
+    </div>
+    <div class="team-grid">
+      <div class="card fade-in">
+        <div class="card-title">Consultores de Negócio (CN)</div>
+        <div class="card-sub">conversão Mapeamento → Qualificação Realizada</div>
+        <table class="perf">
+          <thead>
+            <tr>
+              <th>CN</th>
+              <th>Leads</th>
+              <th>Qualif.</th>
+              <th>Taxa</th>
+            </tr>
+          </thead>
+          <tbody>${cnRows}</tbody>
+        </table>
+      </div>
+      <div class="card fade-in">
+        <div class="card-title">Executivos de Vendas (EV)</div>
+        <div class="card-sub">oportunidades ativas e valor em pipeline</div>
+        <table class="perf">
+          <thead>
+            <tr>
+              <th>EV</th>
+              <th>Oport.</th>
+              <th>Pipeline</th>
+              <th>Stage atual</th>
+            </tr>
+          </thead>
+          <tbody>${evRows}</tbody>
+        </table>
+      </div>
+    </div>
+  `;
+}
+
+function renderFooter(data) {
+  const d = data.debug || {};
+  return `
+    <div class="footer">
+      <div>Fonte: HubSpot · <span class="mono">fatores_de_score = Campanha Cortex</span> + filtro por nome do deal</div>
+      <div>Sync a cada 1h · ${fmt(d.cortexDealsCount, 'int')} deals Cortex / ${fmt(d.baselineDealsCount, 'int')} deals Carteira 2025</div>
+    </div>
+  `;
+}
+
+// --- Main render ------------------------------------------------------------
+function render(data) {
+  const root = document.getElementById('root');
+  root.innerHTML = `
+    <div class="app">
+      ${renderTopbar(data)}
+      ${renderMaturity(data)}
+      ${renderKPIs(data)}
+      ${renderFunnel(data)}
+      ${renderVelocity(data)}
+      ${renderROIAndSegments(data)}
+      ${renderTeam(data)}
+      ${renderFooter(data)}
+    </div>
+  `;
+}
+
+function renderError(msg) {
+  const root = document.getElementById('root');
+  root.innerHTML = `
+    <div class="state-screen">
+      <div>
+        <div class="title serif">Não foi possível carregar o painel</div>
+        <div class="sub">O arquivo <span class="mono">data.json</span> não foi encontrado ou está inválido. Verifique se o sync do n8n executou com sucesso.</div>
+        <div class="error-box">${msg}</div>
+        <button class="retry-btn" onclick="loadData()">Tentar novamente</button>
+      </div>
+    </div>
+  `;
+}
+
+async function loadData() {
+  const root = document.getElementById('root');
+  root.innerHTML = `
+    <div class="state-screen">
+      <div>
+        <div class="spinner"></div>
+        <div class="title serif">Carregando painel…</div>
+        <div class="sub">Buscando dados mais recentes da campanha</div>
+      </div>
+    </div>
+  `;
+  try {
+    const url = `${DATA_URL}?t=${Date.now()}`;
+    const resp = await fetch(url, { cache: 'no-store' });
+    if (!resp.ok) throw new Error(`HTTP ${resp.status} ao buscar ${DATA_URL}`);
+    const data = await resp.json();
+    if (!data.meta || !data.kpis) throw new Error('Estrutura do data.json inválida (faltando meta ou kpis)');
+    render(data);
+  } catch (e) {
+    renderError(e.message || String(e));
+  }
+}
+
+// Kick off
+loadData();
+
+// Auto-reload a cada 15 minutos pra pegar dados novos sem precisar F5
+setInterval(loadData, 15 * 60 * 1000);
+</script>
+
+</body>
+</html>
