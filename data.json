@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updatedAt": "2026-04-22T18:15:16.456Z",
+    "updatedAt": "2026-04-22T18:22:44.017Z",
     "campaignStartDate": "2026-04-01",
     "campaignDurationDays": 365,
     "daysElapsed": 21,
@@ -261,8 +261,8 @@
     "cns": [
       {
         "id": "331668616",
-        "name": "Owner 331668616",
-        "initials": "?",
+        "name": "Breno Haus",
+        "initials": "BH",
         "leads": 20,
         "qualified": 0,
         "rate": 0
@@ -274,7 +274,7 @@
     "cortexDealsCount": 20,
     "baselineDealsCount": 0,
     "cortexCompaniesCount": 15,
-    "baselineCompaniesCount": 0,
-    "ownersResolvedCount": 0
+    "baselineCompaniesCount": 1457,
+    "ownersResolvedCount": 159
   }
 }
