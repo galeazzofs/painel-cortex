@@ -22,6 +22,7 @@
     --accent-soft: #E8F2EC;
     --positive: #15803D;
     --negative: #991B1B;
+    --negative-soft: #FEF2F2;
     --warning: #92400E;
     --warning-soft: #FEF3C7;
     --shadow-sm: 0 1px 2px rgba(12, 10, 9, 0.04);
@@ -35,197 +36,137 @@
     font-variant-numeric: tabular-nums;
   }
   .serif { font-family: 'Fraunces', Georgia, serif; font-weight: 400; letter-spacing: -0.02em; }
-  .mono { font-family: 'Geist Mono', monospace; }
+  .mono  { font-family: 'Geist Mono', monospace; }
 
   .app { max-width: 1320px; margin: 0 auto; padding: 32px 40px 80px; }
 
-  /* LOADING & ERROR */
+  /* LOADING */
   .state-screen { min-height: 60vh; display: grid; place-items: center; text-align: center; }
   .state-screen .title { font-family: 'Fraunces', serif; font-size: 28px; color: var(--text-2); margin-bottom: 8px; }
   .state-screen .sub   { color: var(--text-3); font-size: 14px; max-width: 480px; }
   .spinner {
-    width: 32px; height: 32px;
-    border: 2px solid var(--border);
-    border-top-color: var(--accent);
-    border-radius: 50%;
-    margin: 0 auto 20px;
-    animation: spin 0.8s linear infinite;
+    width: 32px; height: 32px; border: 2px solid var(--border);
+    border-top-color: var(--accent); border-radius: 50%;
+    margin: 0 auto 20px; animation: spin 0.8s linear infinite;
   }
   @keyframes spin { to { transform: rotate(360deg); } }
   .error-box {
-    margin-top: 16px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    padding: 16px 20px;
-    border-radius: 8px;
-    max-width: 520px;
-    font-family: 'Geist Mono', monospace;
-    font-size: 12px;
-    color: var(--negative);
-    text-align: left;
-    white-space: pre-wrap;
-    word-break: break-word;
+    margin-top: 16px; background: var(--surface); border: 1px solid var(--border);
+    padding: 16px 20px; border-radius: 8px; max-width: 520px;
+    font-family: 'Geist Mono', monospace; font-size: 12px; color: var(--negative);
+    text-align: left; white-space: pre-wrap; word-break: break-word;
   }
   .retry-btn {
-    margin-top: 16px;
-    background: var(--text-1);
-    color: #fff;
-    border: none;
-    padding: 10px 18px;
-    border-radius: 6px;
-    font-family: inherit;
-    font-size: 13px;
-    cursor: pointer;
+    margin-top: 16px; background: var(--text-1); color: #fff; border: none;
+    padding: 10px 18px; border-radius: 6px; font-family: inherit; font-size: 13px; cursor: pointer;
   }
   .retry-btn:hover { background: var(--text-2); }
 
   /* TOP BAR */
   .topbar {
     display: flex; align-items: center; justify-content: space-between;
-    padding-bottom: 28px;
-    border-bottom: 1px solid var(--border);
-    margin-bottom: 24px;
+    padding-bottom: 28px; border-bottom: 1px solid var(--border); margin-bottom: 24px;
   }
   .brand { display: flex; align-items: baseline; gap: 14px; }
   .brand-mark {
     width: 28px; height: 28px; border-radius: 7px;
     background: linear-gradient(135deg, var(--text-1), var(--text-2));
-    display: inline-grid; place-items: center;
-    color: #fff; font-weight: 600; font-size: 13px;
-    transform: translateY(4px);
+    display: inline-grid; place-items: center; color: #fff;
+    font-weight: 600; font-size: 13px; transform: translateY(4px);
   }
   .brand-title { font-size: 15px; font-weight: 500; letter-spacing: -0.01em; }
   .brand-sub   { font-size: 13px; color: var(--text-3); }
-  .topbar-right {
-    display: flex; align-items: center; gap: 20px;
-    font-size: 12px; color: var(--text-3);
-  }
+  .topbar-right { display: flex; align-items: center; gap: 20px; font-size: 12px; color: var(--text-3); }
   .live-dot {
     display: inline-block; width: 6px; height: 6px; border-radius: 50%;
-    background: var(--positive); margin-right: 6px;
-    animation: pulse 2s infinite;
+    background: var(--positive); margin-right: 6px; animation: pulse 2s infinite;
   }
   @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
 
-  /* PORTE FILTER */
-  .porte-filter-bar {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 24px;
-    padding: 12px 14px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    box-shadow: var(--shadow-sm);
-  }
-  .porte-filter-label {
-    font-size: 11px;
-    color: var(--text-3);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    font-weight: 500;
-    padding-left: 6px;
-  }
-  .porte-tabs {
-    display: flex;
-    gap: 4px;
-    flex: 1;
-  }
-  .porte-tab {
-    padding: 8px 16px;
-    font-size: 13px;
-    font-family: inherit;
-    color: var(--text-3);
-    background: transparent;
-    border: none;
-    border-radius: 7px;
-    cursor: pointer;
-    transition: all 0.15s;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .porte-tab:hover { background: var(--surface-2); color: var(--text-2); }
-  .porte-tab.active {
-    background: var(--text-1);
-    color: #fff;
-  }
-  .porte-tab.active .porte-count { color: rgba(255,255,255,0.7); }
-  .porte-count {
-    font-size: 11px;
-    color: var(--text-4);
-    font-variant-numeric: tabular-nums;
-  }
-  .porte-share-note {
-    font-size: 11px;
-    color: var(--text-4);
-    padding-right: 10px;
-  }
-
   /* MATURITY */
   .maturity {
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: 10px; padding: 18px 22px;
-    display: grid; grid-template-columns: 1fr auto; gap: 24px;
-    align-items: center; margin-bottom: 32px;
-    box-shadow: var(--shadow-sm);
+    background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+    padding: 18px 22px; display: grid; grid-template-columns: 1fr auto;
+    gap: 24px; align-items: center; margin-bottom: 20px; box-shadow: var(--shadow-sm);
   }
-  .maturity-label {
-    font-size: 12px; color: var(--text-3);
-    text-transform: uppercase; letter-spacing: 0.08em;
-    font-weight: 500; margin-bottom: 6px;
-  }
+  .maturity-label { font-size: 12px; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 500; margin-bottom: 6px; }
   .maturity-text { font-size: 14px; color: var(--text-1); }
-  .maturity-text .highlight {
-    background: var(--warning-soft); color: var(--warning);
-    padding: 2px 8px; border-radius: 4px;
-    font-weight: 500; font-size: 12px; margin-right: 8px;
-  }
-  .maturity-text .highlight.mature {
-    background: var(--accent-soft); color: var(--accent);
-  }
+  .maturity-text .highlight { background: var(--warning-soft); color: var(--warning); padding: 2px 8px; border-radius: 4px; font-weight: 500; font-size: 12px; margin-right: 8px; }
+  .maturity-text .highlight.mature { background: var(--accent-soft); color: var(--accent); }
   .maturity-bar-wrap { width: 280px; }
-  .maturity-meta {
-    display: flex; justify-content: space-between;
-    font-size: 11px; color: var(--text-3); margin-bottom: 6px;
-  }
+  .maturity-meta { display: flex; justify-content: space-between; font-size: 11px; color: var(--text-3); margin-bottom: 6px; }
   .maturity-bar { height: 4px; background: var(--surface-2); border-radius: 2px; overflow: hidden; }
-  .maturity-bar-fill {
-    height: 100%; background: var(--accent); border-radius: 2px;
-    transition: width 0.8s cubic-bezier(.4,0,.2,1);
+  .maturity-bar-fill { height: 100%; background: var(--accent); border-radius: 2px; transition: width 0.8s cubic-bezier(.4,0,.2,1); }
+
+  /* FILTER BAR */
+  .filter-area { margin-bottom: 24px; display: flex; flex-direction: column; gap: 8px; }
+  .porte-filter-bar {
+    display: flex; align-items: center; gap: 16px; padding: 10px 14px;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 10px; box-shadow: var(--shadow-sm);
   }
+  .filter-label { font-size: 11px; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 500; padding-left: 4px; white-space: nowrap; }
+  .porte-tabs { display: flex; gap: 4px; flex: 1; }
+  .porte-tab {
+    padding: 7px 14px; font-size: 13px; font-family: inherit; color: var(--text-3);
+    background: transparent; border: none; border-radius: 7px; cursor: pointer; transition: all 0.15s;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .porte-tab:hover { background: var(--surface-2); color: var(--text-2); }
+  .porte-tab.active { background: var(--text-1); color: #fff; }
+  .porte-tab.active .porte-count { color: rgba(255,255,255,0.6); }
+  .porte-count { font-size: 11px; color: var(--text-4); }
+
+  .dim-filter-bar {
+    display: flex; align-items: center; gap: 10px; padding: 10px 14px;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 10px; box-shadow: var(--shadow-sm);
+    flex-wrap: wrap;
+  }
+  .dim-select-wrap { display: flex; align-items: center; gap: 8px; }
+  .dim-select {
+    appearance: none; -webkit-appearance: none;
+    background: var(--surface-2) url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%23A8A29E' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 10px center;
+    border: 1px solid var(--border); border-radius: 7px; padding: 7px 28px 7px 12px;
+    font-family: inherit; font-size: 12px; color: var(--text-2); cursor: pointer;
+    min-width: 140px; max-width: 200px;
+  }
+  .dim-select:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .filter-sep { width: 1px; height: 20px; background: var(--border); }
+  .clear-filters-btn {
+    font-size: 11px; color: var(--text-4); background: none; border: none; cursor: pointer;
+    padding: 4px 8px; border-radius: 5px; font-family: inherit;
+  }
+  .clear-filters-btn:hover { color: var(--text-2); background: var(--surface-2); }
+  .filter-summary {
+    font-size: 11px; color: var(--text-3); padding: 0 4px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .active-filter-pill {
+    background: var(--accent-soft); color: var(--accent); border-radius: 4px;
+    padding: 2px 8px; font-size: 11px; font-weight: 500; display: inline-flex; align-items: center; gap: 6px;
+  }
+  .active-filter-pill button { background: none; border: none; cursor: pointer; color: var(--accent); font-size: 12px; line-height: 1; padding: 0; }
 
   /* SECTION */
   .section-header {
     display: flex; align-items: baseline; justify-content: space-between;
     margin-bottom: 16px; margin-top: 40px;
   }
-  .section-title {
-    font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em;
-    color: var(--text-3); font-weight: 500;
-  }
+  .section-title { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-3); font-weight: 500; }
   .section-sub { font-size: 12px; color: var(--text-4); }
 
   /* KPIs */
-  .kpi-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-bottom: 8px; }
+  .kpi-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
   .kpi {
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: 10px; padding: 20px 22px;
-    box-shadow: var(--shadow-sm);
-    display: flex; flex-direction: column; gap: 10px;
-    min-height: 140px; position: relative;
-    transition: border-color 0.15s, transform 0.15s;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+    padding: 20px 22px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;
+    gap: 10px; min-height: 132px; transition: border-color 0.15s, transform 0.15s;
   }
   .kpi:hover { border-color: var(--border-strong); transform: translateY(-1px); }
   .kpi-label { font-size: 12px; color: var(--text-3); display: flex; align-items: center; gap: 6px; }
   .kpi-tag {
-    font-size: 9px; font-weight: 500;
-    text-transform: uppercase; letter-spacing: 0.06em;
-    padding: 2px 6px; border-radius: 3px;
-    background: var(--accent-soft); color: var(--accent);
+    font-size: 9px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em;
+    padding: 2px 6px; border-radius: 3px; background: var(--accent-soft); color: var(--accent);
   }
-  .kpi-tag.lagging { background: var(--warning-soft); color: var(--warning); }
   .kpi-value { font-size: 36px; letter-spacing: -0.03em; line-height: 1; margin-top: auto; }
   .kpi-value.muted { color: var(--text-4); }
   .kpi-value small { font-size: 18px; color: var(--text-3); margin-left: 2px; }
@@ -237,24 +178,24 @@
   /* FUNNEL */
   .funnel-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
   .funnel-card {
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: 10px; padding: 24px 26px;
-    box-shadow: var(--shadow-sm);
+    background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+    padding: 24px 26px; box-shadow: var(--shadow-sm);
   }
   .funnel-title { font-size: 13px; font-weight: 500; margin-bottom: 4px; }
-  .funnel-caption { font-size: 12px; color: var(--text-3); margin-bottom: 20px; }
-  .funnel-legend { display: flex; gap: 18px; font-size: 11px; color: var(--text-3); margin-bottom: 18px; }
+  .funnel-caption { font-size: 12px; color: var(--text-3); margin-bottom: 18px; }
+  .funnel-legend { display: flex; gap: 18px; font-size: 11px; color: var(--text-3); margin-bottom: 16px; }
   .legend-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
   .legend-cortex   { background: var(--accent); }
   .legend-baseline { background: var(--text-4); }
   .stage-row {
-    display: grid; grid-template-columns: 180px 1fr 70px;
-    align-items: center; gap: 12px; padding: 10px 0;
+    display: grid; grid-template-columns: 170px 1fr 70px;
+    align-items: center; gap: 12px; padding: 9px 0;
     border-bottom: 1px solid var(--border); font-size: 13px;
   }
   .stage-row:last-child { border-bottom: none; }
+  .stage-row.sao-divider { border-top: 1px dashed var(--accent); margin-top: 2px; padding-top: 12px; }
   .stage-name { color: var(--text-2); }
-  .stage-count { color: var(--text-4); font-size: 11px; }
+  .stage-count-sm { color: var(--text-4); font-size: 11px; }
   .stage-bars { display: flex; flex-direction: column; gap: 4px; }
   .stage-bar-row { display: grid; grid-template-columns: 1fr 44px; gap: 8px; align-items: center; }
   .bar-outer { height: 6px; background: var(--surface-2); border-radius: 3px; overflow: hidden; }
@@ -266,88 +207,83 @@
   .stage-rate.positive { color: var(--positive); }
   .stage-rate.negative { color: var(--negative); }
   .stage-rate .delta { display: block; font-size: 10px; font-weight: 400; margin-top: 2px; }
-
-  .handoff-alert {
-    margin: 16px 0; padding: 14px 18px;
-    background: var(--warning-soft); border-radius: 8px;
-    display: flex; gap: 14px; font-size: 12px;
-    color: var(--warning); line-height: 1.5;
+  .lost-row {
+    margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border);
+    font-size: 11px; color: var(--text-4); display: flex; gap: 16px;
   }
-  .handoff-alert svg { flex-shrink: 0; }
+
+  /* LOSS ANALYSIS */
+  .loss-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .loss-card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+    padding: 24px 26px; box-shadow: var(--shadow-sm);
+  }
+  .loss-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 20px; }
+  .loss-total { font-family: 'Fraunces', serif; font-size: 42px; letter-spacing: -0.03em; line-height: 1; }
+  .loss-total.zero { color: var(--text-4); }
+  .loss-sub { font-size: 12px; color: var(--text-3); margin-top: 4px; }
+  .loss-bar-list { display: flex; flex-direction: column; gap: 12px; }
+  .loss-bar-row { display: grid; grid-template-columns: 140px 1fr 40px; gap: 10px; align-items: center; font-size: 12px; }
+  .loss-bar-label { color: var(--text-2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .loss-bar-outer { height: 8px; background: var(--surface-2); border-radius: 4px; overflow: hidden; }
+  .loss-bar-fill  { height: 100%; background: var(--negative); border-radius: 4px; opacity: 0.6; transition: width 0.7s cubic-bezier(.4,0,.2,1); }
+  .loss-bar-fill.reason { background: var(--warning); }
+  .loss-count { text-align: right; color: var(--text-3); font-size: 11px; }
 
   /* VELOCITY */
   .velocity-card {
     background: var(--surface); border: 1px solid var(--border);
     border-radius: 10px; padding: 24px 26px; box-shadow: var(--shadow-sm);
   }
-  .velocity-grid { display: grid; grid-template-columns: repeat(11, 1fr); gap: 8px; margin-top: 20px; }
+  .velocity-grid { display: grid; grid-template-columns: repeat(11, 1fr); gap: 8px; margin-top: 20px; overflow-x: auto; }
   .velocity-col { display: flex; flex-direction: column; align-items: center; gap: 8px; min-width: 0; }
   .velocity-stage { font-size: 10px; color: var(--text-3); text-align: center; height: 32px; line-height: 1.2; overflow: hidden; }
   .velocity-bar-container { display: flex; flex-direction: column; gap: 3px; align-items: center; width: 100%; }
   .velocity-bar { width: 100%; max-width: 24px; background: var(--accent); border-radius: 2px; }
   .velocity-bar.baseline { background: var(--text-4); opacity: 0.4; }
   .velocity-bar.empty    { opacity: 0.2; }
-  .velocity-value { font-size: 11px; color: var(--text-2); font-weight: 500; font-variant-numeric: tabular-nums; }
+  .velocity-value { font-size: 11px; color: var(--text-2); font-weight: 500; }
   .velocity-value.muted { color: var(--text-4); }
-  .velocity-value small { color: var(--text-4); font-weight: 400; font-size: 10px; }
+  .velocity-value small  { color: var(--text-4); font-weight: 400; font-size: 10px; }
 
-  /* DUAL */
-  .dual-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 16px; }
+  /* CADENCES CHART */
+  .cadence-card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+    padding: 24px 26px; box-shadow: var(--shadow-sm);
+  }
+  .cadence-chart-wrap { overflow-x: auto; margin-top: 20px; }
+  .cadence-empty { font-size: 13px; color: var(--text-4); text-align: center; padding: 32px 0; }
+
+  /* DUAL GRID */
+  .dual-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  /* SEGMENTS */
   .card {
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: 10px; padding: 24px 26px; box-shadow: var(--shadow-sm);
+    background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+    padding: 24px 26px; box-shadow: var(--shadow-sm);
   }
   .card-title { font-size: 13px; font-weight: 500; margin-bottom: 4px; }
   .card-sub   { font-size: 12px; color: var(--text-3); margin-bottom: 20px; }
-
-  .roi-stack { display: flex; flex-direction: column; gap: 14px; }
-  .roi-row {
-    display: grid; grid-template-columns: 1fr auto;
-    padding: 14px 0; border-bottom: 1px solid var(--border);
-    align-items: center; gap: 20px;
-  }
-  .roi-row:last-child { border-bottom: none; }
-  .roi-label { font-size: 12px; color: var(--text-3); display: flex; align-items: center; gap: 8px; }
-  .roi-label-main { font-size: 13px; color: var(--text-1); margin-bottom: 2px; }
-  .roi-value { font-family: 'Fraunces', serif; font-size: 22px; letter-spacing: -0.02em; }
-  .roi-value small { font-size: 13px; color: var(--text-3); margin-left: 2px; }
-  .roi-value.muted { color: var(--text-4); }
-  .roi-value.positive { color: var(--positive); }
-  .roi-footnote { font-size: 11px; color: var(--text-4); margin-top: 6px; line-height: 1.5; }
-  .projection-chip {
-    display: inline-block; font-size: 10px; font-weight: 500;
-    color: var(--text-3); background: var(--surface-2);
-    padding: 2px 6px; border-radius: 3px;
-    text-transform: uppercase; letter-spacing: 0.06em;
-  }
-
-  /* SEGMENTS */
-  .segments { display: flex; flex-direction: column; gap: 18px; }
-  .segment-row { display: grid; grid-template-columns: 100px 1fr 50px; gap: 14px; align-items: center; font-size: 13px; }
+  .segments { display: flex; flex-direction: column; gap: 14px; }
+  .segment-row { display: grid; grid-template-columns: 110px 1fr 50px; gap: 12px; align-items: center; font-size: 13px; }
   .segment-label { color: var(--text-2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  .segment-bar { height: 10px; background: var(--surface-2); border-radius: 3px; overflow: hidden; position: relative; }
+  .segment-bar { height: 10px; background: var(--surface-2); border-radius: 3px; overflow: hidden; }
   .segment-fill { height: 100%; background: var(--accent); border-radius: 3px; transition: width 0.8s cubic-bezier(.4,0,.2,1); }
-  .segment-count { text-align: right; color: var(--text-3); font-size: 12px; font-variant-numeric: tabular-nums; }
+  .segment-count { text-align: right; color: var(--text-3); font-size: 12px; }
 
   /* TEAM */
   .team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
   table.perf { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 14px; }
   table.perf th {
-    text-align: left; font-size: 10px;
-    text-transform: uppercase; letter-spacing: 0.08em;
-    color: var(--text-4); font-weight: 500;
-    padding: 10px 12px; border-bottom: 1px solid var(--border);
+    text-align: left; font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--text-4); font-weight: 500; padding: 10px 12px; border-bottom: 1px solid var(--border);
   }
   table.perf th:last-child, table.perf td:last-child { text-align: right; }
-  table.perf td { padding: 14px 12px; border-bottom: 1px solid var(--border); color: var(--text-2); }
+  table.perf td { padding: 12px 12px; border-bottom: 1px solid var(--border); color: var(--text-2); }
   table.perf tr:last-child td { border-bottom: none; }
   table.perf tr:hover td { background: var(--surface-2); }
   .person { display: flex; align-items: center; gap: 10px; }
-  .avatar {
-    width: 26px; height: 26px; border-radius: 50%;
-    background: var(--surface-2); display: grid; place-items: center;
-    font-size: 10px; color: var(--text-2); font-weight: 500;
-  }
+  .avatar { width: 26px; height: 26px; border-radius: 50%; background: var(--surface-2); display: grid; place-items: center; font-size: 10px; color: var(--text-2); font-weight: 500; }
   .perf-mini-bar { display: inline-block; width: 60px; height: 4px; background: var(--surface-2); border-radius: 2px; overflow: hidden; vertical-align: middle; margin-right: 8px; }
   .perf-mini-bar-fill { height: 100%; background: var(--accent); border-radius: 2px; }
   .rate-pill { font-size: 12px; font-weight: 500; }
@@ -355,27 +291,22 @@
 
   /* FOOTER */
   .footer {
-    margin-top: 60px; padding-top: 24px;
-    border-top: 1px solid var(--border);
-    display: flex; justify-content: space-between; align-items: center;
-    font-size: 11px; color: var(--text-4);
+    margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border);
+    display: flex; justify-content: space-between; align-items: center; font-size: 11px; color: var(--text-4);
   }
 
-  .fade-in { animation: fadeUp 0.4s cubic-bezier(.4,0,.2,1) backwards; }
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(4px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
+  .fade-in { animation: fadeUp 0.35s cubic-bezier(.4,0,.2,1) backwards; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
 
   @media (max-width: 1100px) {
+    .app { padding: 24px 20px 60px; }
     .kpi-grid { grid-template-columns: repeat(2, 1fr); }
-    .funnel-grid, .dual-grid, .team-grid { grid-template-columns: 1fr; }
-    .velocity-grid { overflow-x: auto; }
+    .funnel-grid, .dual-grid, .team-grid, .loss-grid { grid-template-columns: 1fr; }
+    .velocity-grid { min-width: 700px; }
   }
 </style>
 </head>
 <body>
-
 <div id="root">
   <div class="state-screen">
     <div>
@@ -388,49 +319,61 @@
 
 <script>
 // ============================================================================
-// PAINEL CORTEX v2 — com filtro por porte
+// PAINEL CORTEX v3 — filtros dinâmicos + análise de perdas + cadências
 // ============================================================================
 
 const DATA_URL = './data.json';
-const STORAGE_KEY = 'painel-cortex-porte-filter';
-let currentData = null;
-let currentView = 'all';
 
-// --- Formatters -------------------------------------------------------------
+// Stage IDs (devem bater com o n8n Compute Metrics)
+const STAGES_SDR = [
+  { id: '72557853',  name: 'Mapeamento' },
+  { id: '24595558',  name: 'Abordar' },
+  { id: '24595559',  name: 'Em cadência' },
+  { id: '24595562',  name: 'Lead Conectado' },
+  { id: '24595560',  name: 'Qual. Agendada' },
+  { id: '24595561',  name: 'Qual. Realizada' },
+  { id: '9102669',   name: 'SAO' },
+];
+const STAGES_OPP = [
+  { id: '9102669',               name: 'SAO' },
+  { id: 'presentationscheduled', name: 'Elab. Proposta' },
+  { id: '11505970',              name: 'Proposta Enviada' },
+  { id: 'decisionmakerboughtin', name: 'Em negociação' },
+  { id: '26183057',              name: 'Proposta Aceita' },
+];
+const STAGE_SDR_LOST = '24595564';
+const STAGE_OPP_LOST = 'closedlost';
+
+// ---- State ---------------------------------------------------------------
+let gData = null;
+const filters = { porte: 'all', setor: 'all', cn: 'all', ev: 'all', campanha: 'all' };
+
+// ---- Formatters ----------------------------------------------------------
 const DASH = '—';
 const isNil = v => v === null || v === undefined || (typeof v === 'number' && !isFinite(v));
 
 function fmt(v, type = 'auto') {
   if (isNil(v)) return DASH;
   switch (type) {
-    case 'int':          return Number(v).toLocaleString('pt-BR');
-    case 'pct':          return `${(Number(v) * 100).toFixed(1).replace('.', ',')}%`;
+    case 'int':  return Number(v).toLocaleString('pt-BR');
+    case 'pct':  return `${(Number(v) * 100).toFixed(1).replace('.', ',')}%`;
     case 'pp': {
       const pp = Number(v) * 100;
-      const sign = pp > 0 ? '+' : pp < 0 ? '−' : '';
+      const sign = pp > 0.001 ? '+' : pp < -0.001 ? '−' : '';
       return `${sign}${Math.abs(pp).toFixed(1).replace('.', ',')} pp`;
     }
-    case 'currencyK': {
-      const n = Number(v);
-      if (Math.abs(n) >= 1_000_000) return `R$ ${(n / 1_000_000).toFixed(1).replace('.', ',')}M`;
-      if (Math.abs(n) >= 1000) return `R$ ${(n / 1000).toFixed(1).replace('.', ',')}k`;
-      return `R$ ${n.toFixed(0)}`;
-    }
-    case 'currencyFull': return `R$ ${Number(v).toLocaleString('pt-BR', { maximumFractionDigits: 0 })}`;
-    case 'days':         return `${Number(v).toFixed(1).replace('.', ',')}d`;
-    case 'multiplier':   return `${Number(v).toFixed(1).replace('.', ',')}x`;
-    default:             return String(v);
+    case 'days':       return `${Number(v).toFixed(1).replace('.', ',')}d`;
+    case 'multiplier': return `${Number(v).toFixed(1).replace('.', ',')}x`;
+    default: return String(v);
   }
 }
 
 function fmtDate(iso) {
   if (!iso) return DASH;
   const d = new Date(iso);
-  const dd = String(d.getDate()).padStart(2, '0');
-  const months = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
-  return `${dd} ${months[d.getMonth()]} ${d.getFullYear()} · ${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')} BRT`;
+  const months = ['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'];
+  return `${String(d.getDate()).padStart(2,'0')} ${months[d.getMonth()]} ${d.getFullYear()} · ${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}`;
 }
-
 function timeAgo(iso) {
   if (!iso) return DASH;
   const mins = Math.floor((Date.now() - new Date(iso).getTime()) / 60000);
@@ -440,44 +383,166 @@ function timeAgo(iso) {
   if (hrs < 24) return `há ${hrs} h`;
   return `há ${Math.floor(hrs / 24)} d`;
 }
-
-const initialsOf = name => {
+function weekLabel(wk) {
+  // "2026-W14" → "Sem 14"
+  const [year, w] = wk.split('-W');
+  return `S${w}`;
+}
+function initialsOf(name) {
   if (!name) return '?';
   const parts = name.split(' ').filter(Boolean);
-  return ((parts[0]?.[0] || '') + (parts[parts.length - 1]?.[0] || '')).toUpperCase().slice(0, 2);
-};
-
-// --- PORTE FILTER -----------------------------------------------------------
-function renderPorteFilter(data) {
-  const portes = data.meta.availablePortes || [];
-  const counts = data.meta.porteCounts || {};
-  const tabs = [
-    { id: 'all', label: 'Todos', count: counts.all ?? 0 },
-    ...portes.map(p => ({ id: p, label: p, count: counts[p] ?? 0 }))
-  ];
-
-  const view = data.views[currentView] || data.views.all;
-  const shareNote = currentView !== 'all' && view.leadShare !== undefined
-    ? `Custo rateado: ${fmt(view.costShare, 'currencyK')} (${(view.leadShare * 100).toFixed(0)}% dos leads)`
-    : '';
-
-  return `
-    <div class="porte-filter-bar fade-in">
-      <span class="porte-filter-label">Recorte</span>
-      <div class="porte-tabs">
-        ${tabs.map(t => `
-          <button class="porte-tab ${currentView === t.id ? 'active' : ''}" data-view="${t.id}">
-            ${t.label} <span class="porte-count">${fmt(t.count, 'int')}</span>
-          </button>
-        `).join('')}
-      </div>
-      ${shareNote ? `<span class="porte-share-note">${shareNote}</span>` : ''}
-    </div>
-  `;
+  return ((parts[0]?.[0] || '') + (parts[parts.length - 1]?.[0] || '')).toUpperCase().slice(0, 2) || '?';
 }
 
-// --- TOP BAR ----------------------------------------------------------------
+// ---- Filter deals --------------------------------------------------------
+function applyFilters(deals) {
+  return deals.filter(d => {
+    if (filters.porte !== 'all' && d.porte !== filters.porte) return false;
+    if (filters.setor !== 'all' && d.setor !== filters.setor) return false;
+    if (filters.cn !== 'all' && d.cn !== filters.cn) return false;
+    if (filters.ev !== 'all' && d.ev !== filters.ev) return false;
+    if (filters.campanha !== 'all' && d.campanha !== filters.campanha) return false;
+    return true;
+  });
+}
+
+function getBaseline(data) {
+  const key = filters.porte === 'all' ? 'all' : filters.porte;
+  return data.baseline[key] || data.baseline.all;
+}
+
+// ---- Compute metrics from deal array -------------------------------------
+function computeMetrics(deals, baseline) {
+  const total = deals.length;
+
+  // SDR funnel
+  const sdrFunnel = STAGES_SDR.map((s, i) => {
+    const count = deals.filter(d => d.stages[s.id]).length;
+    const prevCount = i === 0 ? total : deals.filter(d => d.stages[STAGES_SDR[i-1].id]).length;
+    return {
+      stage: s.name, count,
+      rateFromPrev: i === 0 ? 1 : (prevCount > 0 ? count / prevCount : 0),
+      rateFromTop:  total > 0 ? count / total : 0
+    };
+  });
+  const sdrLost = deals.filter(d => d.stages[STAGE_SDR_LOST]).length;
+
+  // OPP funnel
+  const saoDeals  = deals.filter(d => d.stages['9102669']);
+  const saoCount  = saoDeals.length;
+  const oppFunnel = STAGES_OPP.map((s, i) => {
+    const count = deals.filter(d => d.stages[s.id]).length;
+    const prevCount = i === 0 ? saoCount : deals.filter(d => d.stages[STAGES_OPP[i-1].id]).length;
+    return {
+      stage: s.name, count,
+      rateFromPrev: i === 0 ? 1 : (prevCount > 0 ? count / prevCount : 0),
+      rateFromTop:  saoCount > 0 ? count / saoCount : 0
+    };
+  });
+  const oppLost = deals.filter(d => d.stages[STAGE_OPP_LOST]).length;
+
+  // KPIs
+  const qualified     = deals.filter(d => d.stages['24595561']).length;
+  const closed        = deals.filter(d => d.stages['26183057']).length;
+  const closedRevenue = deals.filter(d => d.stages['26183057']).reduce((s, d) => s + (d.amount || 0), 0);
+  const pipelineValue = deals.filter(d => d.stages['9102669'] && !d.stages['26183057'] && !d.stages[STAGE_OPP_LOST])
+                             .reduce((s, d) => s + (d.amount || 0), 0);
+
+  // Loss analysis
+  const lostDeals = deals.filter(d => d.isLost);
+  const byStage   = {};
+  const byReason  = {};
+  lostDeals.forEach(d => {
+    const st = d.lostStage   || '— desconhecido';
+    const r  = d.lostReason  || '— sem motivo registrado';
+    byStage[st] = (byStage[st] || 0) + 1;
+    byReason[r] = (byReason[r] || 0) + 1;
+  });
+
+  // Weekly cadences (entries into "Em cadência" stage per ISO week)
+  const cadWeeks = {};
+  deals.forEach(d => {
+    const dt = d.stages['24595559'];
+    if (dt) {
+      const wk = toISOWeek(dt);
+      cadWeeks[wk] = (cadWeeks[wk] || 0) + 1;
+    }
+  });
+
+  // Segments
+  const byPorte = groupBy(deals, d => d.porte || '— sem porte');
+  const bySetor = groupBy(deals, d => d.setor  || '— sem categoria');
+
+  // Team
+  const cnMap = {};
+  deals.forEach(d => {
+    if (!d.cn) return;
+    if (!cnMap[d.cn]) cnMap[d.cn] = { name: d.cn, leads: 0, qualified: 0 };
+    cnMap[d.cn].leads++;
+    if (d.stages['24595561']) cnMap[d.cn].qualified++;
+  });
+  const cns = Object.values(cnMap).map(c => ({ ...c, rate: c.leads > 0 ? c.qualified / c.leads : 0 }))
+                                  .sort((a, b) => b.leads - a.leads);
+
+  const evMap = {};
+  deals.filter(d => d.stages['9102669'] && d.ev).forEach(d => {
+    if (!evMap[d.ev]) evMap[d.ev] = { name: d.ev, opportunities: 0, pipeline: 0 };
+    if (!d.stages['26183057'] && !d.stages[STAGE_OPP_LOST]) {
+      evMap[d.ev].opportunities++;
+      evMap[d.ev].pipeline += (d.amount || 0);
+    }
+  });
+  const evs = Object.values(evMap).sort((a, b) => b.pipeline - a.pipeline);
+
+  return {
+    total,
+    kpis: {
+      leadsTotal:    total,
+      qualified,
+      qualifiedRate: total > 0 ? qualified / total : 0,
+      inOpportunity: saoCount,
+      pipelineValue,
+      closed,
+      closedRevenue,
+    },
+    funnel: {
+      sdr: { cortex: sdrFunnel, baseline: baseline?.funnel?.sdr || [], cortexLost: sdrLost },
+      opp: { cortex: oppFunnel, baseline: baseline?.funnel?.opp || [], cortexLost: oppLost }
+    },
+    losses: {
+      total: lostDeals.length,
+      rate: total > 0 ? lostDeals.length / total : 0,
+      byStage:  Object.entries(byStage).map(([stage,  count]) => ({ stage,  count })).sort((a,b) => b.count - a.count),
+      byReason: Object.entries(byReason).map(([reason, count]) => ({ reason, count })).sort((a,b) => b.count - a.count),
+    },
+    cadences: {
+      weekly: Object.entries(cadWeeks).sort(([a],[b]) => a.localeCompare(b)).map(([week, count]) => ({ week, count }))
+    },
+    velocity: baseline?.velocity || { stages: [] },
+    segments: { byPorte, bySetor: bySetor.slice(0, 6) },
+    team: { cns, evs }
+  };
+}
+
+function groupBy(deals, keyFn) {
+  const acc = {};
+  deals.forEach(d => { const k = keyFn(d); acc[k] = (acc[k] || 0) + 1; });
+  return Object.entries(acc).map(([name, count]) => ({ name, count })).sort((a,b) => b.count - a.count);
+}
+
+function toISOWeek(dateStr) {
+  const d = new Date(dateStr);
+  const thr = new Date(d);
+  thr.setDate(d.getDate() - ((d.getDay() + 6) % 7) + 3);
+  const yr  = thr.getFullYear();
+  const jan4 = new Date(yr, 0, 4);
+  const wk  = 1 + Math.round((thr - jan4) / 604800000);
+  return `${yr}-W${String(wk).padStart(2,'0')}`;
+}
+
+// ---- Renderers -----------------------------------------------------------
 function renderTopbar(data) {
+  const meta = data.meta;
   return `
     <div class="topbar fade-in">
       <div class="brand">
@@ -488,8 +553,8 @@ function renderTopbar(data) {
         </div>
       </div>
       <div class="topbar-right">
-        <span><span class="live-dot"></span>Atualizado ${timeAgo(data.meta.updatedAt)}</span>
-        <span class="mono">${fmtDate(data.meta.updatedAt)}</span>
+        <span><span class="live-dot"></span>Atualizado ${timeAgo(meta.updatedAt)}</span>
+        <span class="mono">${fmtDate(meta.updatedAt)}</span>
       </div>
     </div>
   `;
@@ -499,19 +564,18 @@ function renderMaturity(data) {
   const m = data.meta;
   const isMature = m.maturityPct >= 30;
   const start = new Date(m.campaignStartDate);
-  const end = new Date(start); end.setDate(end.getDate() + m.campaignDurationDays);
+  const end   = new Date(start); end.setDate(end.getDate() + m.campaignDurationDays);
   const startLabel = start.toLocaleDateString('pt-BR', { day: '2-digit', month: 'short' });
-  const endLabel = end.toLocaleDateString('pt-BR', { day: '2-digit', month: 'short', year: 'numeric' });
+  const endLabel   = end.toLocaleDateString('pt-BR',   { day: '2-digit', month: 'short', year: 'numeric' });
   const msg = isMature
-    ? 'Campanha madura o suficiente para análise de métricas de fechamento.'
-    : 'Métricas de fechamento ainda em formação — foque nos indicadores <em>leading</em> (topo de funil e qualificação).';
+    ? 'Campanha com dados suficientes para análise de métricas de fechamento.'
+    : 'Campanha em formação — priorize indicadores de topo de funil (cadência, conexão e qualificação).';
   return `
     <div class="maturity fade-in">
       <div>
         <div class="maturity-label">Maturidade da campanha</div>
         <div class="maturity-text">
-          <span class="highlight ${isMature ? 'mature' : ''}">Dia ${m.daysElapsed} de ${m.campaignDurationDays}</span>
-          ${msg}
+          <span class="highlight${isMature ? ' mature' : ''}">Dia ${m.daysElapsed} de ${m.campaignDurationDays}</span>${msg}
         </div>
       </div>
       <div class="maturity-bar-wrap">
@@ -526,79 +590,140 @@ function renderMaturity(data) {
   `;
 }
 
-// --- KPIs -------------------------------------------------------------------
-function renderKPIs(data, view) {
-  const k = view.kpis;
-  const baselineRate = view.roi?.baselineConvRate;
-  const qualDelta = !isNil(k.qualifiedRate) && !isNil(baselineRate) ? k.qualifiedRate - baselineRate : null;
-  const viewSuffix = currentView === 'all' ? '' : ` · porte ${currentView}`;
+function renderFilterBar(data) {
+  const meta = data.meta;
+  const f    = data.filters || {};
+  const portes = meta.availablePortes || [];
+  const counts = meta.porteCounts || {};
+
+  const tabs = [
+    { id: 'all', label: 'Todos', count: counts.all ?? 0 },
+    ...portes.map(p => ({ id: p, label: p, count: counts[p] ?? 0 }))
+  ];
+
+  const selectOpts = (arr, key) => {
+    const opts = (arr || []).map(v => `<option value="${v}" ${filters[key] === v ? 'selected' : ''}>${v}</option>`).join('');
+    return `<option value="all">Todos${key === 'cn' ? ' CNs' : key === 'ev' ? ' EVs' : ''}</option>${opts}`;
+  };
+
+  // Active filter pills
+  const activePills = ['setor','cn','ev','campanha']
+    .filter(k => filters[k] !== 'all')
+    .map(k => `<span class="active-filter-pill">${filters[k]}<button data-clear="${k}">×</button></span>`)
+    .join('');
+
+  const hasDimFilters = ['setor','cn','ev','campanha'].some(k => filters[k] !== 'all');
 
   return `
-    <div class="section-header">
-      <div class="section-title">Visão geral${viewSuffix}</div>
-      <div class="section-sub">vs. Carteira 2025${currentView !== 'all' ? ` (${currentView})` : ''} · últimos ${data.meta.daysElapsed} dias</div>
-    </div>
-    <div class="kpi-grid">
-      <div class="kpi fade-in">
-        <div class="kpi-label">Leads entregues <span class="kpi-tag">leading</span></div>
-        <div class="kpi-value serif">${fmt(k.leadsTotal, 'int')}</div>
-        <div class="kpi-delta"><span class="kpi-muted">${data.meta.daysElapsed > 0 && k.leadsTotal > 0 ? `~${(k.leadsTotal / data.meta.daysElapsed).toFixed(1).replace('.', ',')}/dia` : DASH}</span></div>
+    <div class="filter-area fade-in">
+      <div class="porte-filter-bar">
+        <span class="filter-label">Porte</span>
+        <div class="porte-tabs">
+          ${tabs.map(t => `
+            <button class="porte-tab ${filters.porte === t.id ? 'active' : ''}" data-porte="${t.id}">
+              ${t.label} <span class="porte-count">${fmt(t.count, 'int')}</span>
+            </button>`).join('')}
+        </div>
       </div>
-      <div class="kpi fade-in">
-        <div class="kpi-label">Qualificados (CN) <span class="kpi-tag">leading</span></div>
-        <div class="kpi-value serif">${fmt(k.qualified, 'int')} <small>/ ${fmt(k.leadsTotal, 'int')}</small></div>
-        <div class="kpi-delta">${
-          qualDelta !== null
-            ? `<span class="${qualDelta >= 0 ? 'delta-up' : 'delta-down'}">${qualDelta >= 0 ? '↑' : '↓'} ${Math.abs(qualDelta * 100).toFixed(1).replace('.', ',')} pp</span><span>vs. Carteira 2025</span>`
-            : `<span class="kpi-muted">${fmt(k.qualifiedRate, 'pct')} de conversão</span>`
-        }</div>
-      </div>
-      <div class="kpi fade-in">
-        <div class="kpi-label">Em oportunidade <span class="kpi-tag">leading</span></div>
-        <div class="kpi-value serif">${fmt(k.inOpportunity, 'int')}</div>
-        <div class="kpi-delta"><span class="kpi-muted">${fmt(k.pipelineValue, 'currencyK')} em pipeline ativo</span></div>
-      </div>
-      <div class="kpi fade-in">
-        <div class="kpi-label">Fechados <span class="kpi-tag lagging">lagging</span></div>
-        <div class="kpi-value serif ${k.closed === 0 ? 'muted' : ''}">${fmt(k.closed, 'int')}</div>
-        <div class="kpi-delta"><span class="kpi-muted">${k.closed > 0 ? fmt(k.closedRevenue, 'currencyK') + ' fechados' : 'aguardando 1º fechamento'}</span></div>
-      </div>
-      <div class="kpi fade-in">
-        <div class="kpi-label">ROI projetado <span class="kpi-tag lagging">lagging</span></div>
-        <div class="kpi-value serif">${fmt(k.roiProjected, 'multiplier')}</div>
-        <div class="kpi-delta"><span class="kpi-muted">baseado em velocity atual</span></div>
+      <div class="dim-filter-bar">
+        <span class="filter-label">Filtrar por</span>
+        ${f.setores?.length ? `
+          <div class="dim-select-wrap">
+            <select class="dim-select" data-filter="setor"><option value="all">Todos setores</option>
+              ${(f.setores||[]).map(v => `<option value="${v}" ${filters.setor===v?'selected':''}>${v}</option>`).join('')}
+            </select>
+          </div>` : ''}
+        ${f.cns?.length ? `
+          <div class="dim-select-wrap">
+            <select class="dim-select" data-filter="cn"><option value="all">Todos CNs</option>
+              ${(f.cns||[]).map(v => `<option value="${v}" ${filters.cn===v?'selected':''}>${v}</option>`).join('')}
+            </select>
+          </div>` : ''}
+        ${f.evs?.length ? `
+          <div class="dim-select-wrap">
+            <select class="dim-select" data-filter="ev"><option value="all">Todos EVs</option>
+              ${(f.evs||[]).map(v => `<option value="${v}" ${filters.ev===v?'selected':''}>${v}</option>`).join('')}
+            </select>
+          </div>` : ''}
+        ${f.campanhas?.length ? `
+          <div class="dim-select-wrap">
+            <select class="dim-select" data-filter="campanha"><option value="all">Todas campanhas</option>
+              ${(f.campanhas||[]).map(v => `<option value="${v}" ${filters.campanha===v?'selected':''}>${v}</option>`).join('')}
+            </select>
+          </div>` : ''}
+        ${hasDimFilters ? `<span class="filter-sep"></span><button class="clear-filters-btn">Limpar filtros</button>` : ''}
+        ${activePills ? `<div class="filter-summary">${activePills}</div>` : ''}
       </div>
     </div>
   `;
 }
 
-// --- FUNNEL -----------------------------------------------------------------
-function renderFunnelCard(title, caption, stagesData, lostCount, handoffAlert) {
-  const cortex = stagesData.cortex || [];
-  const baseline = stagesData.baseline || [];
+function renderKPIs(m, meta) {
+  const k = m.kpis;
+  const d = meta.daysElapsed;
+  return `
+    <div class="section-header">
+      <div class="section-title">Visão geral · ${fmt(m.total, 'int')} leads · ${meta.companiesTotal} empresas mapeadas</div>
+      <div class="section-sub">Últimos ${d} dias · Campanha Cortex vs. Carteira 2025</div>
+    </div>
+    <div class="kpi-grid">
+      <div class="kpi fade-in">
+        <div class="kpi-label">Leads entregues <span class="kpi-tag">leading</span></div>
+        <div class="kpi-value serif">${fmt(k.leadsTotal, 'int')}</div>
+        <div class="kpi-delta"><span class="kpi-muted">${d > 0 && k.leadsTotal > 0 ? `~${(k.leadsTotal/d).toFixed(1).replace('.', ',')}/dia` : DASH}</span></div>
+      </div>
+      <div class="kpi fade-in">
+        <div class="kpi-label">Qualificados (CN) <span class="kpi-tag">leading</span></div>
+        <div class="kpi-value serif">${fmt(k.qualified, 'int')}</div>
+        <div class="kpi-delta"><span class="kpi-muted">${fmt(k.qualifiedRate, 'pct')} taxa de qualificação</span></div>
+      </div>
+      <div class="kpi fade-in">
+        <div class="kpi-label">SAO (oportunidades) <span class="kpi-tag">leading</span></div>
+        <div class="kpi-value serif ${k.inOpportunity === 0 ? 'muted' : ''}">${fmt(k.inOpportunity, 'int')}</div>
+        <div class="kpi-delta"><span class="kpi-muted">${k.inOpportunity === 0 ? 'aguardando 1ª oportunidade' : 'deals em pipeline ativo'}</span></div>
+      </div>
+      <div class="kpi fade-in">
+        <div class="kpi-label">Perdidos</div>
+        <div class="kpi-value serif ${m.losses.total > 0 ? '' : 'muted'}">${fmt(m.losses.total, 'int')}</div>
+        <div class="kpi-delta">
+          ${m.losses.total > 0 ? `<span class="delta-down">↓ ${fmt(m.losses.rate, 'pct')} do total</span>` : `<span class="kpi-muted">nenhum perdido</span>`}
+        </div>
+      </div>
+      <div class="kpi fade-in">
+        <div class="kpi-label">Fechados</div>
+        <div class="kpi-value serif ${k.closed === 0 ? 'muted' : ''}">${fmt(k.closed, 'int')}</div>
+        <div class="kpi-delta"><span class="kpi-muted">${k.closed > 0 ? 'deals fechados' : 'aguardando 1º fechamento'}</span></div>
+      </div>
+    </div>
+  `;
+}
+
+function renderFunnelCard(title, caption, cortex, baseline, cortexLost, saoIsLast) {
+  const bTotal = baseline[0]?.count || 1;
 
   const rows = cortex.map((c, i) => {
-    const baselineTop = baseline[i]?.rateFromTop ?? 0;
-    const cortexRate = c.rateFromTop;
-    const delta = (!isNil(cortexRate) && !isNil(baselineTop)) ? cortexRate - baselineTop : null;
-    const deltaClass = delta === null ? '' : delta > 0.01 ? 'positive' : delta < -0.01 ? 'negative' : '';
+    const bl           = baseline[i] || {};
+    const baselineTop  = bl.rateFromTop ?? 0;
+    const cortexTop    = c.rateFromTop;
+    const delta        = (!isNil(cortexTop) && !isNil(baselineTop)) ? cortexTop - baselineTop : null;
+    const deltaClass   = delta === null ? '' : delta > 0.01 ? 'positive' : delta < -0.01 ? 'negative' : '';
+    const isSaoRow     = saoIsLast && i === cortex.length - 1;
 
     return `
-      <div class="stage-row">
-        <div class="stage-name">${c.stage}<div class="stage-count">${fmt(c.count, 'int')} deals</div></div>
+      <div class="stage-row${isSaoRow ? ' sao-divider' : ''}">
+        <div class="stage-name">${c.stage}<div class="stage-count-sm">${fmt(c.count, 'int')} deals · baseline: ${fmt(bl.count, 'int')}</div></div>
         <div class="stage-bars">
           <div class="stage-bar-row">
-            <div class="bar-outer"><div class="bar-inner bar-cortex" style="width:${Math.min(100, (cortexRate || 0) * 100)}%"></div></div>
-            <div class="bar-label">${fmt(cortexRate, 'pct')}</div>
+            <div class="bar-outer"><div class="bar-inner bar-cortex"   style="width:${Math.min(100,(cortexTop||0)*100)}%"></div></div>
+            <div class="bar-label">${fmt(cortexTop, 'pct')}</div>
           </div>
           <div class="stage-bar-row">
-            <div class="bar-outer"><div class="bar-inner bar-baseline" style="width:${Math.min(100, (baselineTop || 0) * 100)}%"></div></div>
+            <div class="bar-outer"><div class="bar-inner bar-baseline" style="width:${Math.min(100,(baselineTop||0)*100)}%"></div></div>
             <div class="bar-label">${fmt(baselineTop, 'pct')}</div>
           </div>
         </div>
         <div class="stage-rate ${deltaClass}">${i === 0 ? DASH : fmt(delta, 'pp')}${i === 0 ? '' : '<span class="delta">vs. baseline</span>'}</div>
-      </div>
-    `;
+      </div>`;
   }).join('');
 
   return `
@@ -609,298 +734,317 @@ function renderFunnelCard(title, caption, stagesData, lostCount, handoffAlert) {
         <span><span class="legend-dot legend-cortex"></span>Cortex</span>
         <span><span class="legend-dot legend-baseline"></span>Carteira 2025</span>
       </div>
-      ${handoffAlert || ''}
       ${rows}
-      ${lostCount > 0 ? `<div class="stage-count" style="margin-top:12px; padding-top:10px; border-top:1px solid var(--border)">${fmt(lostCount, 'int')} deals perdidos (saíram do funil)</div>` : ''}
-    </div>
-  `;
+      <div class="lost-row">
+        <span>Cortex: <strong>${fmt(cortexLost, 'int')}</strong> perdidos</span>
+      </div>
+    </div>`;
 }
 
-function renderFunnel(view) {
-  const f = view.funnel || {};
-  const handoffGap = !isNil(f.handoffRateCortex) && !isNil(f.handoffRateBaseline) ? f.handoffRateBaseline - f.handoffRateCortex : null;
-  const handoffAlert = (handoffGap !== null && handoffGap > 0.05)
-    ? `
-      <div class="handoff-alert">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1.5L.5 14h15L8 1.5zm0 4l5 8.5H3L8 5.5zm-.5 2.5v3h1v-3h-1zm0 4v1h1v-1h-1z"/></svg>
-        <span><strong>Gap na passagem de bastão:</strong> ${fmt(f.handoffRateCortex, 'pct')} dos leads Cortex qualificados viraram oportunidade, vs. ${fmt(f.handoffRateBaseline, 'pct')} na Carteira 2025. Investigar critério de qualificação e alinhamento CN × EV.</span>
-      </div>
-    ` : '';
-
+function renderFunnel(m) {
+  const f = m.funnel;
   return `
     <div class="section-header">
       <div class="section-title">Funil comparativo</div>
-      <div class="section-sub">Cortex vs. Carteira 2025 · taxa de conversão do topo do funil</div>
+      <div class="section-sub">Taxa de conversão do topo · Cortex vs. Carteira 2025</div>
     </div>
     <div class="funnel-grid">
-      ${renderFunnelCard('Funil de Leads (CN)', 'Mapeamento → Qualificação Realizada', f.sdr || {}, f.sdr?.cortexLost || 0)}
-      ${renderFunnelCard('Funil de Oportunidades (EV)', 'SAO → Proposta Aceita', f.opp || {}, f.opp?.cortexLost || 0, handoffAlert)}
-    </div>
-  `;
+      ${renderFunnelCard('Funil CN → SAO', 'Mapeamento → Qual. Realizada → SAO', f.sdr.cortex, f.sdr.baseline, f.sdr.cortexLost, true)}
+      ${renderFunnelCard('Funil de Oportunidades (EV)', 'SAO → Proposta Aceita', f.opp.cortex, f.opp.baseline, f.opp.cortexLost, false)}
+    </div>`;
 }
 
-// --- VELOCITY ---------------------------------------------------------------
-function renderVelocity(view) {
-  const v = view.velocity || { stages: [] };
-  const stages = v.stages || [];
-  const allValues = stages.flatMap(s => [s.cortexDays, s.baselineDays]).filter(x => !isNil(x) && x > 0);
-  const max = allValues.length ? Math.max(...allValues) : 1;
-  const scale = 150;
+function renderLossAnalysis(m) {
+  const l = m.losses;
+  const maxStage  = l.byStage[0]?.count  || 1;
+  const maxReason = l.byReason[0]?.count || 1;
+
+  const stageRows = l.byStage.length === 0
+    ? `<div style="color:var(--text-4);font-size:13px;padding:12px 0;">Nenhum deal perdido neste recorte</div>`
+    : l.byStage.map(r => `
+        <div class="loss-bar-row">
+          <div class="loss-bar-label" title="${r.stage}">${r.stage}</div>
+          <div class="loss-bar-outer"><div class="loss-bar-fill" style="width:${(r.count/maxStage)*100}%"></div></div>
+          <div class="loss-count">${r.count}</div>
+        </div>`).join('');
+
+  const reasonRows = l.byReason.length === 0
+    ? `<div style="color:var(--text-4);font-size:13px;padding:12px 0;">Sem motivos registrados</div>`
+    : l.byReason.map(r => `
+        <div class="loss-bar-row">
+          <div class="loss-bar-label" title="${r.reason}">${r.reason}</div>
+          <div class="loss-bar-outer"><div class="loss-bar-fill reason" style="width:${(r.count/maxReason)*100}%"></div></div>
+          <div class="loss-count">${r.count}</div>
+        </div>`).join('');
+
+  return `
+    <div class="section-header">
+      <div class="section-title">Análise de perdas</div>
+      <div class="section-sub">Onde e por que os deals saem do funil</div>
+    </div>
+    <div class="loss-grid">
+      <div class="loss-card fade-in">
+        <div class="loss-header">
+          <div>
+            <div class="loss-total${l.total === 0 ? ' zero' : ''} serif">${fmt(l.total, 'int')}</div>
+            <div class="loss-sub">deals perdidos · ${fmt(l.rate, 'pct')} do total</div>
+          </div>
+          <div style="font-size:12px;color:var(--text-3)">por etapa</div>
+        </div>
+        <div class="loss-bar-list">${stageRows}</div>
+      </div>
+      <div class="loss-card fade-in">
+        <div class="loss-header">
+          <div>
+            <div style="font-size:13px;font-weight:500;">Motivos de perda</div>
+            <div class="loss-sub">preenchidos no HubSpot</div>
+          </div>
+        </div>
+        <div class="loss-bar-list">${reasonRows}</div>
+      </div>
+    </div>`;
+}
+
+function renderVelocity(velocity) {
+  const stages = velocity.stages || [];
+  if (stages.length === 0) return '';
+
+  const allVals = stages.flatMap(s => [s.cortexDays, s.avgDays]).filter(x => x !== null && x !== undefined && x > 0);
+  const maxV = allVals.length ? Math.max(...allVals) : 1;
+  const scale = 120;
 
   const cols = stages.map(s => {
-    const cH = !isNil(s.cortexDays) ? Math.max(4, (s.cortexDays / max) * scale) : 12;
-    const bH = !isNil(s.baselineDays) ? Math.max(4, (s.baselineDays / max) * scale) : 12;
+    const cH = (s.cortexDays !== null && s.cortexDays !== undefined && s.cortexDays > 0)
+      ? Math.max(4, (s.cortexDays / maxV) * scale) : 0;
+    const bH = (s.avgDays !== null && s.avgDays !== undefined && s.avgDays > 0)
+      ? Math.max(4, (s.avgDays / maxV) * scale) : 0;
     return `
       <div class="velocity-col">
         <div class="velocity-bar-container">
-          <div class="velocity-bar ${isNil(s.cortexDays) ? 'empty' : ''}" style="height:${cH}px"></div>
-          <div class="velocity-value ${isNil(s.cortexDays) ? 'muted' : ''}">${fmt(s.cortexDays, 'days')}</div>
-          <div class="velocity-bar baseline ${isNil(s.baselineDays) ? 'empty' : ''}" style="height:${bH}px"></div>
-          <div class="velocity-value"><small>${fmt(s.baselineDays, 'days')}</small></div>
+          ${cH > 0 ? `<div class="velocity-bar" style="height:${cH}px"></div>` : `<div class="velocity-bar empty" style="height:12px"></div>`}
+          <div class="velocity-value ${cH === 0 ? 'muted' : ''}">${cH > 0 ? fmt(s.cortexDays, 'days') : DASH}</div>
+          <div class="velocity-bar baseline" style="height:${Math.max(4, bH)}px"></div>
+          <div class="velocity-value"><small>${fmt(s.avgDays, 'days')}</small></div>
         </div>
         <div class="velocity-stage">${s.name}</div>
-      </div>
-    `;
+      </div>`;
   }).join('');
 
   return `
     <div class="section-header">
       <div class="section-title">Velocidade do funil</div>
-      <div class="section-sub">dias médios em cada stage · Cortex vs. Carteira 2025</div>
+      <div class="section-sub">Dias médios por stage · barra verde = Cortex · cinza = Carteira 2025 · menor é melhor</div>
     </div>
     <div class="velocity-card fade-in">
       <div class="funnel-legend">
         <span><span class="legend-dot legend-cortex"></span>Cortex</span>
         <span><span class="legend-dot legend-baseline"></span>Carteira 2025</span>
-        <span style="margin-left:auto; color:var(--text-4)">menor é melhor</span>
+        <span style="margin-left:auto;color:var(--text-4)">menor é melhor</span>
       </div>
       <div class="velocity-grid">${cols}</div>
-      <div style="display:flex; justify-content:space-between; margin-top:16px; font-size:11px; color:var(--text-4)">
-        <span>← Funil CN (6 stages) · &nbsp; Funil EV (5 stages) →</span>
-        <span>Ciclo total baseline: <strong style="color:var(--text-2)">${fmt(v.cycleBaselineDays, 'days')}</strong></span>
-      </div>
-    </div>
-  `;
+    </div>`;
 }
 
-// --- ROI --------------------------------------------------------------------
-function renderROI(data, view) {
-  const r = view.roi || {};
-  const roiClass = !isNil(r.roi1yProjected) && r.roi1yProjected >= 1 ? 'positive' : '';
-  const costLabel = currentView === 'all'
-    ? `Custo anual: <span class="mono">${fmt(data.cost.annual, 'currencyFull')}</span>`
-    : `Custo rateado (porte ${currentView}): <span class="mono">${fmt(r.costShare, 'currencyFull')}</span>`;
+function renderCadences(m) {
+  const weekly = m.cadences?.weekly || [];
+
+  let chartHtml = '';
+  if (weekly.length === 0) {
+    chartHtml = `<div class="cadence-empty">Nenhuma entrada em cadência registrada neste recorte</div>`;
+  } else {
+    const maxVal = Math.max(...weekly.map(w => w.count), 1);
+    const BAR_W = 44, BAR_GAP = 8, CHART_H = 140, LABEL_H = 28;
+    const svgW = weekly.length * (BAR_W + BAR_GAP) + BAR_GAP;
+    const svgH = CHART_H + LABEL_H;
+
+    const bars = weekly.map((w, i) => {
+      const barH = Math.max(4, (w.count / maxVal) * CHART_H);
+      const x = BAR_GAP + i * (BAR_W + BAR_GAP);
+      const y = CHART_H - barH;
+      const lbl = weekLabel(w.week);
+      return `
+        <g>
+          <rect x="${x}" y="${y}" width="${BAR_W}" height="${barH}" rx="3" fill="var(--accent)" opacity="0.85"/>
+          <text x="${x + BAR_W/2}" y="${y - 6}" text-anchor="middle" font-size="11" fill="var(--text-2)" font-family="'Geist Mono', monospace">${w.count}</text>
+          <text x="${x + BAR_W/2}" y="${CHART_H + 18}" text-anchor="middle" font-size="10" fill="var(--text-3)" font-family="Geist, sans-serif">${lbl}</text>
+        </g>`;
+    }).join('');
+
+    chartHtml = `
+      <div class="cadence-chart-wrap">
+        <svg width="${svgW}" height="${svgH}" viewBox="0 0 ${svgW} ${svgH}" xmlns="http://www.w3.org/2000/svg" style="overflow:visible;min-width:${svgW}px">
+          <line x1="0" y1="${CHART_H}" x2="${svgW}" y2="${CHART_H}" stroke="var(--border)" stroke-width="1"/>
+          ${bars}
+        </svg>
+      </div>`;
+  }
+
+  const totalCadences = weekly.reduce((s, w) => s + w.count, 0);
   return `
-    <div class="card fade-in">
-      <div class="card-title">Retorno financeiro</div>
-      <div class="card-sub">${costLabel}</div>
-      <div class="roi-stack">
-        <div class="roi-row">
-          <div>
-            <div class="roi-label-main">CAC realizado</div>
-            <div class="roi-label">custo ÷ deals fechados</div>
-          </div>
-          <div class="roi-value ${isNil(r.cacRealized) ? 'muted' : ''}">${
-            isNil(r.cacRealized) ? `${DASH}<small> aguardando 1º fechamento</small>` : fmt(r.cacRealized, 'currencyK')
-          }</div>
-        </div>
-        <div class="roi-row">
-          <div>
-            <div class="roi-label-main">CAC projetado <span class="projection-chip">projeção</span></div>
-            <div class="roi-label">baseado na velocity do funil</div>
-          </div>
-          <div class="roi-value">${fmt(r.cacProjected, 'currencyK')}</div>
-        </div>
-        <div class="roi-row">
-          <div>
-            <div class="roi-label-main">Ticket médio Carteira 2025</div>
-            <div class="roi-label">ACV médio dos deals fechados em 2025</div>
-          </div>
-          <div class="roi-value">${fmt(r.baselineAvgTicket, 'currencyK')}</div>
-        </div>
-        <div class="roi-row">
-          <div>
-            <div class="roi-label-main">Conversão Carteira 2025</div>
-            <div class="roi-label">leads que fecharam no funil completo</div>
-          </div>
-          <div class="roi-value">${fmt(r.baselineConvRate, 'pct')}</div>
-        </div>
-        <div class="roi-row">
-          <div>
-            <div class="roi-label-main">ROI 1º ano projetado</div>
-            <div class="roi-label">receita projetada ÷ custo</div>
-          </div>
-          <div class="roi-value ${roiClass}">${fmt(r.roi1yProjected, 'multiplier')}</div>
-        </div>
-      </div>
-      <div class="roi-footnote">
-        Projeções baseadas em ${fmt(r.closedYearProjected, 'int')} fechamentos esperados no 1º ano (${fmt(r.revenueYearProjected, 'currencyK')} de receita).
-      </div>
+    <div class="section-header">
+      <div class="section-title">Ritmo de cadências</div>
+      <div class="section-sub">Deals que entraram em cadência por semana · total: ${fmt(totalCadences, 'int')}</div>
     </div>
-  `;
+    <div class="cadence-card fade-in">
+      ${chartHtml}
+    </div>`;
 }
 
-// --- SEGMENTS ---------------------------------------------------------------
-function renderSegments(data, view) {
-  const s = view.segments || { byPorte: [], bySetor: [] };
-  const bySetor = s.bySetor || [];
-  const byPorte = s.byPorte || [];
-  const showPorteBlock = currentView === 'all' && byPorte.length > 0;
+function renderSegments(m, data) {
+  const s      = m.segments;
+  const total  = m.total || 1;
 
-  const totalSetor = bySetor.reduce((acc, r) => acc + r.count, 0) || 1;
-  const totalPorte = byPorte.reduce((acc, r) => acc + r.count, 0) || 1;
+  const showPorte = filters.porte === 'all' && s.byPorte.length > 0;
+  const PORTE_ORDER = ['P', 'M', 'G+'];
+  const sortedPorte = [...s.byPorte].sort((a, b) => {
+    const ia = PORTE_ORDER.indexOf(a.name), ib = PORTE_ORDER.indexOf(b.name);
+    return (ia === -1 ? 99 : ia) - (ib === -1 ? 99 : ib);
+  });
 
-  const setorRows = bySetor.length === 0
-    ? `<div class="segment-count" style="text-align:center; padding:20px 0; color:var(--text-4)">Sem dados de setor</div>`
-    : bySetor.map(r => `
-        <div class="segment-row">
-          <div class="segment-label" title="${r.name}">${r.name}</div>
-          <div class="segment-bar"><div class="segment-fill" style="width:${(r.count / totalSetor) * 100}%"></div></div>
-          <div class="segment-count">${fmt(r.count, 'int')}</div>
-        </div>
-      `).join('');
-
-  const porteRows = byPorte.map(r => `
+  const makeRows = (arr, maxCount) => arr.map(r => `
     <div class="segment-row">
       <div class="segment-label" title="${r.name}">${r.name}</div>
-      <div class="segment-bar"><div class="segment-fill" style="width:${(r.count / totalPorte) * 100}%"></div></div>
+      <div class="segment-bar"><div class="segment-fill" style="width:${(r.count/(maxCount||1))*100}%"></div></div>
       <div class="segment-count">${fmt(r.count, 'int')}</div>
-    </div>
-  `).join('');
+    </div>`).join('');
+
+  const setorMax = s.bySetor[0]?.count || 1;
+  const porteMax = sortedPorte[0]?.count || 1;
 
   return `
     <div class="card fade-in">
       <div class="card-title">Perfil das empresas</div>
-      <div class="card-sub">Distribuição dos ${fmt(view.kpis.leadsTotal, 'int')} leads${currentView !== 'all' ? ` do porte ${currentView}` : ''}</div>
-      ${showPorteBlock ? `
-        <div style="margin-bottom:18px">
-          <div style="font-size:11px; color:var(--text-3); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:10px">Por porte</div>
-          <div class="segments">${porteRows}</div>
-        </div>
-        <div style="margin-top:20px; padding-top:20px; border-top:1px solid var(--border)">
-          <div style="font-size:11px; color:var(--text-3); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:10px">Top setores</div>
-          <div class="segments">${setorRows}</div>
-        </div>
+      <div class="card-sub">Distribuição de ${fmt(m.total, 'int')} leads no recorte atual</div>
+      ${showPorte ? `
+        <div style="font-size:11px;color:var(--text-3);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:10px">Por porte</div>
+        <div class="segments" style="margin-bottom:20px">${makeRows(sortedPorte, porteMax)}</div>
+        <div style="font-size:11px;color:var(--text-3);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:10px;padding-top:18px;border-top:1px solid var(--border)">Por setor</div>
+        <div class="segments">${makeRows(s.bySetor, setorMax)}</div>
       ` : `
-        <div style="font-size:11px; color:var(--text-3); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:10px">Top setores</div>
-        <div class="segments">${setorRows}</div>
+        <div class="segments">${makeRows(s.bySetor, setorMax)}</div>
       `}
-    </div>
-  `;
+    </div>`;
 }
 
-function renderROIAndSegments(data, view) {
-  return `
-    <div class="section-header">
-      <div class="section-title">Qualidade e retorno</div>
-      <div class="section-sub">CAC, ROI e perfil das empresas</div>
-    </div>
-    <div class="dual-grid">
-      ${renderROI(data, view)}
-      ${renderSegments(data, view)}
-    </div>
-  `;
-}
-
-// --- TEAM -------------------------------------------------------------------
-function renderTeam(view) {
-  const t = view.team || { cns: [], evs: [] };
-  const cns = t.cns || [];
-  const evs = t.evs || [];
+function renderCNTable(cns, suffix) {
   const maxRate = cns.length ? Math.max(...cns.map(c => c.rate || 0), 0.01) : 0.01;
-  const suffix = currentView === 'all' ? '' : ` (porte ${currentView})`;
-
-  const cnRows = cns.length === 0
-    ? `<tr class="empty-row"><td colspan="4">Nenhum CN com deals Cortex${suffix} ainda</td></tr>`
-    : cns.slice(0, 10).map(c => `
+  const rows = cns.length === 0
+    ? `<tr class="empty-row"><td colspan="4">Nenhum CN com leads Cortex${suffix}</td></tr>`
+    : cns.map(c => `
         <tr>
-          <td><div class="person"><div class="avatar">${c.initials || initialsOf(c.name)}</div>${c.name}</div></td>
+          <td><div class="person"><div class="avatar">${initialsOf(c.name)}</div>${c.name}</div></td>
           <td>${fmt(c.leads, 'int')}</td>
           <td>${fmt(c.qualified, 'int')}</td>
           <td>
-            <span class="perf-mini-bar"><span class="perf-mini-bar-fill" style="width:${((c.rate || 0) / maxRate) * 100}%"></span></span>
+            <span class="perf-mini-bar"><span class="perf-mini-bar-fill" style="width:${((c.rate||0)/maxRate)*100}%"></span></span>
             <span class="rate-pill">${fmt(c.rate, 'pct')}</span>
           </td>
-        </tr>
-      `).join('');
+        </tr>`).join('');
+  return `
+    <div class="card fade-in">
+      <div class="card-title">Consultores de Negócio (CN)</div>
+      <div class="card-sub">Mapeamento → Qualificação Realizada</div>
+      <table class="perf">
+        <thead><tr><th>CN</th><th>Leads</th><th>Qualif.</th><th>Taxa</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>`;
+}
 
-  const evRows = evs.length === 0
-    ? `<tr class="empty-row"><td colspan="4">Nenhum EV com oportunidades Cortex${suffix} ainda</td></tr>`
-    : evs.slice(0, 10).map(e => `
+function renderEVTable(evs, suffix) {
+  const rows = evs.length === 0
+    ? `<tr class="empty-row"><td colspan="3">Nenhum EV com oportunidades Cortex${suffix}</td></tr>`
+    : evs.map(e => `
         <tr>
-          <td><div class="person"><div class="avatar">${e.initials || initialsOf(e.name)}</div>${e.name}</div></td>
+          <td><div class="person"><div class="avatar">${initialsOf(e.name)}</div>${e.name}</div></td>
           <td>${fmt(e.opportunities, 'int')}</td>
-          <td>${fmt(e.pipeline, 'currencyK')}</td>
-          <td><span class="rate-pill">${e.topStage || DASH}</span></td>
-        </tr>
-      `).join('');
+          <td>${fmt(e.pipeline, 'int') === DASH ? DASH : `R$ ${fmt(e.pipeline, 'int')}`}</td>
+        </tr>`).join('');
+  return `
+    <div class="card fade-in">
+      <div class="card-title">Executivos de Vendas (EV)</div>
+      <div class="card-sub">Oportunidades ativas em pipeline</div>
+      <table class="perf">
+        <thead><tr><th>EV</th><th>Oport. ativas</th><th>Pipeline</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>`;
+}
 
+function renderTeam(m) {
+  const suffix = filters.porte !== 'all' ? ` (porte ${filters.porte})` : '';
   return `
     <div class="section-header">
-      <div class="section-title">Performance por pessoa${suffix}</div>
-      <div class="section-sub">quem está capitalizando melhor os leads Cortex</div>
+      <div class="section-title">Performance por pessoa</div>
+      <div class="section-sub">Quem está capitalizando melhor os leads Cortex</div>
     </div>
     <div class="team-grid">
-      <div class="card fade-in">
-        <div class="card-title">Consultores de Negócio (CN)</div>
-        <div class="card-sub">conversão Mapeamento → Qualificação Realizada</div>
-        <table class="perf">
-          <thead><tr><th>CN</th><th>Leads</th><th>Qualif.</th><th>Taxa</th></tr></thead>
-          <tbody>${cnRows}</tbody>
-        </table>
-      </div>
-      <div class="card fade-in">
-        <div class="card-title">Executivos de Vendas (EV)</div>
-        <div class="card-sub">oportunidades ativas e valor em pipeline</div>
-        <table class="perf">
-          <thead><tr><th>EV</th><th>Oport.</th><th>Pipeline</th><th>Stage atual</th></tr></thead>
-          <tbody>${evRows}</tbody>
-        </table>
-      </div>
-    </div>
-  `;
+      ${renderCNTable(m.team.cns, suffix)}
+      ${renderEVTable(m.team.evs, suffix)}
+    </div>`;
 }
 
 function renderFooter(data) {
   const d = data.debug || {};
-  const unporteWarning = d.cortexDealsWithoutPorte > 0
-    ? ` · ⚠ ${d.cortexDealsWithoutPorte} deals sem porte definido`
-    : '';
+  const unporte = d.cortexDealsWithoutPorte > 0
+    ? ` · ⚠ ${d.cortexDealsWithoutPorte} deals sem porte` : '';
   return `
     <div class="footer">
-      <div>Fonte: HubSpot · filtro por <span class="mono">fatores_de_score</span> + nome do deal</div>
-      <div>Sync a cada 1h · ${fmt(d.cortexDealsCount, 'int')} Cortex / ${fmt(d.baselineDealsCount, 'int')} Carteira 2025${unporteWarning}</div>
-    </div>
-  `;
+      <div>Fonte: HubSpot · sync n8n</div>
+      <div>${fmt(d.cortexDealsCount,'int')} deals Cortex · ${fmt(d.baselineDealsCount,'int')} Carteira 2025${unporte} · sync a cada 1h</div>
+    </div>`;
 }
 
-// --- MAIN RENDER ------------------------------------------------------------
+// ---- Main render ---------------------------------------------------------
 function render() {
-  if (!currentData) return;
-  const root = document.getElementById('root');
-  const view = currentData.views[currentView] || currentData.views.all;
+  if (!gData) return;
+  const filtered  = applyFilters(gData.deals);
+  const baseline  = getBaseline(gData);
+  const m         = computeMetrics(filtered, baseline);
+  const meta      = gData.meta;
 
-  root.innerHTML = `
+  document.getElementById('root').innerHTML = `
     <div class="app">
-      ${renderTopbar(currentData)}
-      ${renderPorteFilter(currentData)}
-      ${renderMaturity(currentData)}
-      ${renderKPIs(currentData, view)}
-      ${renderFunnel(view)}
-      ${renderVelocity(view)}
-      ${renderROIAndSegments(currentData, view)}
-      ${renderTeam(view)}
-      ${renderFooter(currentData)}
+      ${renderTopbar(gData)}
+      ${renderMaturity(gData)}
+      ${renderFilterBar(gData)}
+      ${renderKPIs(m, meta)}
+      ${renderFunnel(m)}
+      ${renderLossAnalysis(m)}
+      ${renderVelocity(m.velocity)}
+      ${renderCadences(m)}
+      <div class="section-header">
+        <div class="section-title">Qualidade e perfil</div>
+        <div class="section-sub">Segmentação dos ${fmt(m.total, 'int')} leads no recorte</div>
+      </div>
+      <div class="dual-grid" style="margin-bottom:0">
+        ${renderSegments(m, gData)}
+        <div><!-- placeholder for future widget --></div>
+      </div>
+      ${renderTeam(m)}
+      ${renderFooter(gData)}
     </div>
   `;
 
-  // Bind filter clicks
+  // Bind porte tabs
   document.querySelectorAll('.porte-tab').forEach(btn => {
-    btn.addEventListener('click', () => {
-      currentView = btn.dataset.view;
-      try { localStorage.setItem(STORAGE_KEY, currentView); } catch (e) {}
-      render();
-    });
+    btn.addEventListener('click', () => { filters.porte = btn.dataset.porte; render(); });
+  });
+
+  // Bind dimension selects
+  document.querySelectorAll('.dim-select').forEach(sel => {
+    sel.addEventListener('change', () => { filters[sel.dataset.filter] = sel.value; render(); });
+  });
+
+  // Clear filters button
+  document.querySelector('.clear-filters-btn')?.addEventListener('click', () => {
+    ['setor','cn','ev','campanha'].forEach(k => filters[k] = 'all');
+    render();
+  });
+
+  // Clear individual pills
+  document.querySelectorAll('[data-clear]').forEach(btn => {
+    btn.addEventListener('click', () => { filters[btn.dataset.clear] = 'all'; render(); });
   });
 }
 
@@ -909,30 +1053,20 @@ function renderError(msg) {
     <div class="state-screen">
       <div>
         <div class="title serif">Não foi possível carregar o painel</div>
-        <div class="sub">O arquivo <span class="mono">data.json</span> não foi encontrado ou está inválido.</div>
+        <div class="sub">O arquivo <code>data.json</code> não foi encontrado ou tem estrutura inválida.</div>
         <div class="error-box">${msg}</div>
         <button class="retry-btn" onclick="loadData()">Tentar novamente</button>
       </div>
-    </div>
-  `;
+    </div>`;
 }
 
 async function loadData() {
   try {
-    const url = `${DATA_URL}?t=${Date.now()}`;
-    const resp = await fetch(url, { cache: 'no-store' });
+    const resp = await fetch(`${DATA_URL}?t=${Date.now()}`, { cache: 'no-store' });
     if (!resp.ok) throw new Error(`HTTP ${resp.status} ao buscar ${DATA_URL}`);
     const data = await resp.json();
-    if (!data.meta || !data.views) throw new Error('Estrutura do data.json inválida (faltando meta ou views)');
-
-    currentData = data;
-
-    // Recupera filtro salvo
-    try {
-      const saved = localStorage.getItem(STORAGE_KEY);
-      if (saved && data.views[saved]) currentView = saved;
-    } catch (e) {}
-
+    if (!data.meta || !data.deals || !data.baseline) throw new Error('Estrutura do data.json inválida (esperado: meta, deals, baseline)');
+    gData = data;
     render();
   } catch (e) {
     renderError(e.message || String(e));
@@ -942,6 +1076,5 @@ async function loadData() {
 loadData();
 setInterval(loadData, 15 * 60 * 1000);
 </script>
-
 </body>
 </html>
