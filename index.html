@@ -249,10 +249,35 @@
   /* CADENCES CHART */
   .cadence-card {
     background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
-    padding: 24px 26px; box-shadow: var(--shadow-sm);
+    padding: 28px 30px; box-shadow: var(--shadow-sm);
   }
-  .cadence-chart-wrap { overflow-x: auto; margin-top: 20px; }
-  .cadence-empty { font-size: 13px; color: var(--text-4); text-align: center; padding: 32px 0; }
+  .cadence-stats {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px;
+    padding-bottom: 24px; margin-bottom: 28px; border-bottom: 1px solid var(--border);
+  }
+  .cadence-stat-label {
+    font-size: 11px; color: var(--text-3); text-transform: uppercase;
+    letter-spacing: 0.08em; font-weight: 500; margin-bottom: 10px;
+  }
+  .cadence-stat-value { font-size: 32px; letter-spacing: -0.025em; line-height: 1; display: flex; align-items: baseline; gap: 8px; }
+  .cadence-stat-value.muted { color: var(--text-4); }
+  .cadence-stat-value.pos   { color: var(--positive); }
+  .cadence-stat-value.neg   { color: var(--negative); }
+  .cadence-stat-meta { font-size: 12px; color: var(--text-4); font-family: 'Geist'; font-weight: 400; letter-spacing: 0; }
+  .cadence-arrow { font-size: 22px; line-height: 1; }
+  .cadence-chart-wrap { overflow-x: auto; padding: 0 4px; }
+  .cadence-empty { font-size: 13px; color: var(--text-4); text-align: center; padding: 48px 0; }
+  .cad-bar { transition: opacity 0.18s; }
+  .cad-bar:hover { opacity: 0.78; }
+  .cad-bar-zero { fill: var(--surface-2); }
+  .cad-grid-line { stroke: var(--border); stroke-width: 1; stroke-dasharray: 2 4; opacity: 0.6; }
+  .cad-baseline { stroke: var(--text-3); stroke-width: 1.5; opacity: 0.4; }
+  .cad-axis-val { font-size: 10px; fill: var(--text-4); font-family: 'Geist Mono', monospace; }
+  .cad-week-lbl { font-size: 11px; fill: var(--text-2); font-weight: 500; font-family: Geist, sans-serif; }
+  .cad-week-date { font-size: 9px; fill: var(--text-4); font-family: Geist, sans-serif; letter-spacing: 0.02em; }
+  .cad-count-lbl { font-size: 13px; fill: var(--text-1); font-weight: 500; font-family: 'Fraunces', serif; }
+  .cad-count-zero { font-size: 10px; fill: var(--text-4); font-family: 'Geist Mono', monospace; }
+  .cad-peak-mark { fill: var(--warning); }
 
   /* DUAL GRID */
   .dual-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -384,9 +409,67 @@ function timeAgo(iso) {
   return `há ${Math.floor(hrs / 24)} d`;
 }
 function weekLabel(wk) {
-  // "2026-W14" → "Sem 14"
-  const [year, w] = wk.split('-W');
+  // "2026-W14" → "S14"
+  const [, w] = wk.split('-W');
   return `S${w}`;
+}
+
+// "2026-W14" → start (Mon) and end (Sun) Date objects
+function isoWeekToDates(wk) {
+  const [yr, w] = wk.split('-W').map(Number);
+  // Monday of ISO week 1: the Monday on or before Jan 4
+  const jan4 = new Date(yr, 0, 4);
+  const jan4Day = (jan4.getDay() + 6) % 7; // 0 = Mon
+  const week1Mon = new Date(jan4);
+  week1Mon.setDate(jan4.getDate() - jan4Day);
+  // Target week's Monday
+  const start = new Date(week1Mon);
+  start.setDate(week1Mon.getDate() + (w - 1) * 7);
+  const end = new Date(start);
+  end.setDate(start.getDate() + 6);
+  return { start, end };
+}
+function fmtDayMonth(d) {
+  const months = ['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'];
+  return `${String(d.getDate()).padStart(2,'0')} ${months[d.getMonth()]}`;
+}
+function isoWeekRangeLabel(wk) {
+  const { start, end } = isoWeekToDates(wk);
+  // If same month, show "06–12 abr"; else "30 mar–05 abr"
+  const months = ['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'];
+  const sd = String(start.getDate()).padStart(2,'0');
+  const ed = String(end.getDate()).padStart(2,'0');
+  if (start.getMonth() === end.getMonth()) {
+    return `${sd}–${ed} ${months[end.getMonth()]}`;
+  }
+  return `${sd} ${months[start.getMonth()]}–${ed} ${months[end.getMonth()]}`;
+}
+
+// Fill missing weeks with zero counts between min and max week (same year)
+function fillWeekGaps(weekly) {
+  if (weekly.length === 0) return [];
+  const sorted = [...weekly].sort((a, b) => a.week.localeCompare(b.week));
+  const map = Object.fromEntries(sorted.map(w => [w.week, w.count]));
+  const [startYr, startW] = sorted[0].week.split('-W').map(Number);
+  const [endYr, endW]     = sorted[sorted.length - 1].week.split('-W').map(Number);
+  if (startYr !== endYr) return sorted; // cross-year, just use what we have
+
+  // How many ISO weeks does this year have?
+  const dec28 = new Date(startYr, 11, 28);
+  const day28 = (dec28.getDay() + 6) % 7;
+  const lastWeekMon = new Date(dec28); lastWeekMon.setDate(dec28.getDate() - day28);
+  const jan4 = new Date(startYr, 0, 4);
+  const jan4Day = (jan4.getDay() + 6) % 7;
+  const week1Mon = new Date(jan4); week1Mon.setDate(jan4.getDate() - jan4Day);
+  const totalWeeks = Math.round((lastWeekMon - week1Mon) / 604800000) + 1;
+
+  const out = [];
+  for (let w = startW; w <= endW; w++) {
+    if (w > totalWeeks) break;
+    const key = `${startYr}-W${String(w).padStart(2, '0')}`;
+    out.push({ week: key, count: map[key] || 0 });
+  }
+  return out;
 }
 function initialsOf(name) {
   if (!name) return '?';
@@ -846,47 +929,136 @@ function renderVelocity(velocity) {
 }
 
 function renderCadences(m) {
-  const weekly = m.cadences?.weekly || [];
+  const rawWeekly = m.cadences?.weekly || [];
 
-  let chartHtml = '';
-  if (weekly.length === 0) {
-    chartHtml = `<div class="cadence-empty">Nenhuma entrada em cadência registrada neste recorte</div>`;
-  } else {
-    const maxVal = Math.max(...weekly.map(w => w.count), 1);
-    const BAR_W = 44, BAR_GAP = 8, CHART_H = 140, LABEL_H = 28;
-    const svgW = weekly.length * (BAR_W + BAR_GAP) + BAR_GAP;
-    const svgH = CHART_H + LABEL_H;
-
-    const bars = weekly.map((w, i) => {
-      const barH = Math.max(4, (w.count / maxVal) * CHART_H);
-      const x = BAR_GAP + i * (BAR_W + BAR_GAP);
-      const y = CHART_H - barH;
-      const lbl = weekLabel(w.week);
-      return `
-        <g>
-          <rect x="${x}" y="${y}" width="${BAR_W}" height="${barH}" rx="3" fill="var(--accent)" opacity="0.85"/>
-          <text x="${x + BAR_W/2}" y="${y - 6}" text-anchor="middle" font-size="11" fill="var(--text-2)" font-family="'Geist Mono', monospace">${w.count}</text>
-          <text x="${x + BAR_W/2}" y="${CHART_H + 18}" text-anchor="middle" font-size="10" fill="var(--text-3)" font-family="Geist, sans-serif">${lbl}</text>
-        </g>`;
-    }).join('');
-
-    chartHtml = `
-      <div class="cadence-chart-wrap">
-        <svg width="${svgW}" height="${svgH}" viewBox="0 0 ${svgW} ${svgH}" xmlns="http://www.w3.org/2000/svg" style="overflow:visible;min-width:${svgW}px">
-          <line x1="0" y1="${CHART_H}" x2="${svgW}" y2="${CHART_H}" stroke="var(--border)" stroke-width="1"/>
-          ${bars}
-        </svg>
+  if (rawWeekly.length === 0) {
+    return `
+      <div class="section-header">
+        <div class="section-title">Ritmo de cadências</div>
+        <div class="section-sub">Quantos deals entraram em "Em cadência" por semana ISO</div>
+      </div>
+      <div class="cadence-card fade-in">
+        <div class="cadence-empty">Nenhuma entrada em cadência registrada neste recorte</div>
       </div>`;
   }
 
-  const totalCadences = weekly.reduce((s, w) => s + w.count, 0);
+  // Fill week gaps for visual continuity
+  const weekly = fillWeekGaps(rawWeekly);
+
+  // Stats
+  const total       = weekly.reduce((s, w) => s + w.count, 0);
+  const nonZero     = weekly.filter(w => w.count > 0);
+  const max         = Math.max(...weekly.map(w => w.count), 1);
+  const avg         = nonZero.length > 0 ? total / nonZero.length : 0;
+  const peak        = weekly.reduce((acc, w) => w.count > acc.count ? w : acc, weekly[0]);
+  const last        = weekly[weekly.length - 1];
+  const prev        = weekly[weekly.length - 2] || null;
+  const wow         = (prev && prev.count > 0) ? ((last.count - prev.count) / prev.count) : null;
+
+  // SVG layout
+  const PAD_LEFT = 32, PAD_RIGHT = 12, PAD_TOP = 28, CHART_H = 200, LABEL_H = 56;
+  const BAR_W   = 48, BAR_GAP = 22;
+  const innerW  = weekly.length * (BAR_W + BAR_GAP) + BAR_GAP;
+  const svgW    = PAD_LEFT + innerW + PAD_RIGHT;
+  const svgH    = PAD_TOP + CHART_H + LABEL_H;
+
+  // Y-axis grid (4 ticks at 25/50/75/100% of max)
+  const niceMax = (() => {
+    // Round up max to a nice number
+    if (max <= 5)  return 5;
+    if (max <= 10) return 10;
+    if (max <= 20) return 20;
+    if (max <= 50) return Math.ceil(max / 5) * 5;
+    return Math.ceil(max / 10) * 10;
+  })();
+
+  const ticks  = [1, 0.75, 0.5, 0.25, 0];
+  const grid   = ticks.map(t => {
+    const y   = PAD_TOP + (1 - t) * CHART_H;
+    const val = Math.round(niceMax * t);
+    return `
+      <line class="cad-grid-line" x1="${PAD_LEFT}" y1="${y}" x2="${svgW - PAD_RIGHT}" y2="${y}"/>
+      <text class="cad-axis-val" x="${PAD_LEFT - 6}" y="${y + 3}" text-anchor="end">${val}</text>`;
+  }).join('');
+
+  const baseY = PAD_TOP + CHART_H;
+
+  // Bars
+  const bars = weekly.map((w, i) => {
+    const x   = PAD_LEFT + BAR_GAP + i * (BAR_W + BAR_GAP);
+    const cx  = x + BAR_W / 2;
+    const isZero  = w.count === 0;
+    const isPeak  = !isZero && w.count === peak.count;
+    const barH    = isZero ? 4 : Math.max(6, (w.count / niceMax) * CHART_H);
+    const y       = baseY - barH;
+    const dateLbl = isoWeekRangeLabel(w.week);
+    const wkLbl   = weekLabel(w.week);
+
+    if (isZero) {
+      return `
+        <g>
+          <rect class="cad-bar cad-bar-zero" x="${x}" y="${y}" width="${BAR_W}" height="${barH}" rx="2" ry="2"/>
+          <text class="cad-count-zero" x="${cx}" y="${y - 6}" text-anchor="middle">0</text>
+          <text class="cad-week-lbl"  x="${cx}" y="${baseY + 22}" text-anchor="middle" opacity="0.6">${wkLbl}</text>
+          <text class="cad-week-date" x="${cx}" y="${baseY + 38}" text-anchor="middle" opacity="0.6">${dateLbl}</text>
+        </g>`;
+    }
+    return `
+      <g>
+        <rect class="cad-bar" x="${x}" y="${y}" width="${BAR_W}" height="${barH}" rx="4" ry="4" fill="url(#cad-grad)"/>
+        ${isPeak ? `<circle class="cad-peak-mark" cx="${cx}" cy="${y - 18}" r="3.5"/>` : ''}
+        <text class="cad-count-lbl" x="${cx}" y="${y - 8}" text-anchor="middle">${w.count}</text>
+        <text class="cad-week-lbl"  x="${cx}" y="${baseY + 22}" text-anchor="middle">${wkLbl}</text>
+        <text class="cad-week-date" x="${cx}" y="${baseY + 38}" text-anchor="middle">${dateLbl}</text>
+      </g>`;
+  }).join('');
+
+  // Stat formatter
+  const wowDisplay = wow === null
+    ? `<span class="cadence-stat-value muted serif">—<span class="cadence-stat-meta">sem comparação</span></span>`
+    : `<span class="cadence-stat-value serif ${wow > 0 ? 'pos' : wow < 0 ? 'neg' : ''}">
+         <span class="cadence-arrow">${wow > 0 ? '↑' : wow < 0 ? '↓' : '–'}</span>
+         ${Math.abs(wow * 100).toFixed(0)}%
+         <span class="cadence-stat-meta">vs. ${weekLabel(prev.week)}</span>
+       </span>`;
+
   return `
     <div class="section-header">
       <div class="section-title">Ritmo de cadências</div>
-      <div class="section-sub">Deals que entraram em cadência por semana · total: ${fmt(totalCadences, 'int')}</div>
+      <div class="section-sub">Quantos deals entraram em "Em cadência" por semana ISO</div>
     </div>
     <div class="cadence-card fade-in">
-      ${chartHtml}
+      <div class="cadence-stats">
+        <div>
+          <div class="cadence-stat-label">Total no período</div>
+          <span class="cadence-stat-value serif">${fmt(total, 'int')}<span class="cadence-stat-meta">deals em cadência</span></span>
+        </div>
+        <div>
+          <div class="cadence-stat-label">Pico semanal</div>
+          <span class="cadence-stat-value serif">${peak.count}<span class="cadence-stat-meta">na ${weekLabel(peak.week)} · ${isoWeekRangeLabel(peak.week)}</span></span>
+        </div>
+        <div>
+          <div class="cadence-stat-label">Média semanal</div>
+          <span class="cadence-stat-value serif">${avg.toFixed(1).replace('.', ',')}<span class="cadence-stat-meta">semanas com atividade</span></span>
+        </div>
+        <div>
+          <div class="cadence-stat-label">Última vs. anterior</div>
+          ${wowDisplay}
+        </div>
+      </div>
+      <div class="cadence-chart-wrap">
+        <svg width="${svgW}" height="${svgH}" viewBox="0 0 ${svgW} ${svgH}" xmlns="http://www.w3.org/2000/svg" style="min-width:${svgW}px">
+          <defs>
+            <linearGradient id="cad-grad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%"   stop-color="var(--accent)" stop-opacity="0.95"/>
+              <stop offset="100%" stop-color="var(--accent)" stop-opacity="0.55"/>
+            </linearGradient>
+          </defs>
+          ${grid}
+          <line class="cad-baseline" x1="${PAD_LEFT}" y1="${baseY}" x2="${svgW - PAD_RIGHT}" y2="${baseY}"/>
+          ${bars}
+        </svg>
+      </div>
     </div>`;
 }
 
