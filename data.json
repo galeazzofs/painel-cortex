@@ -1,11 +1,11 @@
 {
   "meta": {
-    "updatedAt": "2026-04-29T03:00:38.364Z",
+    "updatedAt": "2026-04-29T17:59:35.724Z",
     "campaignStartDate": "2026-04-01",
     "campaignDurationDays": 365,
     "daysElapsed": 28,
     "maturityPct": 7.7,
-    "companiesTotal": 163,
+    "companiesTotal": 16,
     "availablePortes": [
       "P",
       "M",
@@ -20,2813 +20,2976 @@
   },
   "deals": [
     {
-      "id": "100000",
-      "company": "Empresa 0001",
+      "id": "57818112619",
+      "company": "PULSUS - Cortex (1 campanha)",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Mar 2026",
+      "stages": {
+        "24595558": "2026-03-27T17:25:20.372Z",
+        "24595559": "2026-03-27T17:25:22.734Z",
+        "24595564": "2026-04-22T21:36:17.514Z",
+        "72557853": "2026-03-09T14:56:35.908Z"
+      },
+      "amount": 0,
+      "isLost": true,
+      "lostStage": "Em cadência",
+      "lostFunnel": "SDR",
+      "lostReason": null
+    },
+    {
+      "id": "57819527318",
+      "company": "DIEL ENERGIA - Cortex (1 campanha)",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Mar 2026",
+      "stages": {
+        "24595558": "2026-03-27T17:26:49.189Z",
+        "24595559": "2026-03-27T17:26:55.997Z",
+        "24595564": "2026-03-27T17:27:14.999Z",
+        "72557853": "2026-03-09T14:56:35.938Z"
+      },
+      "amount": 0,
+      "isLost": true,
+      "lostStage": "Em cadência",
+      "lostFunnel": "SDR",
+      "lostReason": null
+    },
+    {
+      "id": "57822077270",
+      "company": "NG BILLING - Cortex (1 campanha)",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Mar 2026",
+      "stages": {
+        "24595558": "2026-03-27T17:30:21.806Z",
+        "24595559": "2026-03-27T17:30:24.402Z",
+        "72557853": "2026-03-09T14:56:35.950Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "57821900804",
+      "company": "COLAB TECNOLOGIA E SERVICOS DE INTERNET S.A. - Cortex (1 campanha)",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Mar 2026",
+      "stages": {
+        "24595558": "2026-03-27T17:34:07.388Z",
+        "24595559": "2026-03-27T17:34:09.814Z",
+        "24595564": "2026-04-22T21:37:00.293Z",
+        "72557853": "2026-03-09T14:56:35.954Z"
+      },
+      "amount": 0,
+      "isLost": true,
+      "lostStage": "Em cadência",
+      "lostFunnel": "SDR",
+      "lostReason": null
+    },
+    {
+      "id": "57821336668",
+      "company": "ACCOUNTFY - Cortex (1 campanha)",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Mar 2026",
+      "stages": {
+        "24595558": "2026-03-27T18:43:22.509Z",
+        "24595559": "2026-03-27T18:43:25.493Z",
+        "72557853": "2026-03-09T14:56:36.176Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "57821334091",
+      "company": "B2E GROUP - Cortex (1 campanha)",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Mar 2026",
+      "stages": {
+        "24595558": "2026-03-19T17:53:46.016Z",
+        "24595559": "2026-03-19T17:53:52.153Z",
+        "24595564": "2026-04-22T19:50:58.392Z",
+        "72557853": "2026-03-09T14:56:36.248Z"
+      },
+      "amount": 0,
+      "isLost": true,
+      "lostStage": "Em cadência",
+      "lostFunnel": "SDR",
+      "lostReason": null
+    },
+    {
+      "id": "57822083094",
+      "company": "PLUGIFY - Cortex (1 campanha)",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Mar 2026",
+      "stages": {
+        "24595558": "2026-03-19T17:51:11.440Z",
+        "24595559": "2026-03-19T17:51:14.811Z",
+        "24595564": "2026-04-22T19:50:28.807Z",
+        "72557853": "2026-03-09T14:56:36.278Z"
+      },
+      "amount": 0,
+      "isLost": true,
+      "lostStage": "Em cadência",
+      "lostFunnel": "SDR",
+      "lostReason": null
+    },
+    {
+      "id": "57814755762",
+      "company": "QUIVER SOLUCOES - Cortex (1 campanha)",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Mar 2026",
+      "stages": {
+        "24595558": "2026-03-19T17:48:35.874Z",
+        "24595559": "2026-03-19T17:48:39.817Z",
+        "24595564": "2026-04-22T19:53:00.918Z",
+        "72557853": "2026-03-09T14:56:36.284Z"
+      },
+      "amount": 0,
+      "isLost": true,
+      "lostStage": "Em cadência",
+      "lostFunnel": "SDR",
+      "lostReason": null
+    },
+    {
+      "id": "57812554284",
+      "company": "NIMBI S/A - Cortex (1 campanha)",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Mar 2026",
+      "stages": {
+        "24595558": "2026-03-19T15:16:46.824Z",
+        "24595559": "2026-03-19T15:16:49.629Z",
+        "24595564": "2026-04-22T19:53:26.414Z",
+        "72557853": "2026-03-09T14:56:36.458Z"
+      },
+      "amount": 0,
+      "isLost": true,
+      "lostStage": "Em cadência",
+      "lostFunnel": "SDR",
+      "lostReason": null
+    },
+    {
+      "id": "57821331097",
+      "company": "GEDANKEN - GCERTIFICA - Cortex (1 campanha)",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Mar 2026",
+      "stages": {
+        "24595558": "2026-03-19T15:09:30.918Z",
+        "24595559": "2026-03-19T15:09:34.315Z",
+        "72557853": "2026-03-09T14:56:36.478Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "57821342613",
+      "company": "SOLUCOES SOPHIA - Cortex (1 campanha)",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Mar 2026",
+      "stages": {
+        "24595558": "2026-03-19T15:04:02.162Z",
+        "24595559": "2026-03-19T15:04:04.856Z",
+        "24595564": "2026-04-22T20:53:33.366Z",
+        "72557853": "2026-03-09T14:56:36.529Z"
+      },
+      "amount": 0,
+      "isLost": true,
+      "lostStage": "Em cadência",
+      "lostFunnel": "SDR",
+      "lostReason": null
+    },
+    {
+      "id": "57814176151",
+      "company": "ACURA TECHNOLOGIES - Cortex (1 campanha)",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Mar 2026",
+      "stages": {
+        "24595558": "2026-03-19T15:00:22.428Z",
+        "24595559": "2026-03-19T15:00:25.689Z",
+        "24595564": "2026-04-22T19:51:56.865Z",
+        "72557853": "2026-03-09T14:56:36.674Z"
+      },
+      "amount": 0,
+      "isLost": true,
+      "lostStage": "Em cadência",
+      "lostFunnel": "SDR",
+      "lostReason": null
+    },
+    {
+      "id": "57821679623",
+      "company": "SAUTER - Cortex (1 campanha)",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Mar 2026",
+      "stages": {
+        "24595558": "2026-03-19T14:56:15.273Z",
+        "24595559": "2026-03-19T14:56:19.581Z",
+        "24595564": "2026-04-22T19:52:29.662Z",
+        "72557853": "2026-03-09T14:56:36.728Z"
+      },
+      "amount": 0,
+      "isLost": true,
+      "lostStage": "Em cadência",
+      "lostFunnel": "SDR",
+      "lostReason": null
+    },
+    {
+      "id": "57819328535",
+      "company": "INFOPRICE - Cortex (1 campanha)",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Mar 2026",
+      "stages": {
+        "24595558": "2026-03-19T14:51:41.877Z",
+        "24595559": "2026-03-19T14:51:44.331Z",
+        "72557853": "2026-03-09T14:56:36.852Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "57820746579",
+      "company": "VERITY GROUP - Cortex (1 campanha)",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Mar 2026",
+      "stages": {
+        "24595558": "2026-03-19T14:43:52.325Z",
+        "24595559": "2026-03-19T14:43:55.304Z",
+        "24595564": "2026-04-22T19:51:27.149Z",
+        "72557853": "2026-03-09T14:56:36.872Z"
+      },
+      "amount": 0,
+      "isLost": true,
+      "lostStage": "Em cadência",
+      "lostFunnel": "SDR",
+      "lostReason": null
+    },
+    {
+      "id": "57822401060",
+      "company": "Food To Save - Cortex (1 campanha)",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Mar 2026",
+      "stages": {
+        "24595558": "2026-03-19T14:41:07.598Z",
+        "24595559": "2026-03-19T14:41:17.264Z",
+        "72557853": "2026-03-09T14:56:37.308Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "58652142116",
+      "company": "ERM BRASIL LTDA - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Mar 2026",
+      "stages": {
+        "24595558": "2026-04-17T19:11:32.107Z",
+        "24595559": "2026-04-17T19:11:34.497Z",
+        "72557853": "2026-03-31T18:33:19.465Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "58638038394",
+      "company": "TARGET SISTEMAS - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Mar 2026",
+      "stages": {
+        "24595558": "2026-04-08T14:39:40.444Z",
+        "24595559": "2026-04-08T14:39:49.173Z",
+        "24595564": "2026-04-22T21:29:09.547Z",
+        "72557853": "2026-03-31T18:33:19.654Z"
+      },
+      "amount": 0,
+      "isLost": true,
+      "lostStage": "Em cadência",
+      "lostFunnel": "SDR",
+      "lostReason": null
+    },
+    {
+      "id": "58642525851",
+      "company": "WGSN - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Mar 2026",
+      "stages": {
+        "24595558": "2026-04-08T14:06:09.447Z",
+        "24595559": "2026-04-08T14:06:12.878Z",
+        "72557853": "2026-03-31T18:33:19.670Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "58653999229",
+      "company": "ACATE - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Mar 2026",
+      "stages": {
+        "24595558": "2026-04-08T14:02:22.325Z",
+        "24595559": "2026-04-08T14:02:32.481Z",
+        "24595564": "2026-04-08T14:03:10.203Z",
+        "72557853": "2026-03-31T18:33:19.673Z"
+      },
+      "amount": 0,
+      "isLost": true,
+      "lostStage": "Em cadência",
+      "lostFunnel": "SDR",
+      "lostReason": null
+    },
+    {
+      "id": "58648386839",
+      "company": "Hemera DTVM - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Mar 2026",
+      "stages": {
+        "24595558": "2026-04-08T13:58:55.930Z",
+        "24595559": "2026-04-08T13:59:01.911Z",
+        "72557853": "2026-03-31T18:33:19.682Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "58641907025",
+      "company": "CONSTRUMARKET - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Mar 2026",
+      "stages": {
+        "24595558": "2026-04-08T13:51:12.481Z",
+        "24595559": "2026-04-08T13:51:16.187Z",
+        "72557853": "2026-03-31T18:33:19.885Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "58636730514",
+      "company": "Topcon Suite - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Mar 2026",
+      "stages": {
+        "24595558": "2026-04-08T13:47:19.927Z",
+        "24595559": "2026-04-08T13:47:23.032Z",
+        "72557853": "2026-03-31T18:33:19.887Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "58643766431",
+      "company": "M&I ELECTRIC BRAZIL SISTEMAS E SERVICOS EM ENERGIA LTDA - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Mar 2026",
+      "stages": {
+        "24595558": "2026-04-08T13:26:29.678Z",
+        "24595559": "2026-04-08T13:26:40.721Z",
+        "72557853": "2026-03-31T18:33:19.909Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "58657673332",
+      "company": "SOFIST - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Mar 2026",
+      "stages": {
+        "24595558": "2026-04-08T13:20:33.610Z",
+        "24595559": "2026-04-08T13:20:37.980Z",
+        "72557853": "2026-03-31T18:33:19.967Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "58651516214",
+      "company": "Minutrade - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Mar 2026",
+      "stages": {
+        "24595558": "2026-04-08T13:09:47.888Z",
+        "24595559": "2026-04-08T13:09:51.379Z",
+        "72557853": "2026-03-31T18:33:19.980Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "58652914517",
+      "company": "SERVIX - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Mar 2026",
+      "stages": {
+        "24595558": "2026-04-08T13:01:43.609Z",
+        "24595559": "2026-04-08T13:01:49.079Z",
+        "72557853": "2026-03-31T18:33:20.019Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "58637189378",
+      "company": "ARGO SOLUTIONS - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Mar 2026",
+      "stages": {
+        "24595558": "2026-04-08T12:53:44.492Z",
+        "24595559": "2026-04-08T12:53:48.021Z",
+        "72557853": "2026-03-31T18:33:20.038Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "58639894383",
+      "company": "AKROSS - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Mar 2026",
+      "stages": {
+        "24595558": "2026-04-08T12:44:49.571Z",
+        "24595559": "2026-04-08T12:44:53.321Z",
+        "72557853": "2026-03-31T18:33:20.075Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "58653999230",
+      "company": "Vector Unitech - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Mar 2026",
+      "stages": {
+        "24595558": "2026-04-08T11:50:07.652Z",
+        "24595559": "2026-04-08T11:50:12.108Z",
+        "24595564": "2026-04-22T21:00:52.003Z",
+        "72557853": "2026-03-31T18:33:20.126Z"
+      },
+      "amount": 0,
+      "isLost": true,
+      "lostStage": "Em cadência",
+      "lostFunnel": "SDR",
+      "lostReason": null
+    },
+    {
+      "id": "58654463049",
+      "company": "Salú - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Mar 2026",
+      "stages": {
+        "24595558": "2026-04-08T11:41:35.414Z",
+        "24595559": "2026-04-08T11:41:43.031Z",
+        "24595564": "2026-04-08T11:42:07.557Z",
+        "72557853": "2026-03-31T18:33:20.131Z"
+      },
+      "amount": 0,
+      "isLost": true,
+      "lostStage": "Em cadência",
+      "lostFunnel": "SDR",
+      "lostReason": null
+    },
+    {
+      "id": "58647762198",
+      "company": "WEHANDLE - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Mar 2026",
+      "stages": {
+        "24595558": "2026-04-08T11:35:15.814Z",
+        "24595559": "2026-04-08T11:35:19.864Z",
+        "72557853": "2026-03-31T18:33:20.148Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "58648386840",
+      "company": "ao3 (IOB) - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Mar 2026",
+      "stages": {
+        "24595558": "2026-04-08T11:27:26.749Z",
+        "24595559": "2026-04-08T11:27:30.065Z",
+        "24595564": "2026-04-08T11:28:04.978Z",
+        "72557853": "2026-03-31T18:33:20.394Z"
+      },
+      "amount": 0,
+      "isLost": true,
+      "lostStage": "Em cadência",
+      "lostFunnel": "SDR",
+      "lostReason": null
+    },
+    {
+      "id": "58646681735",
+      "company": "CERS Cursos Online - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Mar 2026",
+      "stages": {
+        "24595558": "2026-04-07T16:52:13.155Z",
+        "24595559": "2026-04-07T16:52:17.331Z",
+        "72557853": "2026-03-31T18:33:20.509Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "58642373042",
+      "company": "MAGIS5 - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Mar 2026",
+      "stages": {
+        "24595558": "2026-04-07T16:47:01.761Z",
+        "24595559": "2026-04-07T16:47:29.406Z",
+        "24595562": "2026-04-22T21:25:50.922Z",
+        "24595564": "2026-04-27T15:46:35.335Z",
+        "72557853": "2026-03-31T18:33:20.656Z"
+      },
+      "amount": 0,
+      "isLost": true,
+      "lostStage": "Lead Conectado",
+      "lostFunnel": "SDR",
+      "lostReason": null
+    },
+    {
+      "id": "58647920943",
+      "company": "Roca Imóveis - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Mar 2026",
+      "stages": {
+        "24595558": "2026-04-07T16:43:30.688Z",
+        "24595559": "2026-04-07T16:43:35.112Z",
+        "24595562": "2026-04-07T16:43:44.052Z",
+        "24595564": "2026-04-07T16:45:15.873Z",
+        "72557853": "2026-03-31T18:33:20.785Z"
+      },
+      "amount": 0,
+      "isLost": true,
+      "lostStage": "Lead Conectado",
+      "lostFunnel": "SDR",
+      "lostReason": null
+    },
+    {
+      "id": "59165345166",
+      "company": "CAMPOS MELLO ADVOGADOS - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Larissa Martins da Cruz",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-16T19:44:26.965Z",
+        "24595559": "2026-04-16T19:44:50.347Z",
+        "72557853": "2026-04-14T12:13:48.982Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59165538871",
+      "company": "SONEPAR BRASIL - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Larissa Martins da Cruz",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-16T19:44:26.965Z",
+        "24595559": "2026-04-16T19:44:50.347Z",
+        "72557853": "2026-04-14T12:13:49.096Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59166108524",
+      "company": "EMAIS URBANISMO - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Larissa Martins da Cruz",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-16T19:44:26.965Z",
+        "24595559": "2026-04-16T19:44:50.347Z",
+        "72557853": "2026-04-14T12:13:49.160Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59165458480",
+      "company": "BSOFT BY NSTECH - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Larissa Martins da Cruz",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-16T19:44:26.965Z",
+        "24595559": "2026-04-16T19:44:50.347Z",
+        "72557853": "2026-04-14T12:13:49.183Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59166187403",
+      "company": "GRUPO KRUEGER - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Larissa Martins da Cruz",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-16T19:44:26.965Z",
+        "24595559": "2026-04-16T19:44:50.347Z",
+        "72557853": "2026-04-14T12:13:49.205Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59166277902",
+      "company": "EXAL - EXCELENCIA EM ALIMENTACAO E FACILITIES - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Larissa Martins da Cruz",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-16T19:44:26.965Z",
+        "24595559": "2026-04-16T19:44:50.347Z",
+        "72557853": "2026-04-14T12:13:49.258Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59165360989",
+      "company": "LBX CONSTRUTORA - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Larissa Martins da Cruz",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-16T19:44:26.965Z",
+        "24595559": "2026-04-16T19:44:50.347Z",
+        "72557853": "2026-04-14T12:13:49.275Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59140099758",
+      "company": "TAKAOKA ANESTESIA - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Larissa Martins da Cruz",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-16T19:44:26.965Z",
+        "24595559": "2026-04-16T19:44:50.347Z",
+        "72557853": "2026-04-14T12:13:49.282Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59166202194",
+      "company": "INCENTIV - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Larissa Martins da Cruz",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-16T19:44:26.965Z",
+        "24595559": "2026-04-16T19:44:50.347Z",
+        "72557853": "2026-04-14T12:13:49.298Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59166234741",
+      "company": "CAPRICORNIO TEXTIL - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Larissa Martins da Cruz",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-15T19:28:45.773Z",
+        "24595559": "2026-04-15T19:29:03.274Z",
+        "72557853": "2026-04-14T12:13:49.302Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59139931688",
+      "company": "IRKO OUTSOURCING - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Larissa Martins da Cruz",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-15T19:28:45.773Z",
+        "24595559": "2026-04-15T19:29:03.274Z",
+        "72557853": "2026-04-14T12:13:49.336Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59166134612",
+      "company": "GENOMMA LAB - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Larissa Martins da Cruz",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-15T19:28:45.773Z",
+        "24595559": "2026-04-15T19:29:03.274Z",
+        "72557853": "2026-04-14T12:13:49.372Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59141040723",
+      "company": "HS GROUP - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Larissa Martins da Cruz",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-15T19:25:57.257Z",
+        "24595559": "2026-04-15T19:26:24.975Z",
+        "72557853": "2026-04-14T12:13:49.377Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59165398643",
+      "company": "PROCFIT - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Larissa Martins da Cruz",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-15T19:25:57.257Z",
+        "24595559": "2026-04-15T19:26:24.975Z",
+        "72557853": "2026-04-14T12:13:49.399Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59166300177",
+      "company": "ORCALI SEGURANCA E SERVICOS - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Larissa Martins da Cruz",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-15T19:25:57.257Z",
+        "24595559": "2026-04-15T19:26:24.975Z",
+        "72557853": "2026-04-14T12:13:49.477Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59166219438",
+      "company": "MERCAFACIL - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Larissa Martins da Cruz",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-15T19:25:57.257Z",
+        "24595559": "2026-04-15T19:26:24.975Z",
+        "72557853": "2026-04-14T12:13:49.529Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59166202201",
+      "company": "COMPUTECNICA TECNOLOGIA - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Larissa Martins da Cruz",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-15T19:25:57.257Z",
+        "24595559": "2026-04-15T19:26:24.975Z",
+        "72557853": "2026-04-14T12:13:49.592Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59139691008",
+      "company": "GRUPO VIGGO - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Larissa Martins da Cruz",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-15T19:25:57.257Z",
+        "24595559": "2026-04-15T19:26:24.975Z",
+        "72557853": "2026-04-14T12:13:49.636Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59165500185",
+      "company": "MAGIS5 - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Larissa Martins da Cruz",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-15T19:25:57.257Z",
+        "24595559": "2026-04-15T19:26:24.975Z",
+        "72557853": "2026-04-14T12:13:49.641Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59165542541",
+      "company": "VALDAR MOVEIS OFICIAL - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Larissa Martins da Cruz",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-15T19:25:57.257Z",
+        "24595559": "2026-04-15T19:26:24.975Z",
+        "72557853": "2026-04-14T12:13:49.819Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59164896837",
+      "company": "GRUPO CORPUS SANEAMENTO E OBRAS - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Larissa Martins da Cruz",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-15T19:25:57.257Z",
+        "24595559": "2026-04-15T19:26:24.975Z",
+        "72557853": "2026-04-14T12:13:50.215Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59165318045",
+      "company": "CIA DE TALENTOS - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Larissa Martins da Cruz",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-15T19:25:57.257Z",
+        "24595559": "2026-04-15T19:26:24.975Z",
+        "72557853": "2026-04-14T12:13:50.415Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59166475417",
+      "company": "TRANSDATA - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Luciano Moreira",
+      "ev": "Luciano Moreira",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-15T22:57:26.422Z",
+        "24595559": "2026-04-15T22:57:32.043Z",
+        "72557853": "2026-04-14T12:50:57.013Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59165763463",
+      "company": "TERRA - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Owner 84342335",
+      "ev": "Luciano Moreira",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-15T23:04:57.345Z",
+        "24595559": "2026-04-15T23:05:05.126Z",
+        "24595564": "2026-04-15T23:05:48.338Z",
+        "72557853": "2026-04-14T12:50:57.028Z"
+      },
+      "amount": 0,
+      "isLost": true,
+      "lostStage": "Em cadência",
+      "lostFunnel": "SDR",
+      "lostReason": null
+    },
+    {
+      "id": "59166221426",
+      "company": "BENX - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Luciano Moreira",
+      "ev": "Luciano Moreira",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-14T12:50:57.113Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59166449676",
+      "company": "NORTEC QUIMICA S/A. - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Luciano Moreira",
+      "ev": "Luciano Moreira",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-15T23:28:05.975Z",
+        "24595559": "2026-04-15T23:28:13.209Z",
+        "72557853": "2026-04-14T12:50:57.146Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59166404930",
+      "company": "TECNOGEO GROUND - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Luciano Moreira",
+      "ev": "Luciano Moreira",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-14T12:50:57.163Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59165863075",
+      "company": "DISPAFILM DO BRASIL LTDA - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Luciano Moreira",
+      "ev": "Luciano Moreira",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-14T12:50:57.192Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59166444665",
+      "company": "TROX DO BRASIL - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Luciano Moreira",
+      "ev": "Luciano Moreira",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-14T12:50:57.208Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59165700105",
+      "company": "ATAK SISTEMAS - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Luciano Moreira",
+      "ev": "Luciano Moreira",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-14T12:50:57.219Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59166466874",
+      "company": "PROGEN - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Luciano Moreira",
+      "ev": "Luciano Moreira",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-14T12:50:57.264Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59165621675",
+      "company": "EVER GREEN - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Luciano Moreira",
+      "ev": "Luciano Moreira",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-14T12:50:57.370Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59165902516",
+      "company": "NEFROCLINICAS - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Luciano Moreira",
+      "ev": "Luciano Moreira",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-14T12:50:57.382Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59165498395",
+      "company": "FAST2MINE - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Luciano Moreira",
+      "ev": "Luciano Moreira",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-14T12:50:57.484Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59159111021",
+      "company": "TOPDESK - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Luciano Moreira",
+      "ev": "Luciano Moreira",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-14T12:50:57.586Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59166298486",
+      "company": "POLIMOLD - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Luciano Moreira",
+      "ev": "Luciano Moreira",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-14T12:50:57.636Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59166215428",
+      "company": "SMITH+NEPHEW - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Luciano Moreira",
+      "ev": "Luciano Moreira",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-14T12:50:57.715Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59165781841",
+      "company": "Luft Healthcare - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Luciano Moreira",
+      "ev": "Luciano Moreira",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-14T12:50:57.751Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59166422351",
+      "company": "ENACOM GROUP - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Luciano Moreira",
+      "ev": "Luciano Moreira",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-14T12:50:57.755Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59165533000",
+      "company": "NUTRINOR RESTAURANTES EMPRESARIAIS - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Luciano Moreira",
+      "ev": "Luciano Moreira",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-14T12:50:57.760Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59165772900",
+      "company": "BROGNOLI - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Luciano Moreira",
+      "ev": "Luciano Moreira",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-14T12:50:57.801Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59165657960",
+      "company": "BOTOCLINIC - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Luciano Moreira",
+      "ev": "Luciano Moreira",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-14T12:50:57.846Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59140102281",
+      "company": "SEMANTIX - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Luciano Moreira",
+      "ev": "Luciano Moreira",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-14T12:50:57.988Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59165804335",
+      "company": "LOPES CONSULTORIA DE IMOVEIS - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Luciano Moreira",
+      "ev": "Luciano Moreira",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-14T12:50:58.393Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59248347775",
+      "company": "ao3 (IOB) - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-17T15:18:44.905Z",
+        "24595559": "2026-04-17T15:18:47.984Z",
+        "24595564": "2026-04-17T15:19:10.989Z",
+        "72557853": "2026-04-16T18:29:52.101Z"
+      },
+      "amount": 0,
+      "isLost": true,
+      "lostStage": "Em cadência",
+      "lostFunnel": "SDR",
+      "lostReason": null
+    },
+    {
+      "id": "59230164863",
+      "company": "ELECTROSON BRASIL TELECOMUNICACOES S/A - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-17T19:07:42.714Z",
+        "24595559": "2026-04-17T19:07:46.162Z",
+        "24595564": "2026-04-17T19:07:58.581Z",
+        "72557853": "2026-04-16T18:29:52.138Z"
+      },
+      "amount": 0,
+      "isLost": true,
+      "lostStage": "Em cadência",
+      "lostFunnel": "SDR",
+      "lostReason": null
+    },
+    {
+      "id": "59247101546",
+      "company": "VTECH SOLUCOES PARA VALVULAS - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-17T19:06:26.333Z",
+        "24595559": "2026-04-17T19:06:28.929Z",
+        "24595564": "2026-04-17T19:06:53.939Z",
+        "72557853": "2026-04-16T18:29:52.183Z"
+      },
+      "amount": 0,
+      "isLost": true,
+      "lostStage": "Em cadência",
+      "lostFunnel": "SDR",
+      "lostReason": null
+    },
+    {
+      "id": "59216166024",
+      "company": "Nova Escola - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-17T19:04:39.146Z",
+        "24595559": "2026-04-17T19:04:42.691Z",
+        "72557853": "2026-04-16T18:29:52.512Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59228300108",
+      "company": "HTM ELETRONICA - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-17T19:00:15.191Z",
+        "24595559": "2026-04-17T19:00:18.688Z",
+        "72557853": "2026-04-16T18:29:52.742Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59238366733",
+      "company": "Mercadominio - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-17T18:58:24.675Z",
+        "24595559": "2026-04-17T18:58:27.127Z",
+        "24595564": "2026-04-17T18:58:49.513Z",
+        "72557853": "2026-04-16T18:29:52.743Z"
+      },
+      "amount": 0,
+      "isLost": true,
+      "lostStage": "Em cadência",
+      "lostFunnel": "SDR",
+      "lostReason": null
+    },
+    {
+      "id": "59247268423",
+      "company": "BELVITUR - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-17T18:55:23.120Z",
+        "24595559": "2026-04-17T18:55:28.927Z",
+        "24595564": "2026-04-17T18:56:19.126Z",
+        "72557853": "2026-04-16T18:29:52.774Z"
+      },
+      "amount": 0,
+      "isLost": true,
+      "lostStage": "Em cadência",
+      "lostFunnel": "SDR",
+      "lostReason": null
+    },
+    {
+      "id": "59219754895",
+      "company": "RODOIL - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-16T18:29:52.819Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59219925390",
+      "company": "MAMIRAUA INSTITUTE – BRAZILIAN MINISTRY OF SCIENCE, TECHNOLOGY AND INNOVATION - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-17T18:53:31.988Z",
+        "24595559": "2026-04-17T18:53:34.987Z",
+        "72557853": "2026-04-16T18:29:52.929Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59226290081",
+      "company": "MOVETRULY LEAD MANAGEMENT - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-17T18:50:53.768Z",
+        "24595559": "2026-04-17T18:50:56.471Z",
+        "72557853": "2026-04-16T18:29:52.965Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59232191899",
+      "company": "Hurb - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-16T18:29:52.972Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59219596843",
+      "company": "SMILINK - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-17T18:44:42.724Z",
+        "24595559": "2026-04-17T18:44:45.814Z",
+        "24595564": "2026-04-17T18:45:13.693Z",
+        "72557853": "2026-04-16T18:29:52.988Z"
+      },
+      "amount": 0,
+      "isLost": true,
+      "lostStage": "Em cadência",
+      "lostFunnel": "SDR",
+      "lostReason": null
+    },
+    {
+      "id": "59238824377",
+      "company": "Tigrão Autopeças - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-17T18:43:20.318Z",
+        "24595559": "2026-04-17T18:43:22.892Z",
+        "72557853": "2026-04-16T18:29:53.002Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59235705350",
+      "company": "LABORATORIO ANALIN - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-17T18:37:07.970Z",
+        "24595559": "2026-04-17T18:37:11.914Z",
+        "72557853": "2026-04-16T18:29:53.009Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59232295262",
+      "company": "POLY-VAC - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-17T18:35:34.043Z",
+        "24595559": "2026-04-17T18:35:36.924Z",
+        "72557853": "2026-04-16T18:29:53.098Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59237793908",
+      "company": "CORNING INCORPORATED - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-17T18:30:10.015Z",
+        "24595559": "2026-04-17T18:30:12.956Z",
+        "72557853": "2026-04-16T18:29:53.256Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59236819466",
+      "company": "QuidelOrtho - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-17T18:22:29.385Z",
+        "24595559": "2026-04-17T18:22:32.049Z",
+        "72557853": "2026-04-16T18:29:53.333Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59245860198",
+      "company": "Gallerist - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-17T18:14:19.401Z",
+        "24595559": "2026-04-17T18:14:21.978Z",
+        "72557853": "2026-04-16T18:29:53.651Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59287392853",
+      "company": "MOOVEFY - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-17T19:24:47.336Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59293011297",
+      "company": "DADOTECA - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-17T19:24:47.461Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59300619045",
+      "company": "MOTORA.AI - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-20T19:22:14.683Z",
+        "24595559": "2026-04-20T19:22:17.506Z",
+        "24595564": "2026-04-20T19:22:33.489Z",
+        "72557853": "2026-04-17T19:24:47.466Z"
+      },
+      "amount": 0,
+      "isLost": true,
+      "lostStage": "Em cadência",
+      "lostFunnel": "SDR",
+      "lostReason": null
+    },
+    {
+      "id": "59301868448",
+      "company": "PLANETUN TECNOLOGIA - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-20T19:21:17.435Z",
+        "24595559": "2026-04-20T19:21:20.220Z",
+        "72557853": "2026-04-17T19:24:47.567Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59300002965",
+      "company": "LISA IT - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-20T19:08:13.658Z",
+        "24595559": "2026-04-20T19:08:15.979Z",
+        "72557853": "2026-04-17T19:24:47.717Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59365907339",
+      "company": "NANNAI - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-20T12:11:36.709Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59366472287",
+      "company": "OPEN TECH SISTEMAS DE GERENCIAMENTO DE RISCOS S/A - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-20T12:11:36.923Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59365841182",
+      "company": "CISS S.A - GESTAO PARA O VAREJO - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-20T12:11:37.040Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59366487100",
+      "company": "DAY BRASIL S/A - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-20T12:11:37.123Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59337281597",
+      "company": "VALEMOBI - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-20T12:11:37.443Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59365866580",
+      "company": "CPE TECNOLOGIA - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-20T12:11:37.792Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59365888026",
+      "company": "SOS DOCS - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-20T12:11:37.840Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59365795700",
+      "company": "IXC Soft - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-20T12:11:37.999Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59365893132",
+      "company": "CG ONE - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-20T12:11:38.313Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59365907340",
+      "company": "Datainfo Soluções em TI - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-20T12:11:38.394Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59365914414",
+      "company": "TELETEX IT SOLUTIONS - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Larissa Martins da Cruz",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-22T23:45:17.422Z",
+        "24595559": "2026-04-22T23:45:32.005Z",
+        "72557853": "2026-04-20T12:11:38.525Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59366520230",
+      "company": "PRAXIO BY NSTECH - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-20T12:11:38.645Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59365716545",
+      "company": "PLATFORM BUILDERS - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Larissa Martins da Cruz",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-22T23:45:17.422Z",
+        "24595559": "2026-04-22T23:45:32.005Z",
+        "72557853": "2026-04-20T12:11:38.821Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59366466317",
+      "company": "SINERGYRH - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Larissa Martins da Cruz",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-22T23:45:17.422Z",
+        "24595559": "2026-04-22T23:45:32.005Z",
+        "72557853": "2026-04-20T12:11:38.976Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59365853711",
+      "company": "ARQUIVO NORTE LTDA - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Larissa Martins da Cruz",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-22T23:45:17.422Z",
+        "24595559": "2026-04-22T23:45:32.005Z",
+        "72557853": "2026-04-20T12:11:39.291Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59366556421",
+      "company": "KMM - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Larissa Martins da Cruz",
+      "campanha": "Abr 2026",
+      "stages": {
+        "24595558": "2026-04-22T23:45:17.422Z",
+        "24595559": "2026-04-22T23:45:32.005Z",
+        "72557853": "2026-04-20T12:11:39.400Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59365976200",
+      "company": "DELFIA - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-20T12:11:39.501Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59366516828",
+      "company": "Ricoh Brasil SA - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-20T12:11:39.880Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59365808752",
+      "company": "Sallve - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-20T12:11:40.845Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59365970838",
+      "company": "BYX BR - Campanha Cortex",
       "porte": "G+",
-      "setor": "Financeiro",
+      "setor": "— sem categoria",
       "cn": "Larissa Martins da Cruz",
-      "ev": null,
+      "ev": "Marcelo Silva",
       "campanha": "Abr 2026",
       "stages": {
-        "24595558": "2026-04-15T00:00:00.000Z",
-        "24595559": "2026-04-16T00:00:00.000Z",
-        "24595562": "2026-04-21T00:00:00.000Z",
-        "72557853": "2026-04-07T00:00:00.000Z"
+        "24595558": "2026-04-27T21:38:06.264Z",
+        "24595559": "2026-04-27T21:38:13.415Z",
+        "72557853": "2026-04-20T12:11:41.001Z"
       },
       "amount": 0,
       "isLost": false,
       "lostStage": null,
+      "lostFunnel": null,
       "lostReason": null
     },
     {
-      "id": "100001",
-      "company": "Empresa 0002",
+      "id": "59365912091",
+      "company": "SAS - Campanha Cortex",
       "porte": "P",
-      "setor": "Indústria",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-13T00:00:00.000Z",
-        "24595559": "2026-04-13T00:00:00.000Z",
-        "24595562": "2026-04-19T00:00:00.000Z",
-        "72557853": "2026-04-09T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100002",
-      "company": "Empresa 0003",
-      "porte": "M",
-      "setor": "Logística",
+      "setor": "— sem categoria",
       "cn": "Larissa Martins da Cruz",
-      "ev": null,
+      "ev": "Marcelo Silva",
       "campanha": "Abr 2026",
       "stages": {
-        "24595558": "2026-04-07T00:00:00.000Z",
-        "24595559": "2026-04-07T00:00:00.000Z",
-        "72557853": "2026-04-04T00:00:00.000Z"
+        "72557853": "2026-04-20T12:11:41.804Z"
       },
       "amount": 0,
       "isLost": false,
       "lostStage": null,
+      "lostFunnel": null,
       "lostReason": null
     },
     {
-      "id": "100003",
-      "company": "Empresa 0004",
-      "porte": "P",
-      "setor": "Indústria",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-18T00:00:00.000Z",
-        "24595559": "2026-04-18T00:00:00.000Z",
-        "72557853": "2026-04-10T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100004",
-      "company": "Empresa 0005",
+      "id": "59365877817",
+      "company": "BROOKFIELD - Campanha Cortex",
       "porte": "M",
-      "setor": "Indústria",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-10T00:00:00.000Z",
-        "24595559": "2026-04-11T00:00:00.000Z",
-        "72557853": "2026-04-06T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100005",
-      "company": "Empresa 0006",
-      "porte": "M",
-      "setor": "Construção",
-      "cn": "Luciano Moreira",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-13T00:00:00.000Z",
-        "24595559": "2026-04-14T00:00:00.000Z",
-        "72557853": "2026-04-06T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100006",
-      "company": "Empresa 0007",
-      "porte": "P",
-      "setor": "Tecnologia",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-06T00:00:00.000Z",
-        "24595559": "2026-04-07T00:00:00.000Z",
-        "72557853": "2026-04-02T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100007",
-      "company": "Empresa 0008",
-      "porte": "M",
-      "setor": "Varejo",
+      "setor": "— sem categoria",
       "cn": "Larissa Martins da Cruz",
-      "ev": null,
+      "ev": "Larissa Martins da Cruz",
       "campanha": "Abr 2026",
       "stages": {
-        "24595558": "2026-04-14T00:00:00.000Z",
-        "24595559": "2026-04-15T00:00:00.000Z",
-        "72557853": "2026-04-09T00:00:00.000Z"
+        "24595558": "2026-04-22T23:45:17.422Z",
+        "24595559": "2026-04-22T23:45:32.005Z",
+        "72557853": "2026-04-20T12:11:43.133Z"
       },
       "amount": 0,
       "isLost": false,
       "lostStage": null,
+      "lostFunnel": null,
       "lostReason": null
     },
     {
-      "id": "100008",
-      "company": "Empresa 0009",
-      "porte": "M",
-      "setor": "Indústria",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-14T00:00:00.000Z",
-        "24595559": "2026-04-14T00:00:00.000Z",
-        "72557853": "2026-04-06T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100009",
-      "company": "Empresa 0010",
+      "id": "59433154732",
+      "company": "METASIX TECNOLOGIA - Campanha Cortex",
       "porte": "P",
-      "setor": "Logística",
+      "setor": "— sem categoria",
       "cn": "Breno Haus",
-      "ev": null,
+      "ev": "Breno Haus",
       "campanha": "Abr 2026",
       "stages": {
-        "24595558": "2026-04-10T00:00:00.000Z",
-        "24595559": "2026-04-11T00:00:00.000Z",
-        "72557853": "2026-04-07T00:00:00.000Z"
+        "72557853": "2026-04-22T15:08:30.397Z"
       },
       "amount": 0,
       "isLost": false,
       "lostStage": null,
+      "lostFunnel": null,
       "lostReason": null
     },
     {
-      "id": "100010",
-      "company": "Empresa 0011",
+      "id": "59426937153",
+      "company": "VTECH SOLUCOES PARA VALVULAS - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-22T15:08:32.294Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59423634300",
+      "company": "INCENTIVE.ME - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-22T15:08:41.237Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59436629841",
+      "company": "AMLABS VENTURES - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-22T15:08:41.725Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59419758762",
+      "company": "LINA - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-22T15:08:42.984Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59440754325",
+      "company": "LOOPLEX - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-22T15:08:45.360Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59443550845",
+      "company": "SALU - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-22T15:08:46.953Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59428746811",
+      "company": "ESAPIENS TECNOLOGIA S.A. - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-22T15:08:48.589Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59425021459",
+      "company": "SMILINK - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-22T15:08:49.530Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59420076726",
+      "company": "AMERICA TECNOLOGIA - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-22T15:08:50.982Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59421932471",
+      "company": "BELVITUR - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-22T15:08:51.539Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59442144652",
+      "company": "ZHAZ SOLUCOES DE A A Z - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-22T15:08:53.264Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59438171192",
+      "company": "ELECTROSON BRASIL TELECOMUNICACOES S/A - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-22T15:08:57.464Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59425476688",
+      "company": "4MATT - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-22T15:09:01.351Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59444318366",
+      "company": "SCCON - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Breno Haus",
+      "ev": "Breno Haus",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-22T15:09:06.464Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59720461930",
+      "company": "Safeweb Segurança da Informação - Campanha Cortex",
       "porte": "M",
-      "setor": "Tecnologia",
+      "setor": "— sem categoria",
       "cn": "Larissa Martins da Cruz",
-      "ev": null,
+      "ev": "Marcelo Silva",
       "campanha": "Abr 2026",
       "stages": {
-        "24595558": "2026-04-18T00:00:00.000Z",
-        "24595559": "2026-04-19T00:00:00.000Z",
-        "72557853": "2026-04-11T00:00:00.000Z"
+        "72557853": "2026-04-27T15:08:27.727Z"
       },
       "amount": 0,
       "isLost": false,
       "lostStage": null,
+      "lostFunnel": null,
       "lostReason": null
     },
     {
-      "id": "100011",
-      "company": "Empresa 0012",
+      "id": "59698844181",
+      "company": "USINA PETRIBU S/A - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-27T15:08:29.378Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59721751670",
+      "company": "VIA EDUCATION® - Campanha Cortex",
       "porte": null,
-      "setor": "Varejo",
-      "cn": "Owner 84342335",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-10T00:00:00.000Z",
-        "24595559": "2026-04-10T00:00:00.000Z",
-        "72557853": "2026-04-07T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100012",
-      "company": "Empresa 0013",
-      "porte": "M",
-      "setor": "Saúde",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-16T00:00:00.000Z",
-        "24595559": "2026-04-16T00:00:00.000Z",
-        "72557853": "2026-04-09T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100013",
-      "company": "Empresa 0014",
-      "porte": "M",
-      "setor": "Indústria",
-      "cn": "Luciano Moreira",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-20T00:00:00.000Z",
-        "24595559": "2026-04-21T00:00:00.000Z",
-        "72557853": "2026-04-12T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100014",
-      "company": "Empresa 0015",
-      "porte": "M",
-      "setor": "Varejo",
+      "setor": "— sem categoria",
       "cn": "Larissa Martins da Cruz",
-      "ev": null,
+      "ev": "Marcelo Silva",
       "campanha": "Abr 2026",
       "stages": {
-        "24595558": "2026-04-15T00:00:00.000Z",
-        "24595559": "2026-04-16T00:00:00.000Z",
-        "72557853": "2026-04-09T00:00:00.000Z"
+        "72557853": "2026-04-27T15:08:38.978Z"
       },
       "amount": 0,
       "isLost": false,
       "lostStage": null,
+      "lostFunnel": null,
       "lostReason": null
     },
     {
-      "id": "100015",
-      "company": "Empresa 0016",
+      "id": "59721720862",
+      "company": "Premiersoft - Campanha Cortex",
       "porte": "P",
-      "setor": "Saúde",
+      "setor": "— sem categoria",
       "cn": "Larissa Martins da Cruz",
-      "ev": null,
+      "ev": "Marcelo Silva",
       "campanha": "Abr 2026",
       "stages": {
-        "24595558": "2026-04-12T00:00:00.000Z",
-        "24595559": "2026-04-12T00:00:00.000Z",
-        "72557853": "2026-04-05T00:00:00.000Z"
+        "72557853": "2026-04-27T15:08:41.147Z"
       },
       "amount": 0,
       "isLost": false,
       "lostStage": null,
+      "lostFunnel": null,
       "lostReason": null
     },
     {
-      "id": "100016",
-      "company": "Empresa 0017",
-      "porte": "M",
-      "setor": "Financeiro",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-14T00:00:00.000Z",
-        "24595559": "2026-04-15T00:00:00.000Z",
-        "72557853": "2026-04-11T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100017",
-      "company": "Empresa 0018",
-      "porte": "M",
-      "setor": "Indústria",
-      "cn": "Luciano Moreira",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-11T00:00:00.000Z",
-        "24595559": "2026-04-11T00:00:00.000Z",
-        "72557853": "2026-04-07T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100018",
-      "company": "Empresa 0019",
-      "porte": "M",
-      "setor": "Financeiro",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-11T00:00:00.000Z",
-        "24595559": "2026-04-12T00:00:00.000Z",
-        "72557853": "2026-04-08T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100019",
-      "company": "Empresa 0020",
-      "porte": "M",
-      "setor": "Logística",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-11T00:00:00.000Z",
-        "24595559": "2026-04-11T00:00:00.000Z",
-        "72557853": "2026-04-06T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100020",
-      "company": "Empresa 0021",
-      "porte": "P",
-      "setor": "Educação",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-19T00:00:00.000Z",
-        "24595559": "2026-04-20T00:00:00.000Z",
-        "72557853": "2026-04-12T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100021",
-      "company": "Empresa 0022",
-      "porte": "P",
-      "setor": "Construção",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-14T00:00:00.000Z",
-        "24595559": "2026-04-14T00:00:00.000Z",
-        "72557853": "2026-04-10T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100022",
-      "company": "Empresa 0023",
-      "porte": "M",
-      "setor": "Educação",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-06T00:00:00.000Z",
-        "24595559": "2026-04-06T00:00:00.000Z",
-        "72557853": "2026-04-02T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100023",
-      "company": "Empresa 0024",
-      "porte": "M",
-      "setor": "Saúde",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-08T00:00:00.000Z",
-        "24595559": "2026-04-09T00:00:00.000Z",
-        "72557853": "2026-04-02T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100024",
-      "company": "Empresa 0025",
-      "porte": "P",
-      "setor": "Varejo",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-11T00:00:00.000Z",
-        "24595559": "2026-04-11T00:00:00.000Z",
-        "72557853": "2026-04-04T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100025",
-      "company": "Empresa 0026",
-      "porte": "P",
-      "setor": "Construção",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-08T00:00:00.000Z",
-        "24595559": "2026-04-08T00:00:00.000Z",
-        "72557853": "2026-04-02T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100026",
-      "company": "Empresa 0027",
-      "porte": "P",
-      "setor": "Indústria",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-14T00:00:00.000Z",
-        "24595559": "2026-04-15T00:00:00.000Z",
-        "72557853": "2026-04-10T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100027",
-      "company": "Empresa 0028",
-      "porte": "M",
-      "setor": "Construção",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-16T00:00:00.000Z",
-        "24595559": "2026-04-16T00:00:00.000Z",
-        "72557853": "2026-04-11T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100028",
-      "company": "Empresa 0029",
-      "porte": "P",
-      "setor": "Tecnologia",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-09T00:00:00.000Z",
-        "24595559": "2026-04-10T00:00:00.000Z",
-        "72557853": "2026-04-02T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100029",
-      "company": "Empresa 0030",
-      "porte": "P",
-      "setor": "Indústria",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-16T00:00:00.000Z",
-        "24595559": "2026-04-16T00:00:00.000Z",
-        "72557853": "2026-04-08T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100030",
-      "company": "Empresa 0031",
-      "porte": "P",
-      "setor": "Saúde",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-14T00:00:00.000Z",
-        "24595559": "2026-04-15T00:00:00.000Z",
-        "72557853": "2026-04-10T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100031",
-      "company": "Empresa 0032",
-      "porte": "M",
-      "setor": "Logística",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-11T00:00:00.000Z",
-        "24595559": "2026-04-11T00:00:00.000Z",
-        "72557853": "2026-04-04T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100032",
-      "company": "Empresa 0033",
-      "porte": "P",
-      "setor": "Saúde",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-05T00:00:00.000Z",
-        "24595559": "2026-04-06T00:00:00.000Z",
-        "72557853": "2026-04-02T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100033",
-      "company": "Empresa 0034",
-      "porte": "P",
-      "setor": "Construção",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-17T00:00:00.000Z",
-        "24595559": "2026-04-18T00:00:00.000Z",
-        "72557853": "2026-04-10T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100034",
-      "company": "Empresa 0035",
-      "porte": "M",
-      "setor": "Construção",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-15T00:00:00.000Z",
-        "24595559": "2026-04-16T00:00:00.000Z",
-        "72557853": "2026-04-11T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100035",
-      "company": "Empresa 0036",
-      "porte": "M",
-      "setor": "Varejo",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-14T00:00:00.000Z",
-        "24595559": "2026-04-15T00:00:00.000Z",
-        "72557853": "2026-04-07T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100036",
-      "company": "Empresa 0037",
-      "porte": "P",
-      "setor": "Construção",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-13T00:00:00.000Z",
-        "24595559": "2026-04-13T00:00:00.000Z",
-        "72557853": "2026-04-06T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100037",
-      "company": "Empresa 0038",
-      "porte": "P",
-      "setor": "Saúde",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-13T00:00:00.000Z",
-        "24595559": "2026-04-13T00:00:00.000Z",
-        "72557853": "2026-04-09T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100038",
-      "company": "Empresa 0039",
-      "porte": "P",
-      "setor": "Educação",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-08T00:00:00.000Z",
-        "24595559": "2026-04-09T00:00:00.000Z",
-        "72557853": "2026-04-03T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100039",
-      "company": "Empresa 0040",
-      "porte": "P",
-      "setor": "Financeiro",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-12T00:00:00.000Z",
-        "24595559": "2026-04-12T00:00:00.000Z",
-        "72557853": "2026-04-04T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100040",
-      "company": "Empresa 0041",
-      "porte": "P",
-      "setor": "Tecnologia",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-19T00:00:00.000Z",
-        "24595559": "2026-04-19T00:00:00.000Z",
-        "72557853": "2026-04-11T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100041",
-      "company": "Empresa 0042",
-      "porte": "P",
-      "setor": "Saúde",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-16T00:00:00.000Z",
-        "24595559": "2026-04-17T00:00:00.000Z",
-        "72557853": "2026-04-10T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100042",
-      "company": "Empresa 0043",
-      "porte": "P",
-      "setor": "Logística",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-06T00:00:00.000Z",
-        "24595559": "2026-04-07T00:00:00.000Z",
-        "72557853": "2026-04-02T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100043",
-      "company": "Empresa 0044",
-      "porte": "P",
-      "setor": "Saúde",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-13T00:00:00.000Z",
-        "24595559": "2026-04-13T00:00:00.000Z",
-        "72557853": "2026-04-05T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100044",
-      "company": "Empresa 0045",
-      "porte": "P",
-      "setor": "Logística",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-09T00:00:00.000Z",
-        "24595559": "2026-04-10T00:00:00.000Z",
-        "72557853": "2026-04-03T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100045",
-      "company": "Empresa 0046",
-      "porte": "M",
-      "setor": "Educação",
-      "cn": "Luciano Moreira",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-10T00:00:00.000Z",
-        "24595559": "2026-04-10T00:00:00.000Z",
-        "72557853": "2026-04-04T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100046",
-      "company": "Empresa 0047",
-      "porte": "M",
-      "setor": "Logística",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-10T00:00:00.000Z",
-        "24595559": "2026-04-10T00:00:00.000Z",
-        "72557853": "2026-04-06T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100047",
-      "company": "Empresa 0048",
-      "porte": "P",
-      "setor": "Varejo",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-10T00:00:00.000Z",
-        "24595559": "2026-04-11T00:00:00.000Z",
-        "72557853": "2026-04-05T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100048",
-      "company": "Empresa 0049",
-      "porte": "P",
-      "setor": "Logística",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-06T00:00:00.000Z",
-        "24595559": "2026-04-07T00:00:00.000Z",
-        "72557853": "2026-04-03T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100049",
-      "company": "Empresa 0050",
-      "porte": "M",
-      "setor": "Tecnologia",
-      "cn": "Luciano Moreira",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-10T00:00:00.000Z",
-        "24595559": "2026-04-10T00:00:00.000Z",
-        "72557853": "2026-04-07T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100050",
-      "company": "Empresa 0051",
-      "porte": "M",
-      "setor": "Saúde",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-10T00:00:00.000Z",
-        "24595559": "2026-04-11T00:00:00.000Z",
-        "72557853": "2026-04-05T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100051",
-      "company": "Empresa 0052",
-      "porte": "P",
-      "setor": "Tecnologia",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-13T00:00:00.000Z",
-        "24595559": "2026-04-14T00:00:00.000Z",
-        "72557853": "2026-04-08T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100052",
-      "company": "Empresa 0053",
-      "porte": "M",
-      "setor": "Logística",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-10T00:00:00.000Z",
-        "24595559": "2026-04-10T00:00:00.000Z",
-        "72557853": "2026-04-03T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100053",
-      "company": "Empresa 0054",
-      "porte": "M",
-      "setor": "Educação",
-      "cn": "Luciano Moreira",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-09T00:00:00.000Z",
-        "24595559": "2026-04-10T00:00:00.000Z",
-        "72557853": "2026-04-03T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100054",
-      "company": "Empresa 0055",
-      "porte": "M",
-      "setor": "Educação",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-14T00:00:00.000Z",
-        "24595559": "2026-04-15T00:00:00.000Z",
-        "72557853": "2026-04-10T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100055",
-      "company": "Empresa 0056",
-      "porte": "P",
-      "setor": "Tecnologia",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-15T00:00:00.000Z",
-        "24595559": "2026-04-16T00:00:00.000Z",
-        "72557853": "2026-04-07T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100056",
-      "company": "Empresa 0057",
-      "porte": "P",
-      "setor": "Indústria",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-11T00:00:00.000Z",
-        "24595559": "2026-04-11T00:00:00.000Z",
-        "72557853": "2026-04-04T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100057",
-      "company": "Empresa 0058",
+      "id": "59720517396",
+      "company": "NEOWAY - Campanha Cortex",
       "porte": null,
-      "setor": "Tecnologia",
-      "cn": "Owner 84342335",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-07T00:00:00.000Z",
-        "24595559": "2026-04-07T00:00:00.000Z",
-        "72557853": "2026-04-02T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100058",
-      "company": "Empresa 0059",
-      "porte": "M",
-      "setor": "Varejo",
+      "setor": "— sem categoria",
       "cn": "Larissa Martins da Cruz",
-      "ev": null,
+      "ev": "Marcelo Silva",
       "campanha": "Abr 2026",
       "stages": {
-        "24595558": "2026-04-12T00:00:00.000Z",
-        "24595559": "2026-04-12T00:00:00.000Z",
-        "72557853": "2026-04-09T00:00:00.000Z"
+        "72557853": "2026-04-27T15:08:41.312Z"
       },
       "amount": 0,
       "isLost": false,
       "lostStage": null,
+      "lostFunnel": null,
       "lostReason": null
     },
     {
-      "id": "100059",
-      "company": "Empresa 0060",
-      "porte": "M",
-      "setor": "Indústria",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-16T00:00:00.000Z",
-        "24595559": "2026-04-17T00:00:00.000Z",
-        "72557853": "2026-04-11T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100060",
-      "company": "Empresa 0061",
+      "id": "59720572498",
+      "company": "IATE CLUBE DE BRASILIA - Campanha Cortex",
       "porte": "P",
-      "setor": "Educação",
+      "setor": "— sem categoria",
       "cn": "Larissa Martins da Cruz",
-      "ev": null,
+      "ev": "Marcelo Silva",
       "campanha": "Abr 2026",
       "stages": {
-        "24595558": "2026-04-10T00:00:00.000Z",
-        "24595559": "2026-04-11T00:00:00.000Z",
-        "24595564": "2026-04-15T00:00:00.000Z",
-        "72557853": "2026-04-05T00:00:00.000Z"
+        "72557853": "2026-04-27T15:08:42.074Z"
       },
       "amount": 0,
-      "isLost": true,
-      "lostStage": "Em cadência",
-      "lostReason": "Sem interesse no momento"
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
     },
     {
-      "id": "100061",
-      "company": "Empresa 0062",
-      "porte": "P",
-      "setor": "Educação",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-11T00:00:00.000Z",
-        "24595559": "2026-04-12T00:00:00.000Z",
-        "24595564": "2026-04-19T00:00:00.000Z",
-        "72557853": "2026-04-07T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": true,
-      "lostStage": "Em cadência",
-      "lostReason": "Usando outra solução"
-    },
-    {
-      "id": "100062",
-      "company": "Empresa 0063",
+      "id": "59720513923",
+      "company": "BEACON SCHOOL - Campanha Cortex",
       "porte": "M",
-      "setor": "Financeiro",
+      "setor": "— sem categoria",
       "cn": "Larissa Martins da Cruz",
-      "ev": null,
+      "ev": "Marcelo Silva",
       "campanha": "Abr 2026",
       "stages": {
-        "24595558": "2026-04-17T00:00:00.000Z",
-        "24595559": "2026-04-18T00:00:00.000Z",
-        "24595564": "2026-04-23T00:00:00.000Z",
-        "72557853": "2026-04-11T00:00:00.000Z"
+        "72557853": "2026-04-27T15:08:46.363Z"
       },
       "amount": 0,
-      "isLost": true,
-      "lostStage": "Em cadência",
-      "lostReason": "Sem interesse no momento"
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
     },
     {
-      "id": "100063",
-      "company": "Empresa 0064",
+      "id": "59701716096",
+      "company": "GENERAL WATER - Campanha Cortex",
       "porte": "M",
-      "setor": "Educação",
+      "setor": "— sem categoria",
       "cn": "Larissa Martins da Cruz",
-      "ev": null,
+      "ev": "Marcelo Silva",
       "campanha": "Abr 2026",
       "stages": {
-        "24595558": "2026-04-12T00:00:00.000Z",
-        "24595559": "2026-04-13T00:00:00.000Z",
-        "24595564": "2026-04-20T00:00:00.000Z",
-        "72557853": "2026-04-05T00:00:00.000Z"
+        "72557853": "2026-04-27T15:08:47.718Z"
       },
       "amount": 0,
-      "isLost": true,
-      "lostStage": "Em cadência",
-      "lostReason": "Sem interesse no momento"
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
     },
     {
-      "id": "100064",
-      "company": "Empresa 0065",
-      "porte": "P",
-      "setor": "Varejo",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-07T00:00:00.000Z",
-        "24595559": "2026-04-08T00:00:00.000Z",
-        "24595564": "2026-04-11T00:00:00.000Z",
-        "72557853": "2026-04-03T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": true,
-      "lostStage": "Em cadência",
-      "lostReason": "Sem retorno"
-    },
-    {
-      "id": "100065",
-      "company": "Empresa 0066",
+      "id": "59721685297",
+      "company": "GRI INSTITUTE - Campanha Cortex",
       "porte": "M",
-      "setor": "Logística",
-      "cn": "Luciano Moreira",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-10T00:00:00.000Z",
-        "24595559": "2026-04-11T00:00:00.000Z",
-        "24595564": "2026-04-15T00:00:00.000Z",
-        "72557853": "2026-04-07T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": true,
-      "lostStage": "Em cadência",
-      "lostReason": "Sem interesse no momento"
-    },
-    {
-      "id": "100066",
-      "company": "Empresa 0067",
-      "porte": "M",
-      "setor": "Indústria",
+      "setor": "— sem categoria",
       "cn": "Larissa Martins da Cruz",
-      "ev": null,
+      "ev": "Marcelo Silva",
       "campanha": "Abr 2026",
       "stages": {
-        "24595558": "2026-04-12T00:00:00.000Z",
-        "24595559": "2026-04-13T00:00:00.000Z",
-        "24595564": "2026-04-20T00:00:00.000Z",
-        "72557853": "2026-04-07T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": true,
-      "lostStage": "Em cadência",
-      "lostReason": "Sem retorno"
-    },
-    {
-      "id": "100067",
-      "company": "Empresa 0068",
-      "porte": "P",
-      "setor": "Logística",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-16T00:00:00.000Z",
-        "24595559": "2026-04-16T00:00:00.000Z",
-        "24595564": "2026-04-22T00:00:00.000Z",
-        "72557853": "2026-04-08T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": true,
-      "lostStage": "Em cadência",
-      "lostReason": "Orçamento insuficiente"
-    },
-    {
-      "id": "100068",
-      "company": "Empresa 0069",
-      "porte": "M",
-      "setor": "Educação",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-13T00:00:00.000Z",
-        "24595559": "2026-04-14T00:00:00.000Z",
-        "24595564": "2026-04-21T00:00:00.000Z",
-        "72557853": "2026-04-08T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": true,
-      "lostStage": "Em cadência",
-      "lostReason": "Sem interesse no momento"
-    },
-    {
-      "id": "100069",
-      "company": "Empresa 0070",
-      "porte": "M",
-      "setor": "Construção",
-      "cn": "Luciano Moreira",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-16T00:00:00.000Z",
-        "24595559": "2026-04-17T00:00:00.000Z",
-        "24595564": "2026-04-21T00:00:00.000Z",
-        "72557853": "2026-04-09T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": true,
-      "lostStage": "Em cadência",
-      "lostReason": "Sem retorno"
-    },
-    {
-      "id": "100070",
-      "company": "Empresa 0071",
-      "porte": "M",
-      "setor": "Educação",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-12T00:00:00.000Z",
-        "24595559": "2026-04-12T00:00:00.000Z",
-        "72557853": "2026-04-05T00:00:00.000Z"
+        "72557853": "2026-04-27T15:08:47.988Z"
       },
       "amount": 0,
       "isLost": false,
       "lostStage": null,
+      "lostFunnel": null,
       "lostReason": null
     },
     {
-      "id": "100071",
-      "company": "Empresa 0072",
-      "porte": "M",
-      "setor": "Indústria",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-17T00:00:00.000Z",
-        "24595559": "2026-04-17T00:00:00.000Z",
-        "72557853": "2026-04-10T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100072",
-      "company": "Empresa 0073",
-      "porte": "M",
-      "setor": "Educação",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-11T00:00:00.000Z",
-        "24595559": "2026-04-12T00:00:00.000Z",
-        "72557853": "2026-04-05T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100073",
-      "company": "Empresa 0074",
-      "porte": "M",
-      "setor": "Construção",
-      "cn": "Luciano Moreira",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-12T00:00:00.000Z",
-        "24595559": "2026-04-12T00:00:00.000Z",
-        "72557853": "2026-04-08T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100074",
-      "company": "Empresa 0075",
-      "porte": "P",
-      "setor": "Construção",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-11T00:00:00.000Z",
-        "24595559": "2026-04-12T00:00:00.000Z",
-        "72557853": "2026-04-04T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100075",
-      "company": "Empresa 0076",
-      "porte": "P",
-      "setor": "Educação",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-13T00:00:00.000Z",
-        "24595559": "2026-04-13T00:00:00.000Z",
-        "72557853": "2026-04-07T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100076",
-      "company": "Empresa 0077",
-      "porte": "M",
-      "setor": "Financeiro",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-14T00:00:00.000Z",
-        "24595559": "2026-04-15T00:00:00.000Z",
-        "72557853": "2026-04-10T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100077",
-      "company": "Empresa 0078",
-      "porte": "M",
-      "setor": "Educação",
-      "cn": "Luciano Moreira",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-08T00:00:00.000Z",
-        "24595559": "2026-04-08T00:00:00.000Z",
-        "72557853": "2026-04-02T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100078",
-      "company": "Empresa 0079",
-      "porte": "P",
-      "setor": "Educação",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-17T00:00:00.000Z",
-        "24595559": "2026-04-17T00:00:00.000Z",
-        "72557853": "2026-04-12T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100079",
-      "company": "Empresa 0080",
-      "porte": null,
-      "setor": "Logística",
-      "cn": "Owner 84342335",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-08T00:00:00.000Z",
-        "24595559": "2026-04-09T00:00:00.000Z",
-        "72557853": "2026-04-04T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100080",
-      "company": "Empresa 0081",
-      "porte": "P",
-      "setor": "Saúde",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-09T00:00:00.000Z",
-        "24595559": "2026-04-09T00:00:00.000Z",
-        "72557853": "2026-04-03T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100081",
-      "company": "Empresa 0082",
-      "porte": "M",
-      "setor": "Logística",
-      "cn": "Luciano Moreira",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-11T00:00:00.000Z",
-        "24595559": "2026-04-11T00:00:00.000Z",
-        "72557853": "2026-04-05T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100082",
-      "company": "Empresa 0083",
-      "porte": "P",
-      "setor": "Tecnologia",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-11T00:00:00.000Z",
-        "24595559": "2026-04-12T00:00:00.000Z",
-        "72557853": "2026-04-06T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100083",
-      "company": "Empresa 0084",
-      "porte": "P",
-      "setor": "Saúde",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-11T00:00:00.000Z",
-        "24595559": "2026-04-12T00:00:00.000Z",
-        "72557853": "2026-04-03T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100084",
-      "company": "Empresa 0085",
-      "porte": "M",
-      "setor": "Indústria",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-13T00:00:00.000Z",
-        "24595559": "2026-04-13T00:00:00.000Z",
-        "72557853": "2026-04-05T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100085",
-      "company": "Empresa 0086",
-      "porte": "M",
-      "setor": "Tecnologia",
-      "cn": "Luciano Moreira",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-17T00:00:00.000Z",
-        "24595559": "2026-04-18T00:00:00.000Z",
-        "72557853": "2026-04-11T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100086",
-      "company": "Empresa 0087",
-      "porte": "M",
-      "setor": "Varejo",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595558": "2026-04-10T00:00:00.000Z",
-        "24595559": "2026-04-10T00:00:00.000Z",
-        "72557853": "2026-04-06T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100087",
-      "company": "Empresa 0088",
-      "porte": "M",
-      "setor": "Logística",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595564": "2026-04-17T00:00:00.000Z",
-        "72557853": "2026-04-04T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": true,
-      "lostStage": "Mapeamento",
-      "lostReason": "Usando outra solução"
-    },
-    {
-      "id": "100088",
-      "company": "Empresa 0089",
-      "porte": "P",
-      "setor": "Construção",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595564": "2026-04-21T00:00:00.000Z",
-        "72557853": "2026-04-09T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": true,
-      "lostStage": "Mapeamento",
-      "lostReason": "Sem retorno"
-    },
-    {
-      "id": "100089",
-      "company": "Empresa 0090",
+      "id": "59721735323",
+      "company": "SICK SENSOR INTELLIGENCE - Campanha Cortex",
       "porte": "G+",
-      "setor": "Saúde",
+      "setor": "— sem categoria",
       "cn": "Larissa Martins da Cruz",
-      "ev": null,
+      "ev": "Marcelo Silva",
       "campanha": "Abr 2026",
       "stages": {
-        "24595564": "2026-04-18T00:00:00.000Z",
-        "72557853": "2026-04-03T00:00:00.000Z"
+        "72557853": "2026-04-27T15:08:49.364Z"
       },
       "amount": 0,
-      "isLost": true,
-      "lostStage": "Mapeamento",
-      "lostReason": "Orçamento insuficiente"
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
     },
     {
-      "id": "100090",
-      "company": "Empresa 0091",
-      "porte": "M",
-      "setor": "Saúde",
+      "id": "59707934489",
+      "company": "Grupo Imagetech - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
       "cn": "Larissa Martins da Cruz",
-      "ev": null,
+      "ev": "Marcelo Silva",
       "campanha": "Abr 2026",
       "stages": {
-        "24595564": "2026-04-17T00:00:00.000Z",
-        "72557853": "2026-04-07T00:00:00.000Z"
+        "72557853": "2026-04-27T15:08:49.715Z"
       },
       "amount": 0,
-      "isLost": true,
-      "lostStage": "Mapeamento",
-      "lostReason": "Usando outra solução"
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
     },
     {
-      "id": "100091",
-      "company": "Empresa 0092",
-      "porte": "P",
-      "setor": "Saúde",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595564": "2026-04-12T00:00:00.000Z",
-        "72557853": "2026-04-06T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": true,
-      "lostStage": "Mapeamento",
-      "lostReason": "Usando outra solução"
-    },
-    {
-      "id": "100092",
-      "company": "Empresa 0093",
-      "porte": "P",
-      "setor": "Educação",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595564": "2026-04-14T00:00:00.000Z",
-        "72557853": "2026-04-07T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": true,
-      "lostStage": "Mapeamento",
-      "lostReason": "Orçamento insuficiente"
-    },
-    {
-      "id": "100093",
-      "company": "Empresa 0094",
-      "porte": "P",
-      "setor": "Indústria",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595564": "2026-04-17T00:00:00.000Z",
-        "72557853": "2026-04-10T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": true,
-      "lostStage": "Mapeamento",
-      "lostReason": "Usando outra solução"
-    },
-    {
-      "id": "100094",
-      "company": "Empresa 0095",
-      "porte": "M",
-      "setor": "Varejo",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595564": "2026-04-18T00:00:00.000Z",
-        "72557853": "2026-04-06T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": true,
-      "lostStage": "Mapeamento",
-      "lostReason": "Sem interesse no momento"
-    },
-    {
-      "id": "100095",
-      "company": "Empresa 0096",
-      "porte": "P",
-      "setor": "Construção",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595564": "2026-04-23T00:00:00.000Z",
-        "72557853": "2026-04-09T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": true,
-      "lostStage": "Mapeamento",
-      "lostReason": "Orçamento insuficiente"
-    },
-    {
-      "id": "100096",
-      "company": "Empresa 0097",
-      "porte": "P",
-      "setor": "Construção",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595564": "2026-04-20T00:00:00.000Z",
-        "72557853": "2026-04-06T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": true,
-      "lostStage": "Mapeamento",
-      "lostReason": "Sem interesse no momento"
-    },
-    {
-      "id": "100097",
-      "company": "Empresa 0098",
-      "porte": "P",
-      "setor": "Construção",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595564": "2026-04-16T00:00:00.000Z",
-        "72557853": "2026-04-03T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": true,
-      "lostStage": "Mapeamento",
-      "lostReason": "Orçamento insuficiente"
-    },
-    {
-      "id": "100098",
-      "company": "Empresa 0099",
-      "porte": "M",
-      "setor": "Tecnologia",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595564": "2026-04-12T00:00:00.000Z",
-        "72557853": "2026-04-02T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": true,
-      "lostStage": "Mapeamento",
-      "lostReason": "Usando outra solução"
-    },
-    {
-      "id": "100099",
-      "company": "Empresa 0100",
-      "porte": "P",
-      "setor": "Saúde",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595564": "2026-04-15T00:00:00.000Z",
-        "72557853": "2026-04-07T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": true,
-      "lostStage": "Mapeamento",
-      "lostReason": "Sem interesse no momento"
-    },
-    {
-      "id": "100100",
-      "company": "Empresa 0101",
-      "porte": "P",
-      "setor": "Varejo",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595564": "2026-04-19T00:00:00.000Z",
-        "72557853": "2026-04-07T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": true,
-      "lostStage": "Mapeamento",
-      "lostReason": "Não é o decisor"
-    },
-    {
-      "id": "100101",
-      "company": "Empresa 0102",
-      "porte": "M",
-      "setor": "Indústria",
-      "cn": "Luciano Moreira",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595564": "2026-04-26T00:00:00.000Z",
-        "72557853": "2026-04-11T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": true,
-      "lostStage": "Mapeamento",
-      "lostReason": "Usando outra solução"
-    },
-    {
-      "id": "100102",
-      "company": "Empresa 0103",
-      "porte": "P",
-      "setor": "Logística",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "24595564": "2026-04-13T00:00:00.000Z",
-        "72557853": "2026-04-07T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": true,
-      "lostStage": "Mapeamento",
-      "lostReason": "Sem retorno"
-    },
-    {
-      "id": "100103",
-      "company": "Empresa 0104",
+      "id": "59693146969",
+      "company": "RICOH BRASIL S.A. - Campanha Cortex",
       "porte": "G+",
-      "setor": "Construção",
+      "setor": "— sem categoria",
       "cn": "Larissa Martins da Cruz",
-      "ev": null,
+      "ev": "Marcelo Silva",
       "campanha": "Abr 2026",
       "stages": {
-        "72557853": "2026-04-10T00:00:00.000Z"
+        "72557853": "2026-04-27T15:08:53.531Z"
       },
       "amount": 0,
       "isLost": false,
       "lostStage": null,
+      "lostFunnel": null,
       "lostReason": null
     },
     {
-      "id": "100104",
-      "company": "Empresa 0105",
-      "porte": "M",
-      "setor": "Construção",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-05T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100105",
-      "company": "Empresa 0106",
-      "porte": "P",
-      "setor": "Logística",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-03T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100106",
-      "company": "Empresa 0107",
-      "porte": "M",
-      "setor": "Construção",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-08T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100107",
-      "company": "Empresa 0108",
-      "porte": "P",
-      "setor": "Indústria",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-01T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100108",
-      "company": "Empresa 0109",
-      "porte": "P",
-      "setor": "Indústria",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-08T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100109",
-      "company": "Empresa 0110",
-      "porte": "P",
-      "setor": "Tecnologia",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-06T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100110",
-      "company": "Empresa 0111",
-      "porte": "M",
-      "setor": "Saúde",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-08T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100111",
-      "company": "Empresa 0112",
-      "porte": "M",
-      "setor": "Tecnologia",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-06T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100112",
-      "company": "Empresa 0113",
-      "porte": "P",
-      "setor": "Tecnologia",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-11T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100113",
-      "company": "Empresa 0114",
-      "porte": "M",
-      "setor": "Construção",
-      "cn": "Luciano Moreira",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-12T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100114",
-      "company": "Empresa 0115",
-      "porte": "M",
-      "setor": "Indústria",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-12T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100115",
-      "company": "Empresa 0116",
-      "porte": "M",
-      "setor": "Tecnologia",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-04T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100116",
-      "company": "Empresa 0117",
-      "porte": "P",
-      "setor": "Saúde",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-07T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100117",
-      "company": "Empresa 0118",
-      "porte": "P",
-      "setor": "Educação",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-09T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100118",
-      "company": "Empresa 0119",
-      "porte": "M",
-      "setor": "Financeiro",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-06T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100119",
-      "company": "Empresa 0120",
-      "porte": "M",
-      "setor": "Varejo",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-07T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100120",
-      "company": "Empresa 0121",
-      "porte": "M",
-      "setor": "Saúde",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-05T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100121",
-      "company": "Empresa 0122",
-      "porte": "P",
-      "setor": "Educação",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-05T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100122",
-      "company": "Empresa 0123",
-      "porte": "M",
-      "setor": "Construção",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-06T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100123",
-      "company": "Empresa 0124",
-      "porte": "M",
-      "setor": "Tecnologia",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-07T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100124",
-      "company": "Empresa 0125",
-      "porte": "M",
-      "setor": "Financeiro",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-10T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100125",
-      "company": "Empresa 0126",
-      "porte": "P",
-      "setor": "Tecnologia",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-07T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100126",
-      "company": "Empresa 0127",
-      "porte": "P",
-      "setor": "Tecnologia",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-06T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100127",
-      "company": "Empresa 0128",
-      "porte": "M",
-      "setor": "Saúde",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-05T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100128",
-      "company": "Empresa 0129",
-      "porte": "P",
-      "setor": "Indústria",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-02T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100129",
-      "company": "Empresa 0130",
-      "porte": "M",
-      "setor": "Varejo",
-      "cn": "Luciano Moreira",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-01T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100130",
-      "company": "Empresa 0131",
-      "porte": "P",
-      "setor": "Construção",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-10T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100131",
-      "company": "Empresa 0132",
-      "porte": "P",
-      "setor": "Varejo",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-10T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100132",
-      "company": "Empresa 0133",
-      "porte": "P",
-      "setor": "Financeiro",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-12T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100133",
-      "company": "Empresa 0134",
-      "porte": "P",
-      "setor": "Indústria",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-11T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100134",
-      "company": "Empresa 0135",
-      "porte": "M",
-      "setor": "Varejo",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-09T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100135",
-      "company": "Empresa 0136",
-      "porte": "P",
-      "setor": "Varejo",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-01T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100136",
-      "company": "Empresa 0137",
-      "porte": "P",
-      "setor": "Saúde",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-05T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100137",
-      "company": "Empresa 0138",
-      "porte": "P",
-      "setor": "Construção",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-08T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100138",
-      "company": "Empresa 0139",
-      "porte": "M",
-      "setor": "Educação",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-06T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100139",
-      "company": "Empresa 0140",
-      "porte": "M",
-      "setor": "Educação",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-01T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100140",
-      "company": "Empresa 0141",
-      "porte": "M",
-      "setor": "Indústria",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-05T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100141",
-      "company": "Empresa 0142",
-      "porte": "P",
-      "setor": "Logística",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-08T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100142",
-      "company": "Empresa 0143",
-      "porte": "M",
-      "setor": "Tecnologia",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-06T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100143",
-      "company": "Empresa 0144",
-      "porte": "M",
-      "setor": "Financeiro",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-01T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100144",
-      "company": "Empresa 0145",
-      "porte": "P",
-      "setor": "Varejo",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-11T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100145",
-      "company": "Empresa 0146",
-      "porte": "P",
-      "setor": "Logística",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-03T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100146",
-      "company": "Empresa 0147",
-      "porte": "M",
-      "setor": "Indústria",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-03T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100147",
-      "company": "Empresa 0148",
-      "porte": "M",
-      "setor": "Financeiro",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-06T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100148",
-      "company": "Empresa 0149",
-      "porte": null,
-      "setor": "Tecnologia",
-      "cn": "Owner 84342335",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-04T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100149",
-      "company": "Empresa 0150",
-      "porte": "M",
-      "setor": "Logística",
-      "cn": "Luciano Moreira",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-06T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100150",
-      "company": "Empresa 0151",
-      "porte": "M",
-      "setor": "Varejo",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-06T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100151",
-      "company": "Empresa 0152",
-      "porte": "M",
-      "setor": "Educação",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-03T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100152",
-      "company": "Empresa 0153",
-      "porte": "M",
-      "setor": "Logística",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-10T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100153",
-      "company": "Empresa 0154",
-      "porte": "P",
-      "setor": "Educação",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-09T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100154",
-      "company": "Empresa 0155",
-      "porte": "M",
-      "setor": "Saúde",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-06T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100155",
-      "company": "Empresa 0156",
-      "porte": "M",
-      "setor": "Saúde",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-10T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100156",
-      "company": "Empresa 0157",
+      "id": "59720436393",
+      "company": "KUMON NORTH AMERICA, INC. - Campanha Cortex",
       "porte": "G+",
-      "setor": "Saúde",
+      "setor": "— sem categoria",
       "cn": "Larissa Martins da Cruz",
-      "ev": null,
+      "ev": "Marcelo Silva",
       "campanha": "Abr 2026",
       "stages": {
-        "72557853": "2026-04-08T00:00:00.000Z"
+        "72557853": "2026-04-27T15:09:03.748Z"
       },
       "amount": 0,
       "isLost": false,
       "lostStage": null,
+      "lostFunnel": null,
       "lostReason": null
     },
     {
-      "id": "100157",
-      "company": "Empresa 0158",
+      "id": "59720543746",
+      "company": "Qualitycert - Campanha Cortex",
       "porte": "P",
-      "setor": "Educação",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-05T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100158",
-      "company": "Empresa 0159",
-      "porte": "P",
-      "setor": "Construção",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-05T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100159",
-      "company": "Empresa 0160",
-      "porte": "M",
-      "setor": "Educação",
+      "setor": "— sem categoria",
       "cn": "Larissa Martins da Cruz",
-      "ev": null,
+      "ev": "Marcelo Silva",
       "campanha": "Abr 2026",
       "stages": {
-        "72557853": "2026-04-11T00:00:00.000Z"
+        "72557853": "2026-04-27T15:09:14.350Z"
       },
       "amount": 0,
       "isLost": false,
       "lostStage": null,
+      "lostFunnel": null,
       "lostReason": null
     },
     {
-      "id": "100160",
-      "company": "Empresa 0161",
-      "porte": "P",
-      "setor": "Logística",
-      "cn": "Larissa Martins da Cruz",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-11T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100161",
-      "company": "Empresa 0162",
-      "porte": "P",
-      "setor": "Construção",
-      "cn": "Breno Haus",
-      "ev": null,
-      "campanha": "Abr 2026",
-      "stages": {
-        "72557853": "2026-04-01T00:00:00.000Z"
-      },
-      "amount": 0,
-      "isLost": false,
-      "lostStage": null,
-      "lostReason": null
-    },
-    {
-      "id": "100162",
-      "company": "Empresa 0163",
+      "id": "59720633749",
+      "company": "Soow Sigma - Campanha Cortex",
       "porte": null,
-      "setor": "Varejo",
-      "cn": "Owner 84342335",
-      "ev": null,
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
       "campanha": "Abr 2026",
       "stages": {
-        "72557853": "2026-04-01T00:00:00.000Z"
+        "72557853": "2026-04-27T15:09:14.365Z"
       },
       "amount": 0,
       "isLost": false,
       "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59721385545",
+      "company": "DIMENSA TECNOLOGIA - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-27T15:09:15.381Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59720476264",
+      "company": "VRENTAL - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-27T15:09:15.745Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59720395647",
+      "company": "Indicium - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-27T15:09:21.308Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59721698859",
+      "company": "Blank IT - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-27T15:09:24.383Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59703816752",
+      "company": "HostGator América Latina - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-27T15:09:25.062Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59721743116",
+      "company": "Connect - Campanha Cortex",
+      "porte": null,
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-27T15:09:31.345Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59720664948",
+      "company": "Nova Telecom - Campanha Cortex",
+      "porte": "P",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-27T15:09:32.347Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "59720658355",
+      "company": "Solides - Campanha Cortex",
+      "porte": null,
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
+      "campanha": "Abr 2026",
+      "stages": {
+        "72557853": "2026-04-27T15:09:35.090Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
       "lostReason": null
     }
   ],
@@ -2836,77 +2999,77 @@
         "sdr": [
           {
             "stage": "Mapeamento",
-            "count": 1209,
+            "count": 768,
             "rateFromPrev": 1,
             "rateFromTop": 1
           },
           {
             "stage": "Abordar",
-            "count": 1110,
-            "rateFromPrev": 0.918,
-            "rateFromTop": 0.918
+            "count": 700,
+            "rateFromPrev": 0.9114583333333334,
+            "rateFromTop": 0.9114583333333334
           },
           {
             "stage": "Em cadência",
-            "count": 1103,
-            "rateFromPrev": 0.994,
-            "rateFromTop": 0.912
+            "count": 696,
+            "rateFromPrev": 0.9942857142857143,
+            "rateFromTop": 0.90625
           },
           {
             "stage": "Lead Conectado",
-            "count": 352,
-            "rateFromPrev": 0.319,
-            "rateFromTop": 0.291
+            "count": 221,
+            "rateFromPrev": 0.3175287356321839,
+            "rateFromTop": 0.2877604166666667
           },
           {
-            "stage": "Qualificação Agendada",
-            "count": 133,
-            "rateFromPrev": 0.378,
-            "rateFromTop": 0.11
+            "stage": "Qual. Agendada",
+            "count": 88,
+            "rateFromPrev": 0.39819004524886875,
+            "rateFromTop": 0.11458333333333333
           },
           {
-            "stage": "Qualificação Realizada",
-            "count": 116,
-            "rateFromPrev": 0.872,
-            "rateFromTop": 0.096
+            "stage": "Qual. Realizada",
+            "count": 79,
+            "rateFromPrev": 0.8977272727272727,
+            "rateFromTop": 0.10286458333333333
           },
           {
             "stage": "SAO",
-            "count": 67,
-            "rateFromPrev": 0.578,
-            "rateFromTop": 0.055
+            "count": 54,
+            "rateFromPrev": 0.6835443037974683,
+            "rateFromTop": 0.0703125
           }
         ],
         "opp": [
           {
             "stage": "SAO",
-            "count": 67,
+            "count": 54,
             "rateFromPrev": 1,
             "rateFromTop": 1
           },
           {
-            "stage": "Elaboração da Proposta",
-            "count": 41,
-            "rateFromPrev": 0.612,
-            "rateFromTop": 0.612
+            "stage": "Elab. Proposta",
+            "count": 32,
+            "rateFromPrev": 0.5925925925925926,
+            "rateFromTop": 0.5925925925925926
           },
           {
             "stage": "Proposta Enviada",
-            "count": 36,
-            "rateFromPrev": 0.878,
-            "rateFromTop": 0.537
+            "count": 27,
+            "rateFromPrev": 0.84375,
+            "rateFromTop": 0.5
           },
           {
             "stage": "Em negociação",
-            "count": 23,
-            "rateFromPrev": 0.639,
-            "rateFromTop": 0.343
+            "count": 15,
+            "rateFromPrev": 0.5555555555555556,
+            "rateFromTop": 0.2777777777777778
           },
           {
             "stage": "Proposta Aceita",
-            "count": 12,
-            "rateFromPrev": 0.522,
-            "rateFromTop": 0.179
+            "count": 6,
+            "rateFromPrev": 0.4,
+            "rateFromTop": 0.1111111111111111
           }
         ]
       },
@@ -2918,43 +3081,47 @@
           },
           {
             "name": "Abordar",
-            "avgDays": 4.76
+            "avgDays": 4.67
           },
           {
             "name": "Em cadência",
-            "avgDays": 0.39
+            "avgDays": 0.31
           },
           {
             "name": "Lead Conectado",
-            "avgDays": 12.99
+            "avgDays": 13.11
           },
           {
-            "name": "Qualificação Agendada",
-            "avgDays": 7.27
+            "name": "Qual. Agendada",
+            "avgDays": 7.98
           },
           {
-            "name": "Qualificação Realizada",
-            "avgDays": 9.72
+            "name": "Qual. Realizada",
+            "avgDays": 10.95
           },
           {
             "name": "SAO",
-            "avgDays": 13.03
+            "avgDays": 11.17
           },
           {
-            "name": "Elaboração da Proposta",
-            "avgDays": 21.39
+            "name": "SAO",
+            "avgDays": 0
+          },
+          {
+            "name": "Elab. Proposta",
+            "avgDays": 19.23
           },
           {
             "name": "Proposta Enviada",
-            "avgDays": 19.31
+            "avgDays": 16.13
           },
           {
             "name": "Em negociação",
-            "avgDays": 37.56
+            "avgDays": 38.41
           },
           {
             "name": "Proposta Aceita",
-            "avgDays": 23.59
+            "avgDays": 29.64
           }
         ]
       }
@@ -2964,77 +3131,77 @@
         "sdr": [
           {
             "stage": "Mapeamento",
-            "count": 32,
+            "count": 16,
             "rateFromPrev": 1,
             "rateFromTop": 1
           },
           {
             "stage": "Abordar",
-            "count": 26,
-            "rateFromPrev": 0.813,
-            "rateFromTop": 0.813
+            "count": 12,
+            "rateFromPrev": 0.75,
+            "rateFromTop": 0.75
           },
           {
             "stage": "Em cadência",
-            "count": 26,
+            "count": 12,
             "rateFromPrev": 1,
-            "rateFromTop": 0.813
+            "rateFromTop": 0.75
           },
           {
             "stage": "Lead Conectado",
-            "count": 17,
-            "rateFromPrev": 0.654,
-            "rateFromTop": 0.531
+            "count": 6,
+            "rateFromPrev": 0.5,
+            "rateFromTop": 0.375
           },
           {
-            "stage": "Qualificação Agendada",
-            "count": 11,
-            "rateFromPrev": 0.647,
-            "rateFromTop": 0.344
+            "stage": "Qual. Agendada",
+            "count": 5,
+            "rateFromPrev": 0.8333333333333334,
+            "rateFromTop": 0.3125
           },
           {
-            "stage": "Qualificação Realizada",
-            "count": 10,
-            "rateFromPrev": 0.909,
-            "rateFromTop": 0.313
+            "stage": "Qual. Realizada",
+            "count": 5,
+            "rateFromPrev": 1,
+            "rateFromTop": 0.3125
           },
           {
             "stage": "SAO",
-            "count": 7,
-            "rateFromPrev": 0.7,
-            "rateFromTop": 0.219
+            "count": 4,
+            "rateFromPrev": 0.8,
+            "rateFromTop": 0.25
           }
         ],
         "opp": [
           {
             "stage": "SAO",
-            "count": 7,
+            "count": 4,
             "rateFromPrev": 1,
             "rateFromTop": 1
           },
           {
-            "stage": "Elaboração da Proposta",
-            "count": 6,
-            "rateFromPrev": 0.857,
-            "rateFromTop": 0.857
+            "stage": "Elab. Proposta",
+            "count": 3,
+            "rateFromPrev": 0.75,
+            "rateFromTop": 0.75
           },
           {
             "stage": "Proposta Enviada",
-            "count": 5,
-            "rateFromPrev": 0.833,
-            "rateFromTop": 0.714
+            "count": 2,
+            "rateFromPrev": 0.6666666666666666,
+            "rateFromTop": 0.5
           },
           {
             "stage": "Em negociação",
-            "count": 4,
-            "rateFromPrev": 0.8,
-            "rateFromTop": 0.571
+            "count": 1,
+            "rateFromPrev": 0.5,
+            "rateFromTop": 0.25
           },
           {
             "stage": "Proposta Aceita",
-            "count": 2,
-            "rateFromPrev": 0.5,
-            "rateFromTop": 0.286
+            "count": 0,
+            "rateFromPrev": 0,
+            "rateFromTop": 0
           }
         ]
       },
@@ -3046,43 +3213,47 @@
           },
           {
             "name": "Abordar",
-            "avgDays": 2.27
+            "avgDays": 2.14
           },
           {
             "name": "Em cadência",
-            "avgDays": 0.2
+            "avgDays": 0
           },
           {
             "name": "Lead Conectado",
-            "avgDays": 12.66
+            "avgDays": 3.49
           },
           {
-            "name": "Qualificação Agendada",
-            "avgDays": 1.26
+            "name": "Qual. Agendada",
+            "avgDays": 2.77
           },
           {
-            "name": "Qualificação Realizada",
-            "avgDays": 10.87
+            "name": "Qual. Realizada",
+            "avgDays": 18.51
           },
           {
             "name": "SAO",
-            "avgDays": 14.74
+            "avgDays": 25.68
           },
           {
-            "name": "Elaboração da Proposta",
-            "avgDays": 9.06
+            "name": "SAO",
+            "avgDays": 0
+          },
+          {
+            "name": "Elab. Proposta",
+            "avgDays": 2.88
           },
           {
             "name": "Proposta Enviada",
-            "avgDays": 21.1
+            "avgDays": 26.44
           },
           {
             "name": "Em negociação",
-            "avgDays": 48.07
+            "avgDays": 118.07
           },
           {
             "name": "Proposta Aceita",
-            "avgDays": 24.91
+            "avgDays": null
           }
         ]
       }
@@ -3092,77 +3263,77 @@
         "sdr": [
           {
             "stage": "Mapeamento",
-            "count": 484,
+            "count": 387,
             "rateFromPrev": 1,
             "rateFromTop": 1
           },
           {
             "stage": "Abordar",
-            "count": 442,
-            "rateFromPrev": 0.913,
-            "rateFromTop": 0.913
+            "count": 355,
+            "rateFromPrev": 0.917312661498708,
+            "rateFromTop": 0.917312661498708
           },
           {
             "stage": "Em cadência",
-            "count": 440,
-            "rateFromPrev": 0.995,
-            "rateFromTop": 0.909
+            "count": 354,
+            "rateFromPrev": 0.9971830985915493,
+            "rateFromTop": 0.9147286821705426
           },
           {
             "stage": "Lead Conectado",
-            "count": 113,
-            "rateFromPrev": 0.257,
-            "rateFromTop": 0.233
+            "count": 88,
+            "rateFromPrev": 0.24858757062146894,
+            "rateFromTop": 0.22739018087855298
           },
           {
-            "stage": "Qualificação Agendada",
-            "count": 50,
-            "rateFromPrev": 0.442,
-            "rateFromTop": 0.103
+            "stage": "Qual. Agendada",
+            "count": 35,
+            "rateFromPrev": 0.3977272727272727,
+            "rateFromTop": 0.09043927648578812
           },
           {
-            "stage": "Qualificação Realizada",
-            "count": 45,
-            "rateFromPrev": 0.9,
-            "rateFromTop": 0.093
+            "stage": "Qual. Realizada",
+            "count": 31,
+            "rateFromPrev": 0.8857142857142857,
+            "rateFromTop": 0.08010335917312661
           },
           {
             "stage": "SAO",
-            "count": 29,
-            "rateFromPrev": 0.644,
-            "rateFromTop": 0.06
+            "count": 23,
+            "rateFromPrev": 0.7419354838709677,
+            "rateFromTop": 0.059431524547803614
           }
         ],
         "opp": [
           {
             "stage": "SAO",
-            "count": 29,
+            "count": 23,
             "rateFromPrev": 1,
             "rateFromTop": 1
           },
           {
-            "stage": "Elaboração da Proposta",
-            "count": 16,
-            "rateFromPrev": 0.552,
-            "rateFromTop": 0.552
+            "stage": "Elab. Proposta",
+            "count": 13,
+            "rateFromPrev": 0.5652173913043478,
+            "rateFromTop": 0.5652173913043478
           },
           {
             "stage": "Proposta Enviada",
-            "count": 15,
-            "rateFromPrev": 0.938,
-            "rateFromTop": 0.517
+            "count": 12,
+            "rateFromPrev": 0.9230769230769231,
+            "rateFromTop": 0.5217391304347826
           },
           {
             "stage": "Em negociação",
-            "count": 13,
-            "rateFromPrev": 0.867,
-            "rateFromTop": 0.448
+            "count": 10,
+            "rateFromPrev": 0.8333333333333334,
+            "rateFromTop": 0.43478260869565216
           },
           {
             "stage": "Proposta Aceita",
-            "count": 9,
-            "rateFromPrev": 0.692,
-            "rateFromTop": 0.31
+            "count": 6,
+            "rateFromPrev": 0.6,
+            "rateFromTop": 0.2608695652173913
           }
         ]
       },
@@ -3174,43 +3345,47 @@
           },
           {
             "name": "Abordar",
-            "avgDays": 5.34
+            "avgDays": 5.11
           },
           {
             "name": "Em cadência",
-            "avgDays": 0.31
+            "avgDays": 0.24
           },
           {
             "name": "Lead Conectado",
-            "avgDays": 10.45
+            "avgDays": 11.11
           },
           {
-            "name": "Qualificação Agendada",
-            "avgDays": 3.14
+            "name": "Qual. Agendada",
+            "avgDays": 3.37
           },
           {
-            "name": "Qualificação Realizada",
-            "avgDays": 5.62
+            "name": "Qual. Realizada",
+            "avgDays": 6.17
           },
           {
             "name": "SAO",
-            "avgDays": 11.74
+            "avgDays": 6.15
           },
           {
-            "name": "Elaboração da Proposta",
-            "avgDays": 22.65
+            "name": "SAO",
+            "avgDays": 0
+          },
+          {
+            "name": "Elab. Proposta",
+            "avgDays": 16.42
           },
           {
             "name": "Proposta Enviada",
-            "avgDays": 22.02
+            "avgDays": 23.09
           },
           {
             "name": "Em negociação",
-            "avgDays": 31.48
+            "avgDays": 35.22
           },
           {
             "name": "Proposta Aceita",
-            "avgDays": 23.8
+            "avgDays": 29.64
           }
         ]
       }
@@ -3220,77 +3395,77 @@
         "sdr": [
           {
             "stage": "Mapeamento",
-            "count": 693,
+            "count": 365,
             "rateFromPrev": 1,
             "rateFromTop": 1
           },
           {
             "stage": "Abordar",
-            "count": 642,
-            "rateFromPrev": 0.926,
-            "rateFromTop": 0.926
+            "count": 333,
+            "rateFromPrev": 0.9123287671232877,
+            "rateFromTop": 0.9123287671232877
           },
           {
             "stage": "Em cadência",
-            "count": 637,
-            "rateFromPrev": 0.992,
-            "rateFromTop": 0.919
+            "count": 330,
+            "rateFromPrev": 0.990990990990991,
+            "rateFromTop": 0.9041095890410958
           },
           {
             "stage": "Lead Conectado",
-            "count": 222,
-            "rateFromPrev": 0.349,
-            "rateFromTop": 0.32
+            "count": 127,
+            "rateFromPrev": 0.38484848484848483,
+            "rateFromTop": 0.34794520547945207
           },
           {
-            "stage": "Qualificação Agendada",
-            "count": 72,
-            "rateFromPrev": 0.324,
-            "rateFromTop": 0.104
+            "stage": "Qual. Agendada",
+            "count": 48,
+            "rateFromPrev": 0.3779527559055118,
+            "rateFromTop": 0.13150684931506848
           },
           {
-            "stage": "Qualificação Realizada",
-            "count": 61,
-            "rateFromPrev": 0.847,
-            "rateFromTop": 0.088
+            "stage": "Qual. Realizada",
+            "count": 43,
+            "rateFromPrev": 0.8958333333333334,
+            "rateFromTop": 0.1178082191780822
           },
           {
             "stage": "SAO",
-            "count": 31,
-            "rateFromPrev": 0.508,
-            "rateFromTop": 0.045
+            "count": 27,
+            "rateFromPrev": 0.627906976744186,
+            "rateFromTop": 0.07397260273972603
           }
         ],
         "opp": [
           {
             "stage": "SAO",
-            "count": 31,
+            "count": 27,
             "rateFromPrev": 1,
             "rateFromTop": 1
           },
           {
-            "stage": "Elaboração da Proposta",
-            "count": 19,
-            "rateFromPrev": 0.613,
-            "rateFromTop": 0.613
+            "stage": "Elab. Proposta",
+            "count": 16,
+            "rateFromPrev": 0.5925925925925926,
+            "rateFromTop": 0.5925925925925926
           },
           {
             "stage": "Proposta Enviada",
-            "count": 16,
-            "rateFromPrev": 0.842,
-            "rateFromTop": 0.516
+            "count": 13,
+            "rateFromPrev": 0.8125,
+            "rateFromTop": 0.48148148148148145
           },
           {
             "stage": "Em negociação",
-            "count": 6,
-            "rateFromPrev": 0.375,
-            "rateFromTop": 0.194
+            "count": 4,
+            "rateFromPrev": 0.3076923076923077,
+            "rateFromTop": 0.14814814814814814
           },
           {
             "stage": "Proposta Aceita",
-            "count": 1,
-            "rateFromPrev": 0.167,
-            "rateFromTop": 0.032
+            "count": 0,
+            "rateFromPrev": 0,
+            "rateFromTop": 0
           }
         ]
       },
@@ -3302,73 +3477,74 @@
           },
           {
             "name": "Abordar",
-            "avgDays": 4.46
+            "avgDays": 4.3
           },
           {
             "name": "Em cadência",
-            "avgDays": 0.45
+            "avgDays": 0.4
           },
           {
             "name": "Lead Conectado",
-            "avgDays": 14.31
+            "avgDays": 14.94
           },
           {
-            "name": "Qualificação Agendada",
-            "avgDays": 11.11
+            "name": "Qual. Agendada",
+            "avgDays": 11.89
           },
           {
-            "name": "Qualificação Realizada",
-            "avgDays": 12.56
+            "name": "Qual. Realizada",
+            "avgDays": 13.51
           },
           {
             "name": "SAO",
-            "avgDays": 13.86
+            "avgDays": 13.29
           },
           {
-            "name": "Elaboração da Proposta",
-            "avgDays": 24.23
+            "name": "SAO",
+            "avgDays": 0
+          },
+          {
+            "name": "Elab. Proposta",
+            "avgDays": 24.58
           },
           {
             "name": "Proposta Enviada",
-            "avgDays": 16.22
+            "avgDays": 8.12
           },
           {
             "name": "Em negociação",
-            "avgDays": 44.96
+            "avgDays": 22.49
           },
           {
             "name": "Proposta Aceita",
-            "avgDays": 19.05
+            "avgDays": null
           }
         ]
       }
     }
   },
   "filters": {
-    "setores": [
-      "Construção",
-      "Educação",
-      "Financeiro",
-      "Indústria",
-      "Logística",
-      "Saúde",
-      "Tecnologia",
-      "Varejo"
-    ],
+    "setores": [],
     "cns": [
       "Breno Haus",
       "Larissa Martins da Cruz",
       "Luciano Moreira",
       "Owner 84342335"
     ],
-    "evs": [],
+    "evs": [
+      "Breno Haus",
+      "Larissa Martins da Cruz",
+      "Luciano Moreira",
+      "Marcelo Silva"
+    ],
     "campanhas": [
-      "Abr 2026"
+      "Abr 2026",
+      "Mar 2026"
     ]
   },
   "debug": {
     "cortexDealsCount": 163,
-    "baselineDealsCount": 1464,
+    "baselineDealsCount": 944,
     "cortexCompaniesCount": 16,
     "baselineCompaniesCount": 1457,
     "ownersResolvedCount": 160,
