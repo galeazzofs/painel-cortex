@@ -19,6 +19,7 @@
     --text-3: #78716C;
     --text-4: #A8A29E;
     --accent: #1F5F3F;
+    --accent-dark: #0F3D28;
     --accent-soft: #E8F2EC;
     --positive: #15803D;
     --negative: #991B1B;
@@ -267,17 +268,21 @@
   .cadence-arrow { font-size: 22px; line-height: 1; }
   .cadence-chart-wrap { overflow-x: auto; padding: 0 4px; }
   .cadence-empty { font-size: 13px; color: var(--text-4); text-align: center; padding: 48px 0; }
+
   .cad-bar { transition: opacity 0.18s; }
-  .cad-bar:hover { opacity: 0.78; }
-  .cad-bar-zero { fill: var(--surface-2); }
-  .cad-grid-line { stroke: var(--border); stroke-width: 1; stroke-dasharray: 2 4; opacity: 0.6; }
-  .cad-baseline { stroke: var(--text-3); stroke-width: 1.5; opacity: 0.4; }
-  .cad-axis-val { font-size: 10px; fill: var(--text-4); font-family: 'Geist Mono', monospace; }
-  .cad-week-lbl { font-size: 11px; fill: var(--text-2); font-weight: 500; font-family: Geist, sans-serif; }
-  .cad-week-date { font-size: 9px; fill: var(--text-4); font-family: Geist, sans-serif; letter-spacing: 0.02em; }
-  .cad-count-lbl { font-size: 13px; fill: var(--text-1); font-weight: 500; font-family: 'Fraunces', serif; }
+  .cad-bar:hover { opacity: 0.85; }
+  .cad-grid-line { stroke: var(--border); stroke-width: 1; stroke-dasharray: 2 4; opacity: 0.7; }
+  .cad-baseline  { stroke: var(--border-strong); stroke-width: 1.25; }
+  .cad-axis-val  { font-size: 10px; fill: var(--text-4); font-family: 'Geist Mono', monospace; }
+  .cad-week-lbl  { font-size: 11px; fill: var(--text-2); font-weight: 500; }
+  .cad-week-lbl.peak  { fill: var(--accent); font-weight: 600; }
+  .cad-week-lbl.muted { fill: var(--text-4); }
+  .cad-week-date { font-size: 9px; fill: var(--text-4); letter-spacing: 0.02em; }
+  .cad-week-date.muted { opacity: 0.6; }
+  .cad-count-lbl { font-size: 13px; fill: var(--text-1); font-weight: 500; font-family: 'Fraunces', serif; letter-spacing: -0.01em; }
+  .cad-count-lbl.peak { font-size: 18px; }
   .cad-count-zero { font-size: 10px; fill: var(--text-4); font-family: 'Geist Mono', monospace; }
-  .cad-peak-mark { fill: var(--warning); }
+  .cad-zero-line  { stroke: var(--border-strong); stroke-width: 2; stroke-linecap: round; }
 
   /* DUAL GRID */
   .dual-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -417,25 +422,18 @@ function weekLabel(wk) {
 // "2026-W14" → start (Mon) and end (Sun) Date objects
 function isoWeekToDates(wk) {
   const [yr, w] = wk.split('-W').map(Number);
-  // Monday of ISO week 1: the Monday on or before Jan 4
   const jan4 = new Date(yr, 0, 4);
-  const jan4Day = (jan4.getDay() + 6) % 7; // 0 = Mon
+  const jan4Day = (jan4.getDay() + 6) % 7;
   const week1Mon = new Date(jan4);
   week1Mon.setDate(jan4.getDate() - jan4Day);
-  // Target week's Monday
   const start = new Date(week1Mon);
   start.setDate(week1Mon.getDate() + (w - 1) * 7);
   const end = new Date(start);
   end.setDate(start.getDate() + 6);
   return { start, end };
 }
-function fmtDayMonth(d) {
-  const months = ['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'];
-  return `${String(d.getDate()).padStart(2,'0')} ${months[d.getMonth()]}`;
-}
 function isoWeekRangeLabel(wk) {
   const { start, end } = isoWeekToDates(wk);
-  // If same month, show "06–12 abr"; else "30 mar–05 abr"
   const months = ['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'];
   const sd = String(start.getDate()).padStart(2,'0');
   const ed = String(end.getDate()).padStart(2,'0');
@@ -452,9 +450,8 @@ function fillWeekGaps(weekly) {
   const map = Object.fromEntries(sorted.map(w => [w.week, w.count]));
   const [startYr, startW] = sorted[0].week.split('-W').map(Number);
   const [endYr, endW]     = sorted[sorted.length - 1].week.split('-W').map(Number);
-  if (startYr !== endYr) return sorted; // cross-year, just use what we have
+  if (startYr !== endYr) return sorted;
 
-  // How many ISO weeks does this year have?
   const dec28 = new Date(startYr, 11, 28);
   const day28 = (dec28.getDay() + 6) % 7;
   const lastWeekMon = new Date(dec28); lastWeekMon.setDate(dec28.getDate() - day28);
@@ -498,7 +495,6 @@ function getBaseline(data) {
 function computeMetrics(deals, baseline) {
   const total = deals.length;
 
-  // SDR funnel
   const sdrFunnel = STAGES_SDR.map((s, i) => {
     const count = deals.filter(d => d.stages[s.id]).length;
     const prevCount = i === 0 ? total : deals.filter(d => d.stages[STAGES_SDR[i-1].id]).length;
@@ -510,7 +506,6 @@ function computeMetrics(deals, baseline) {
   });
   const sdrLost = deals.filter(d => d.stages[STAGE_SDR_LOST]).length;
 
-  // OPP funnel
   const saoDeals  = deals.filter(d => d.stages['9102669']);
   const saoCount  = saoDeals.length;
   const oppFunnel = STAGES_OPP.map((s, i) => {
@@ -524,14 +519,12 @@ function computeMetrics(deals, baseline) {
   });
   const oppLost = deals.filter(d => d.stages[STAGE_OPP_LOST]).length;
 
-  // KPIs
   const qualified     = deals.filter(d => d.stages['24595561']).length;
   const closed        = deals.filter(d => d.stages['26183057']).length;
   const closedRevenue = deals.filter(d => d.stages['26183057']).reduce((s, d) => s + (d.amount || 0), 0);
   const pipelineValue = deals.filter(d => d.stages['9102669'] && !d.stages['26183057'] && !d.stages[STAGE_OPP_LOST])
                              .reduce((s, d) => s + (d.amount || 0), 0);
 
-  // Loss analysis
   const lostDeals = deals.filter(d => d.isLost);
   const byStage   = {};
   const byReason  = {};
@@ -542,7 +535,6 @@ function computeMetrics(deals, baseline) {
     byReason[r] = (byReason[r] || 0) + 1;
   });
 
-  // Weekly cadences (entries into "Em cadência" stage per ISO week)
   const cadWeeks = {};
   deals.forEach(d => {
     const dt = d.stages['24595559'];
@@ -552,11 +544,9 @@ function computeMetrics(deals, baseline) {
     }
   });
 
-  // Segments
   const byPorte = groupBy(deals, d => d.porte || '— sem porte');
   const bySetor = groupBy(deals, d => d.setor  || '— sem categoria');
 
-  // Team
   const cnMap = {};
   deals.forEach(d => {
     if (!d.cn) return;
@@ -684,12 +674,6 @@ function renderFilterBar(data) {
     ...portes.map(p => ({ id: p, label: p, count: counts[p] ?? 0 }))
   ];
 
-  const selectOpts = (arr, key) => {
-    const opts = (arr || []).map(v => `<option value="${v}" ${filters[key] === v ? 'selected' : ''}>${v}</option>`).join('');
-    return `<option value="all">Todos${key === 'cn' ? ' CNs' : key === 'ev' ? ' EVs' : ''}</option>${opts}`;
-  };
-
-  // Active filter pills
   const activePills = ['setor','cn','ev','campanha']
     .filter(k => filters[k] !== 'all')
     .map(k => `<span class="active-filter-pill">${filters[k]}<button data-clear="${k}">×</button></span>`)
@@ -782,8 +766,6 @@ function renderKPIs(m, meta) {
 }
 
 function renderFunnelCard(title, caption, cortex, baseline, cortexLost, saoIsLast) {
-  const bTotal = baseline[0]?.count || 1;
-
   const rows = cortex.map((c, i) => {
     const bl           = baseline[i] || {};
     const baselineTop  = bl.rateFromTop ?? 0;
@@ -928,6 +910,7 @@ function renderVelocity(velocity) {
     </div>`;
 }
 
+// ---- CADENCES (rebuilt) --------------------------------------------------
 function renderCadences(m) {
   const rawWeekly = m.cadences?.weekly || [];
 
@@ -942,78 +925,87 @@ function renderCadences(m) {
       </div>`;
   }
 
-  // Fill week gaps for visual continuity
-  const weekly = fillWeekGaps(rawWeekly);
+  const weekly  = fillWeekGaps(rawWeekly);
+  const total   = weekly.reduce((s, w) => s + w.count, 0);
+  const nonZero = weekly.filter(w => w.count > 0);
+  const max     = Math.max(...weekly.map(w => w.count), 1);
+  const avg     = nonZero.length > 0 ? total / nonZero.length : 0;
+  const peak    = weekly.reduce((acc, w) => w.count > acc.count ? w : acc, weekly[0]);
+  const last    = weekly[weekly.length - 1];
+  const prev    = weekly[weekly.length - 2] || null;
+  const wow     = (prev && prev.count > 0) ? ((last.count - prev.count) / prev.count) : null;
 
-  // Stats
-  const total       = weekly.reduce((s, w) => s + w.count, 0);
-  const nonZero     = weekly.filter(w => w.count > 0);
-  const max         = Math.max(...weekly.map(w => w.count), 1);
-  const avg         = nonZero.length > 0 ? total / nonZero.length : 0;
-  const peak        = weekly.reduce((acc, w) => w.count > acc.count ? w : acc, weekly[0]);
-  const last        = weekly[weekly.length - 1];
-  const prev        = weekly[weekly.length - 2] || null;
-  const wow         = (prev && prev.count > 0) ? ((last.count - prev.count) / prev.count) : null;
+  // Nice Y axis with integer step intervals + ~15% headroom
+  function niceScale(maxVal) {
+    if (maxVal <= 5)   return { max: 5,   step: 1 };
+    if (maxVal <= 10)  return { max: 10,  step: 2 };
+    if (maxVal <= 20)  return { max: 20,  step: 5 };
+    if (maxVal <= 50)  return { max: Math.ceil(maxVal / 10) * 10, step: 10 };
+    if (maxVal <= 100) return { max: Math.ceil(maxVal / 20) * 20, step: 20 };
+    const pow = Math.pow(10, Math.floor(Math.log10(maxVal)));
+    return { max: Math.ceil(maxVal / pow) * pow, step: pow };
+  }
+  const scaleObj = niceScale(Math.ceil(max * 1.15));
+  const niceMax  = scaleObj.max;
+  const step     = scaleObj.step;
 
   // SVG layout
-  const PAD_LEFT = 32, PAD_RIGHT = 12, PAD_TOP = 28, CHART_H = 200, LABEL_H = 56;
-  const BAR_W   = 48, BAR_GAP = 22;
-  const innerW  = weekly.length * (BAR_W + BAR_GAP) + BAR_GAP;
-  const svgW    = PAD_LEFT + innerW + PAD_RIGHT;
-  const svgH    = PAD_TOP + CHART_H + LABEL_H;
+  const PAD_LEFT  = 48;
+  const PAD_RIGHT = 20;
+  const PAD_TOP   = 32;
+  const CHART_H   = 220;
+  const LABEL_H   = 60;
+  const BAR_W     = 44;
+  const BAR_GAP   = 28;
 
-  // Y-axis grid (4 ticks at 25/50/75/100% of max)
-  const niceMax = (() => {
-    // Round up max to a nice number
-    if (max <= 5)  return 5;
-    if (max <= 10) return 10;
-    if (max <= 20) return 20;
-    if (max <= 50) return Math.ceil(max / 5) * 5;
-    return Math.ceil(max / 10) * 10;
-  })();
+  const innerW = weekly.length * BAR_W + Math.max(0, weekly.length - 1) * BAR_GAP;
+  const svgW   = PAD_LEFT + innerW + PAD_RIGHT;
+  const svgH   = PAD_TOP + CHART_H + LABEL_H;
+  const baseY  = PAD_TOP + CHART_H;
 
-  const ticks  = [1, 0.75, 0.5, 0.25, 0];
-  const grid   = ticks.map(t => {
-    const y   = PAD_TOP + (1 - t) * CHART_H;
-    const val = Math.round(niceMax * t);
+  // Y-axis ticks at integer steps (0, step, 2*step, …, niceMax)
+  const ticks = [];
+  for (let v = 0; v <= niceMax; v += step) ticks.push(v);
+
+  const gridLines = ticks.map(v => {
+    const y = baseY - (v / niceMax) * CHART_H;
+    const lineCls = v === 0 ? 'cad-baseline' : 'cad-grid-line';
     return `
-      <line class="cad-grid-line" x1="${PAD_LEFT}" y1="${y}" x2="${svgW - PAD_RIGHT}" y2="${y}"/>
-      <text class="cad-axis-val" x="${PAD_LEFT - 6}" y="${y + 3}" text-anchor="end">${val}</text>`;
+      <line class="${lineCls}" x1="${PAD_LEFT}" y1="${y}" x2="${svgW - PAD_RIGHT}" y2="${y}"/>
+      <text class="cad-axis-val" x="${PAD_LEFT - 10}" y="${y + 3}" text-anchor="end">${v}</text>`;
   }).join('');
 
-  const baseY = PAD_TOP + CHART_H;
-
-  // Bars
   const bars = weekly.map((w, i) => {
-    const x   = PAD_LEFT + BAR_GAP + i * (BAR_W + BAR_GAP);
-    const cx  = x + BAR_W / 2;
-    const isZero  = w.count === 0;
-    const isPeak  = !isZero && w.count === peak.count;
-    const barH    = isZero ? 4 : Math.max(6, (w.count / niceMax) * CHART_H);
-    const y       = baseY - barH;
+    const x  = PAD_LEFT + i * (BAR_W + BAR_GAP);
+    const cx = x + BAR_W / 2;
+    const isZero = w.count === 0;
+    const isPeak = !isZero && w.count === peak.count;
     const dateLbl = isoWeekRangeLabel(w.week);
     const wkLbl   = weekLabel(w.week);
 
     if (isZero) {
       return `
         <g>
-          <rect class="cad-bar cad-bar-zero" x="${x}" y="${y}" width="${BAR_W}" height="${barH}" rx="2" ry="2"/>
-          <text class="cad-count-zero" x="${cx}" y="${y - 6}" text-anchor="middle">0</text>
-          <text class="cad-week-lbl"  x="${cx}" y="${baseY + 22}" text-anchor="middle" opacity="0.6">${wkLbl}</text>
-          <text class="cad-week-date" x="${cx}" y="${baseY + 38}" text-anchor="middle" opacity="0.6">${dateLbl}</text>
+          <line class="cad-zero-line" x1="${x + 6}" y1="${baseY}" x2="${x + BAR_W - 6}" y2="${baseY}"/>
+          <text class="cad-count-zero" x="${cx}" y="${baseY - 8}" text-anchor="middle">0</text>
+          <text class="cad-week-lbl muted" x="${cx}" y="${baseY + 22}" text-anchor="middle">${wkLbl}</text>
+          <text class="cad-week-date muted" x="${cx}" y="${baseY + 38}" text-anchor="middle">${dateLbl}</text>
         </g>`;
     }
+
+    const barH = Math.max(6, (w.count / niceMax) * CHART_H);
+    const y    = baseY - barH;
+    const fill = isPeak ? 'url(#cad-grad-peak)' : 'url(#cad-grad)';
+
     return `
       <g>
-        <rect class="cad-bar" x="${x}" y="${y}" width="${BAR_W}" height="${barH}" rx="4" ry="4" fill="url(#cad-grad)"/>
-        ${isPeak ? `<circle class="cad-peak-mark" cx="${cx}" cy="${y - 18}" r="3.5"/>` : ''}
-        <text class="cad-count-lbl" x="${cx}" y="${y - 8}" text-anchor="middle">${w.count}</text>
-        <text class="cad-week-lbl"  x="${cx}" y="${baseY + 22}" text-anchor="middle">${wkLbl}</text>
+        <rect class="cad-bar" x="${x}" y="${y}" width="${BAR_W}" height="${barH}" rx="3" ry="3" fill="${fill}"/>
+        <text class="cad-count-lbl${isPeak ? ' peak' : ''}" x="${cx}" y="${y - 10}" text-anchor="middle">${w.count}</text>
+        <text class="cad-week-lbl${isPeak ? ' peak' : ''}" x="${cx}" y="${baseY + 22}" text-anchor="middle">${wkLbl}</text>
         <text class="cad-week-date" x="${cx}" y="${baseY + 38}" text-anchor="middle">${dateLbl}</text>
       </g>`;
   }).join('');
 
-  // Stat formatter
   const wowDisplay = wow === null
     ? `<span class="cadence-stat-value muted serif">—<span class="cadence-stat-meta">sem comparação</span></span>`
     : `<span class="cadence-stat-value serif ${wow > 0 ? 'pos' : wow < 0 ? 'neg' : ''}">
@@ -1039,7 +1031,7 @@ function renderCadences(m) {
         </div>
         <div>
           <div class="cadence-stat-label">Média semanal</div>
-          <span class="cadence-stat-value serif">${avg.toFixed(1).replace('.', ',')}<span class="cadence-stat-meta">semanas com atividade</span></span>
+          <span class="cadence-stat-value serif">${avg.toFixed(1).replace('.', ',')}<span class="cadence-stat-meta">por semana ativa</span></span>
         </div>
         <div>
           <div class="cadence-stat-label">Última vs. anterior</div>
@@ -1047,15 +1039,18 @@ function renderCadences(m) {
         </div>
       </div>
       <div class="cadence-chart-wrap">
-        <svg width="${svgW}" height="${svgH}" viewBox="0 0 ${svgW} ${svgH}" xmlns="http://www.w3.org/2000/svg" style="min-width:${svgW}px">
+        <svg width="${svgW}" height="${svgH}" viewBox="0 0 ${svgW} ${svgH}" xmlns="http://www.w3.org/2000/svg" style="min-width:${svgW}px;display:block">
           <defs>
             <linearGradient id="cad-grad" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%"   stop-color="var(--accent)" stop-opacity="0.95"/>
-              <stop offset="100%" stop-color="var(--accent)" stop-opacity="0.55"/>
+              <stop offset="0%"   stop-color="var(--accent)" stop-opacity="0.85"/>
+              <stop offset="100%" stop-color="var(--accent)" stop-opacity="0.45"/>
+            </linearGradient>
+            <linearGradient id="cad-grad-peak" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%"   stop-color="var(--accent-dark)" stop-opacity="1"/>
+              <stop offset="100%" stop-color="var(--accent)"      stop-opacity="0.85"/>
             </linearGradient>
           </defs>
-          ${grid}
-          <line class="cad-baseline" x1="${PAD_LEFT}" y1="${baseY}" x2="${svgW - PAD_RIGHT}" y2="${baseY}"/>
+          ${gridLines}
           ${bars}
         </svg>
       </div>
@@ -1064,7 +1059,6 @@ function renderCadences(m) {
 
 function renderSegments(m, data) {
   const s      = m.segments;
-  const total  = m.total || 1;
 
   const showPorte = filters.porte === 'all' && s.byPorte.length > 0;
   const PORTE_ORDER = ['P', 'M', 'G+'];
@@ -1198,23 +1192,19 @@ function render() {
     </div>
   `;
 
-  // Bind porte tabs
   document.querySelectorAll('.porte-tab').forEach(btn => {
     btn.addEventListener('click', () => { filters.porte = btn.dataset.porte; render(); });
   });
 
-  // Bind dimension selects
   document.querySelectorAll('.dim-select').forEach(sel => {
     sel.addEventListener('change', () => { filters[sel.dataset.filter] = sel.value; render(); });
   });
 
-  // Clear filters button
   document.querySelector('.clear-filters-btn')?.addEventListener('click', () => {
     ['setor','cn','ev','campanha'].forEach(k => filters[k] = 'all');
     render();
   });
 
-  // Clear individual pills
   document.querySelectorAll('[data-clear]').forEach(btn => {
     btn.addEventListener('click', () => { filters[btn.dataset.clear] = 'all'; render(); });
   });
