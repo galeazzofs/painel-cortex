@@ -306,6 +306,26 @@
   .segment-fill { height: 100%; background: var(--accent); border-radius: 3px; transition: width 0.8s cubic-bezier(.4,0,.2,1); }
   .segment-count { text-align: right; color: var(--text-3); font-size: 12px; }
 
+  /* CURRENT STATE */
+  .state-list { display: flex; flex-direction: column; gap: 14px; }
+  .state-row { display: grid; grid-template-columns: 140px 1fr 92px; gap: 12px; align-items: center; font-size: 13px; }
+  .state-label { color: var(--text-2); }
+  .state-bar { height: 10px; background: var(--surface-2); border-radius: 3px; overflow: hidden; }
+  .state-fill { height: 100%; background: var(--accent); border-radius: 3px; transition: width 0.8s cubic-bezier(.4,0,.2,1); }
+  .state-row[data-level="0"] .state-fill { opacity: 0.32; }
+  .state-row[data-level="1"] .state-fill { opacity: 0.48; }
+  .state-row[data-level="2"] .state-fill { opacity: 0.64; }
+  .state-row[data-level="3"] .state-fill { opacity: 0.80; }
+  .state-row[data-level="4"] .state-fill { opacity: 1; }
+  .state-row[data-level="5"] .state-fill { background: var(--accent-dark); }
+  .state-row[data-level="6"] .state-fill { background: var(--accent-dark); }
+  .state-row.lost .state-label { color: var(--negative); }
+  .state-row.lost .state-fill { background: var(--negative); opacity: 0.55; }
+  .state-count { text-align: right; color: var(--text-3); font-size: 12px; font-variant-numeric: tabular-nums; }
+  .state-pct { color: var(--text-4); font-size: 11px; margin-left: 6px; font-family: 'Geist Mono', monospace; }
+  .state-divider-row { border-top: 1px dashed var(--border-strong); margin-top: 6px; padding-top: 14px; }
+  .state-highlight { background: var(--accent-soft); color: var(--accent); padding: 1px 6px; border-radius: 3px; font-weight: 500; }
+
   /* TEAM */
   .team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
   table.perf { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 14px; }
@@ -1098,6 +1118,80 @@ function renderCadences(m) {
     </div>`;
 }
 
+function renderCurrentState(m, deals) {
+  const total = deals.length;
+  if (total === 0) {
+    return `
+      <div class="card fade-in">
+        <div class="card-title">Estado atual dos leads</div>
+        <div class="card-sub">Em qual etapa cada lead está parado agora</div>
+        <div style="color:var(--text-4);font-size:13px;padding:12px 0;">Nenhum lead no recorte</div>
+      </div>`;
+  }
+
+  // Bucket each deal by its furthest non-lost stage reached
+  const buckets = {
+    'Mapeamento':  { count: 0, level: 0 },
+    'Abordando':   { count: 0, level: 1 },
+    'Em cadência': { count: 0, level: 2 },
+    'Conectado':   { count: 0, level: 3 },
+    'Qualificado': { count: 0, level: 4 },
+    'Em pipeline': { count: 0, level: 5 },
+    'Fechado':     { count: 0, level: 6 },
+  };
+  let lostCount = 0;
+
+  deals.forEach(d => {
+    if (d.isLost)             { lostCount++;                     return; }
+    if (d.stages['26183057']) { buckets['Fechado'].count++;      return; }
+    if (d.stages['9102669'])  { buckets['Em pipeline'].count++;  return; }
+    if (d.stages['24595561']) { buckets['Qualificado'].count++;  return; }
+    if (d.stages['24595562']) { buckets['Conectado'].count++;    return; }
+    if (d.stages['24595559']) { buckets['Em cadência'].count++;  return; }
+    if (d.stages['24595558']) { buckets['Abordando'].count++;    return; }
+    buckets['Mapeamento'].count++;
+  });
+
+  const orderedKeys = ['Mapeamento','Abordando','Em cadência','Conectado','Qualificado','Em pipeline','Fechado'];
+  const activeRows = orderedKeys
+    .filter(k => buckets[k].count > 0)
+    .map(k => ({ name: k, count: buckets[k].count, pct: buckets[k].count / total, level: buckets[k].level, isLost: false }));
+
+  // Bars scaled relative to the largest bucket (so the smallest bars are still visible)
+  const maxCount = Math.max(...Object.values(buckets).map(b => b.count), lostCount, 1);
+
+  const renderRow = (r) => `
+    <div class="state-row${r.isLost ? ' lost' : ''}" data-level="${r.level}">
+      <div class="state-label">${r.name}</div>
+      <div class="state-bar"><div class="state-fill" style="width:${(r.count/maxCount)*100}%"></div></div>
+      <div class="state-count">${fmt(r.count, 'int')}<span class="state-pct">${(r.pct*100).toFixed(0)}%</span></div>
+    </div>`;
+
+  const activeBlock = activeRows.length === 0
+    ? `<div style="color:var(--text-4);font-size:13px;padding:8px 0;">Nenhum lead ativo no funil</div>`
+    : activeRows.map(renderRow).join('');
+
+  const lostBlock = lostCount > 0
+    ? `<div class="state-divider-row">${renderRow({ name: 'Perdido', count: lostCount, pct: lostCount/total, level: -1, isLost: true })}</div>`
+    : '';
+
+  // Insight: where most active leads are sitting
+  const topBucket = activeRows.reduce((acc, r) => r.count > (acc?.count||0) ? r : acc, null);
+  const insight = topBucket
+    ? `<span class="state-highlight">${(topBucket.pct*100).toFixed(0)}% em ${topBucket.name}</span>`
+    : '';
+
+  return `
+    <div class="card fade-in">
+      <div class="card-title">Estado atual dos leads</div>
+      <div class="card-sub">Em qual etapa cada lead está parado agora ${insight}</div>
+      <div class="state-list">
+        ${activeBlock}
+        ${lostBlock}
+      </div>
+    </div>`;
+}
+
 function renderSegments(m, data) {
   const s      = m.segments;
 
@@ -1222,11 +1316,11 @@ function render() {
       ${renderCadences(m)}
       <div class="section-header">
         <div class="section-title">Qualidade e perfil</div>
-        <div class="section-sub">Segmentação dos ${fmt(m.total, 'int')} leads no recorte</div>
+        <div class="section-sub">Quem são e onde estão os ${fmt(m.total, 'int')} leads no recorte</div>
       </div>
       <div class="dual-grid" style="margin-bottom:0">
         ${renderSegments(m, gData)}
-        <div><!-- placeholder for future widget --></div>
+        ${renderCurrentState(m, filtered)}
       </div>
       ${renderTeam(m)}
       ${renderFooter(gData)}
