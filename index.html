@@ -439,12 +439,10 @@ function timeAgo(iso) {
   return `há ${Math.floor(hrs / 24)} d`;
 }
 function weekLabel(wk) {
-  // "2026-W14" → "S14"
   const [, w] = wk.split('-W');
   return `S${w}`;
 }
 
-// "2026-W14" → start (Mon) and end (Sun) Date objects
 function isoWeekToDates(wk) {
   const [yr, w] = wk.split('-W').map(Number);
   const jan4 = new Date(yr, 0, 4);
@@ -468,7 +466,6 @@ function isoWeekRangeLabel(wk) {
   return `${sd} ${months[start.getMonth()]}–${ed} ${months[end.getMonth()]}`;
 }
 
-// Fill missing weeks with zero counts between min and max week (same year)
 function fillWeekGaps(weekly) {
   if (weekly.length === 0) return [];
   const sorted = [...weekly].sort((a, b) => a.week.localeCompare(b.week));
@@ -592,6 +589,21 @@ function computeMetrics(deals, baseline) {
   });
   const evs = Object.values(evMap).sort((a, b) => b.pipeline - a.pipeline);
 
+  // ---- VELOCITY: compute Cortex days from deal stage timestamps ----------
+  const ALL_VEL    = [...STAGES_SDR, ...STAGES_OPP.slice(1)]; // 11 stages, sem SAO duplicado
+  const blStages   = baseline?.velocity?.stages || [];
+  const velStages  = ALL_VEL.map((s, i) => {
+    const bl = blStages[i] || {};
+    if (i === 0) return { name: s.name, cortexDays: null, avgDays: bl.avgDays ?? null };
+    const prevId = ALL_VEL[i - 1].id;
+    const diffs  = deals
+      .filter(d => d.stages[prevId] && d.stages[s.id])
+      .map(d => (new Date(d.stages[s.id]) - new Date(d.stages[prevId])) / 86400000)
+      .filter(x => x >= 0 && x < 365);
+    const avg = diffs.length ? diffs.reduce((a, b) => a + b, 0) / diffs.length : null;
+    return { name: s.name, cortexDays: avg, avgDays: bl.avgDays ?? null };
+  });
+
   return {
     total,
     kpis: {
@@ -616,7 +628,7 @@ function computeMetrics(deals, baseline) {
     cadences: {
       weekly: Object.entries(cadWeeks).sort(([a],[b]) => a.localeCompare(b)).map(([week, count]) => ({ week, count }))
     },
-    velocity: baseline?.velocity || { stages: [] },
+    velocity: { stages: velStages },
     segments: { byPorte, bySetor: bySetor.slice(0, 6) },
     team: { cns, evs }
   };
@@ -960,7 +972,6 @@ function renderCadences(m) {
   const prev    = weekly[weekly.length - 2] || null;
   const wow     = (prev && prev.count > 0) ? ((last.count - prev.count) / prev.count) : null;
 
-  // Nice Y axis with integer step intervals + ~18% headroom
   function niceScale(maxVal) {
     if (maxVal <= 5)   return { max: 5,   step: 1 };
     if (maxVal <= 10)  return { max: 10,  step: 2 };
@@ -974,7 +985,6 @@ function renderCadences(m) {
   const niceMax  = scaleObj.max;
   const step     = scaleObj.step;
 
-  // RESPONSIVE LAYOUT — SVG fills 100% of container via viewBox
   const PAD_LEFT  = 56;
   const PAD_RIGHT = 28;
   const PAD_TOP   = 44;
@@ -989,7 +999,6 @@ function renderCadences(m) {
   const svgH  = PAD_TOP + CHART_H + LABEL_H;
   const baseY = PAD_TOP + CHART_H;
 
-  // Y-axis ticks at integer steps
   const ticks = [];
   for (let v = 0; v <= niceMax; v += step) ticks.push(v);
 
@@ -1001,7 +1010,6 @@ function renderCadences(m) {
       <text class="cad-axis-val" x="${PAD_LEFT - 14}" y="${y + 4}" text-anchor="end">${v}</text>`;
   }).join('');
 
-  // Pre-compute geometry for every bar
   const bars = weekly.map((w, i) => {
     const slotX = PAD_LEFT + i * slotW;
     const cx    = slotX + slotW / 2;
@@ -1013,7 +1021,6 @@ function renderCadences(m) {
     return { ...w, x, cx, y, barH, isZero, isPeak };
   });
 
-  // Smooth trend curve through bar tops (Catmull-Rom → cubic bezier)
   function smoothPath(pts) {
     if (pts.length < 2) return '';
     let d = `M ${pts[0].x},${pts[0].y}`;
@@ -1034,7 +1041,6 @@ function renderCadences(m) {
   const trendPts  = bars.filter(b => !b.isZero).map(b => ({ x: b.cx, y: b.y }));
   const trendPath = trendPts.length >= 2 ? smoothPath(trendPts) : '';
 
-  // Bars + labels
   const barElements = bars.map(b => {
     const dateLbl = isoWeekRangeLabel(b.week);
     const wkLbl   = weekLabel(b.week);
@@ -1060,7 +1066,6 @@ function renderCadences(m) {
       </g>`;
   }).join('');
 
-  // Trend dots — small markers at each bar top to anchor the curve
   const trendDots = bars.filter(b => !b.isZero).map(b =>
     `<circle class="cad-trend-dot${b.isPeak ? ' peak' : ''}" cx="${b.cx}" cy="${b.y}" r="${b.isPeak ? 5.5 : 3.5}"/>`
   ).join('');
@@ -1129,7 +1134,6 @@ function renderCurrentState(m, deals) {
       </div>`;
   }
 
-  // Bucket each deal by its furthest non-lost stage reached
   const buckets = {
     'Mapeamento':  { count: 0, level: 0 },
     'Abordando':   { count: 0, level: 1 },
@@ -1157,7 +1161,6 @@ function renderCurrentState(m, deals) {
     .filter(k => buckets[k].count > 0)
     .map(k => ({ name: k, count: buckets[k].count, pct: buckets[k].count / total, level: buckets[k].level, isLost: false }));
 
-  // Bars scaled relative to the largest bucket (so the smallest bars are still visible)
   const maxCount = Math.max(...Object.values(buckets).map(b => b.count), lostCount, 1);
 
   const renderRow = (r) => `
@@ -1175,7 +1178,6 @@ function renderCurrentState(m, deals) {
     ? `<div class="state-divider-row">${renderRow({ name: 'Perdido', count: lostCount, pct: lostCount/total, level: -1, isLost: true })}</div>`
     : '';
 
-  // Insight: where most active leads are sitting
   const topBucket = activeRows.reduce((acc, r) => r.count > (acc?.count||0) ? r : acc, null);
   const insight = topBucket
     ? `<span class="state-highlight">${(topBucket.pct*100).toFixed(0)}% em ${topBucket.name}</span>`
