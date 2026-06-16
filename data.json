@@ -1,10 +1,10 @@
 {
   "meta": {
-    "updatedAt": "2026-06-15T11:00:45.830Z",
+    "updatedAt": "2026-06-16T11:00:43.572Z",
     "campaignStartDate": "2026-04-01",
     "campaignDurationDays": 365,
-    "daysElapsed": 75,
-    "maturityPct": 20.5,
+    "daysElapsed": 76,
+    "maturityPct": 20.8,
     "companiesTotal": 16,
     "availablePortes": [
       "P",
@@ -12,9 +12,9 @@
       "G+"
     ],
     "porteCounts": {
-      "all": 418,
+      "all": 468,
       "P": 164,
-      "M": 246,
+      "M": 296,
       "G+": 8
     }
   },
@@ -7323,6 +7323,7 @@
       "stages": {
         "24595558": "2026-06-11T17:16:26.525Z",
         "24595559": "2026-06-11T17:18:51.781Z",
+        "24595562": "2026-06-15T17:35:48.193Z",
         "72557853": "2026-06-08T15:23:06.692Z"
       },
       "amount": 0,
@@ -7395,6 +7396,7 @@
       "stages": {
         "24595558": "2026-06-11T20:09:50.200Z",
         "24595559": "2026-06-11T20:09:54.072Z",
+        "24595562": "2026-06-15T17:27:23.383Z",
         "72557853": "2026-06-08T15:23:06.860Z"
       },
       "amount": 0,
@@ -7507,6 +7509,8 @@
       "ev": "Breno Haus",
       "campanha": "Jun 2026",
       "stages": {
+        "24595558": "2026-06-15T17:25:45.842Z",
+        "24595559": "2026-06-15T17:25:48.492Z",
         "72557853": "2026-06-09T14:23:08.804Z"
       },
       "amount": 0,
@@ -7935,6 +7939,863 @@
       "lostStage": null,
       "lostFunnel": null,
       "lostReason": null
+    },
+    {
+      "id": "61109373724",
+      "company": "Snd Distribuicao - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Barbara Costa Borges",
+      "ev": "Luciano Moreira",
+      "campanha": "Jun 2026",
+      "stages": {
+        "72557853": "2026-06-15T13:59:40.378Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61109915915",
+      "company": "Bluesoft Sistemas - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Barbara Costa Borges",
+      "ev": "Bruno Fernandes",
+      "campanha": "Jun 2026",
+      "stages": {
+        "72557853": "2026-06-15T13:59:40.545Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61109935943",
+      "company": "Telecall - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Barbara Costa Borges",
+      "ev": "Bruno Fernandes",
+      "campanha": "Jun 2026",
+      "stages": {
+        "72557853": "2026-06-15T13:59:40.592Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61103310862",
+      "company": "Virtual Connection - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Barbara Costa Borges",
+      "ev": "Bruno Fernandes",
+      "campanha": "Jun 2026",
+      "stages": {
+        "72557853": "2026-06-15T13:59:40.594Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61109242436",
+      "company": "Taigeta | Cultura Organizacional - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
+      "campanha": "Jun 2026",
+      "stages": {
+        "72557853": "2026-06-15T13:59:40.615Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61109852985",
+      "company": "Softtek - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
+      "campanha": "Jun 2026",
+      "stages": {
+        "72557853": "2026-06-15T13:59:40.652Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61109875289",
+      "company": "Demarco - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Barbara Costa Borges",
+      "ev": "Bruno Fernandes",
+      "campanha": "Jun 2026",
+      "stages": {
+        "72557853": "2026-06-15T13:59:40.652Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61109366073",
+      "company": "Truechange - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
+      "campanha": "Jun 2026",
+      "stages": {
+        "72557853": "2026-06-15T13:59:40.700Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61109157518",
+      "company": "Quantum - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
+      "campanha": "Jun 2026",
+      "stages": {
+        "72557853": "2026-06-15T13:59:40.707Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61083973178",
+      "company": "Mhnet Telecom - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
+      "campanha": "Jun 2026",
+      "stages": {
+        "72557853": "2026-06-15T13:59:40.749Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61109270441",
+      "company": "Tty2000 - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Barbara Costa Borges",
+      "ev": "Bruno Fernandes",
+      "campanha": "Jun 2026",
+      "stages": {
+        "72557853": "2026-06-15T13:59:40.769Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61102875577",
+      "company": "Squadra Digital - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
+      "campanha": "Jun 2026",
+      "stages": {
+        "72557853": "2026-06-15T13:59:40.777Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61100957045",
+      "company": "Yandeh - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Barbara Costa Borges",
+      "ev": "Bruno Fernandes",
+      "campanha": "Jun 2026",
+      "stages": {
+        "72557853": "2026-06-15T13:59:40.783Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61109312583",
+      "company": "Arquivar - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": null,
+      "campanha": "Jun 2026",
+      "stages": {
+        "72557853": "2026-06-15T13:59:40.790Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61109877051",
+      "company": "Autopass S/A - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Barbara Costa Borges",
+      "ev": "Luciano Moreira",
+      "campanha": "Jun 2026",
+      "stages": {
+        "72557853": "2026-06-15T13:59:40.794Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61109206893",
+      "company": "To Brasil - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
+      "campanha": "Jun 2026",
+      "stages": {
+        "72557853": "2026-06-15T13:59:40.816Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61109315114",
+      "company": "Levva - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
+      "campanha": "Jun 2026",
+      "stages": {
+        "72557853": "2026-06-15T13:59:40.819Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61109273474",
+      "company": "Sydle - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Barbara Costa Borges",
+      "ev": "Bruno Fernandes",
+      "campanha": "Jun 2026",
+      "stages": {
+        "72557853": "2026-06-15T13:59:40.843Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61100807242",
+      "company": "Primeup - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
+      "campanha": "Jun 2026",
+      "stages": {
+        "72557853": "2026-06-15T13:59:40.851Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61109799727",
+      "company": "Exact Sales - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Barbara Costa Borges",
+      "ev": "Bruno Fernandes",
+      "campanha": "Jun 2026",
+      "stages": {
+        "72557853": "2026-06-15T13:59:40.851Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61109915917",
+      "company": "It2b - Tecnologia - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
+      "campanha": "Jun 2026",
+      "stages": {
+        "72557853": "2026-06-15T13:59:40.854Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61109923198",
+      "company": "Seedz - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Barbara Costa Borges",
+      "ev": "Bruno Fernandes",
+      "campanha": "Jun 2026",
+      "stages": {
+        "72557853": "2026-06-15T13:59:40.867Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61109928724",
+      "company": "Tecnoset - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Barbara Costa Borges",
+      "ev": "Bruno Fernandes",
+      "campanha": "Jun 2026",
+      "stages": {
+        "72557853": "2026-06-15T13:59:40.876Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61100181129",
+      "company": "Solor - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
+      "campanha": "Jun 2026",
+      "stages": {
+        "72557853": "2026-06-15T13:59:40.896Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61109355177",
+      "company": "Telemont - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
+      "campanha": "Jun 2026",
+      "stages": {
+        "72557853": "2026-06-15T13:59:40.901Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61109850441",
+      "company": "Scansource Brasil - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Barbara Costa Borges",
+      "ev": "Bruno Fernandes",
+      "campanha": "Jun 2026",
+      "stages": {
+        "72557853": "2026-06-15T13:59:40.905Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61109355178",
+      "company": "Scala Data Centers - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Barbara Costa Borges",
+      "ev": "Bruno Fernandes",
+      "campanha": "Jun 2026",
+      "stages": {
+        "72557853": "2026-06-15T13:59:40.934Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61101860168",
+      "company": "Group Software - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Barbara Costa Borges",
+      "ev": "Bruno Fernandes",
+      "campanha": "Jun 2026",
+      "stages": {
+        "72557853": "2026-06-15T13:59:40.937Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61103310863",
+      "company": "Amcom Sistemas de Informacao - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Barbara Costa Borges",
+      "ev": "Bruno Fernandes",
+      "campanha": "Jun 2026",
+      "stages": {
+        "72557853": "2026-06-15T13:59:40.952Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61109597538",
+      "company": "Solo Network - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Barbara Costa Borges",
+      "ev": "Luciano Moreira",
+      "campanha": "Jun 2026",
+      "stages": {
+        "72557853": "2026-06-15T13:59:40.971Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61109283097",
+      "company": "Tqi IT - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
+      "campanha": "Jun 2026",
+      "stages": {
+        "72557853": "2026-06-15T13:59:41.029Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61109255298",
+      "company": "SysMap - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Barbara Costa Borges",
+      "ev": "Bruno Fernandes",
+      "campanha": "Jun 2026",
+      "stages": {
+        "72557853": "2026-06-15T13:59:41.040Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61109910930",
+      "company": "Multicredito - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Barbara Costa Borges",
+      "ev": "Bruno Fernandes",
+      "campanha": "Jun 2026",
+      "stages": {
+        "72557853": "2026-06-15T13:59:41.055Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61102488419",
+      "company": "Nasajon Sistemas - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
+      "campanha": "Jun 2026",
+      "stages": {
+        "72557853": "2026-06-15T13:59:41.062Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61109373725",
+      "company": "Orizon - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Barbara Costa Borges",
+      "ev": "Luciano Moreira",
+      "campanha": "Jun 2026",
+      "stages": {
+        "72557853": "2026-06-15T13:59:41.064Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61109906536",
+      "company": "Opah IT - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
+      "campanha": "Jun 2026",
+      "stages": {
+        "72557853": "2026-06-15T13:59:41.076Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61109946161",
+      "company": "Shift - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Barbara Costa Borges",
+      "ev": "Bruno Fernandes",
+      "campanha": "Jun 2026",
+      "stages": {
+        "72557853": "2026-06-15T13:59:41.082Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61085262679",
+      "company": "Alpha 7 - Software - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Barbara Costa Borges",
+      "ev": "Bruno Fernandes",
+      "campanha": "Jun 2026",
+      "stages": {
+        "24595558": "2026-06-15T20:14:39.393Z",
+        "72557853": "2026-06-15T13:59:41.109Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61109335839",
+      "company": "System Interact - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
+      "campanha": "Jun 2026",
+      "stages": {
+        "72557853": "2026-06-15T13:59:41.113Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61109177345",
+      "company": "Mercado Eletrônico - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Barbara Costa Borges",
+      "ev": "Bruno Fernandes",
+      "campanha": "Jun 2026",
+      "stages": {
+        "72557853": "2026-06-15T13:59:41.115Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61109850442",
+      "company": "Sbk Bs - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Barbara Costa Borges",
+      "ev": "Bruno Fernandes",
+      "campanha": "Jun 2026",
+      "stages": {
+        "72557853": "2026-06-15T13:59:41.131Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61109910931",
+      "company": "Keevo Software - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
+      "campanha": "Jun 2026",
+      "stages": {
+        "72557853": "2026-06-15T13:59:41.148Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61109288017",
+      "company": "Hinova Solucoes Digitais - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Barbara Costa Borges",
+      "ev": "Bruno Fernandes",
+      "campanha": "Jun 2026",
+      "stages": {
+        "24595558": "2026-06-15T16:51:35.935Z",
+        "24595559": "2026-06-15T16:51:39.082Z",
+        "72557853": "2026-06-15T13:59:41.153Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61099719955",
+      "company": "Teclogica - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
+      "campanha": "Jun 2026",
+      "stages": {
+        "72557853": "2026-06-15T13:59:41.232Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61084948839",
+      "company": "Mk Solutions - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Barbara Costa Borges",
+      "ev": "Bruno Fernandes",
+      "campanha": "Jun 2026",
+      "stages": {
+        "24595558": "2026-06-15T16:25:51.253Z",
+        "24595559": "2026-06-15T16:25:54.593Z",
+        "72557853": "2026-06-15T13:59:41.400Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61109302653",
+      "company": "Rankmyapp - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Bruno Fernandes",
+      "campanha": "Jun 2026",
+      "stages": {
+        "72557853": "2026-06-15T13:59:41.412Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61109926511",
+      "company": "Pd Case Informatica LTDA - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Barbara Costa Borges",
+      "ev": "Luciano Moreira",
+      "campanha": "Jun 2026",
+      "stages": {
+        "24595558": "2026-06-15T17:25:58.769Z",
+        "24595559": "2026-06-15T17:47:53.768Z",
+        "72557853": "2026-06-15T13:59:41.435Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61109318253",
+      "company": "Transfacil - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
+      "campanha": "Jun 2026",
+      "stages": {
+        "72557853": "2026-06-15T13:59:41.482Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61109373727",
+      "company": "Ingram Micro - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
+      "campanha": "Jun 2026",
+      "stages": {
+        "72557853": "2026-06-15T13:59:41.524Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
+    },
+    {
+      "id": "61109333082",
+      "company": "Maximatech - Campanha Cortex",
+      "porte": "M",
+      "setor": "— sem categoria",
+      "cn": "Larissa Martins da Cruz",
+      "ev": "Marcelo Silva",
+      "campanha": "Jun 2026",
+      "stages": {
+        "72557853": "2026-06-15T13:59:41.645Z"
+      },
+      "amount": 0,
+      "isLost": false,
+      "lostStage": null,
+      "lostFunnel": null,
+      "lostReason": null
     }
   ],
   "baseline": {
@@ -7943,77 +8804,77 @@
         "sdr": [
           {
             "stage": "Mapeamento",
-            "count": 1358,
+            "count": 1105,
             "rateFromPrev": 1,
             "rateFromTop": 1
           },
           {
             "stage": "Abordar",
-            "count": 1261,
-            "rateFromPrev": 0.9285714285714286,
-            "rateFromTop": 0.9285714285714286
+            "count": 1016,
+            "rateFromPrev": 0.9194570135746606,
+            "rateFromTop": 0.9194570135746606
           },
           {
             "stage": "Em cadência",
-            "count": 1251,
-            "rateFromPrev": 0.9920697858842189,
-            "rateFromTop": 0.9212076583210603
+            "count": 1006,
+            "rateFromPrev": 0.9901574803149606,
+            "rateFromTop": 0.9104072398190045
           },
           {
             "stage": "Lead Conectado",
-            "count": 387,
-            "rateFromPrev": 0.30935251798561153,
-            "rateFromTop": 0.2849779086892489
+            "count": 316,
+            "rateFromPrev": 0.31411530815109345,
+            "rateFromTop": 0.285972850678733
           },
           {
             "stage": "Qual. Agendada",
-            "count": 145,
-            "rateFromPrev": 0.37467700258397935,
-            "rateFromTop": 0.10677466863033873
+            "count": 110,
+            "rateFromPrev": 0.34810126582278483,
+            "rateFromTop": 0.09954751131221719
           },
           {
             "stage": "Qual. Realizada",
-            "count": 132,
-            "rateFromPrev": 0.9103448275862069,
-            "rateFromTop": 0.09720176730486009
+            "count": 96,
+            "rateFromPrev": 0.8727272727272727,
+            "rateFromTop": 0.08687782805429864
           },
           {
             "stage": "SAO",
-            "count": 76,
-            "rateFromPrev": 0.5757575757575758,
-            "rateFromTop": 0.055964653902798235
+            "count": 67,
+            "rateFromPrev": 0.6979166666666666,
+            "rateFromTop": 0.06063348416289593
           }
         ],
         "opp": [
           {
             "stage": "SAO",
-            "count": 76,
+            "count": 67,
             "rateFromPrev": 1,
             "rateFromTop": 1
           },
           {
             "stage": "Elab. Proposta",
-            "count": 48,
-            "rateFromPrev": 0.631578947368421,
-            "rateFromTop": 0.631578947368421
+            "count": 44,
+            "rateFromPrev": 0.6567164179104478,
+            "rateFromTop": 0.6567164179104478
           },
           {
             "stage": "Proposta Enviada",
-            "count": 41,
-            "rateFromPrev": 0.8541666666666666,
-            "rateFromTop": 0.5394736842105263
+            "count": 38,
+            "rateFromPrev": 0.8636363636363636,
+            "rateFromTop": 0.5671641791044776
           },
           {
             "stage": "Em negociação",
-            "count": 24,
-            "rateFromPrev": 0.5853658536585366,
-            "rateFromTop": 0.3157894736842105
+            "count": 23,
+            "rateFromPrev": 0.6052631578947368,
+            "rateFromTop": 0.34328358208955223
           },
           {
             "stage": "Proposta Aceita",
-            "count": 12,
-            "rateFromPrev": 0.5,
-            "rateFromTop": 0.15789473684210525
+            "count": 11,
+            "rateFromPrev": 0.4782608695652174,
+            "rateFromTop": 0.16417910447761194
           }
         ]
       },
@@ -8025,43 +8886,43 @@
           },
           {
             "name": "Abordar",
-            "avgDays": 4.82
+            "avgDays": 4.59
           },
           {
             "name": "Em cadência",
-            "avgDays": 0.35
+            "avgDays": 0.36
           },
           {
             "name": "Lead Conectado",
-            "avgDays": 13.79
+            "avgDays": 12.9
           },
           {
             "name": "Qual. Agendada",
-            "avgDays": 8.06
+            "avgDays": 7.57
           },
           {
             "name": "Qual. Realizada",
-            "avgDays": 9.77
-          },
-          {
-            "name": "SAO",
             "avgDays": 10.09
           },
           {
+            "name": "SAO",
+            "avgDays": 10.27
+          },
+          {
             "name": "Elab. Proposta",
-            "avgDays": 25.05
+            "avgDays": 23.22
           },
           {
             "name": "Proposta Enviada",
-            "avgDays": 18.56
+            "avgDays": 16.72
           },
           {
             "name": "Em negociação",
-            "avgDays": 42.35
+            "avgDays": 33.96
           },
           {
             "name": "Proposta Aceita",
-            "avgDays": 22.27
+            "avgDays": 27.65
           }
         ]
       }
@@ -8071,77 +8932,77 @@
         "sdr": [
           {
             "stage": "Mapeamento",
-            "count": 27,
+            "count": 24,
             "rateFromPrev": 1,
             "rateFromTop": 1
           },
           {
             "stage": "Abordar",
-            "count": 23,
-            "rateFromPrev": 0.8518518518518519,
-            "rateFromTop": 0.8518518518518519
+            "count": 20,
+            "rateFromPrev": 0.8333333333333334,
+            "rateFromTop": 0.8333333333333334
           },
           {
             "stage": "Em cadência",
-            "count": 23,
+            "count": 20,
             "rateFromPrev": 1,
-            "rateFromTop": 0.8518518518518519
+            "rateFromTop": 0.8333333333333334
           },
           {
             "stage": "Lead Conectado",
             "count": 10,
-            "rateFromPrev": 0.43478260869565216,
-            "rateFromTop": 0.37037037037037035
+            "rateFromPrev": 0.5,
+            "rateFromTop": 0.4166666666666667
           },
           {
             "stage": "Qual. Agendada",
-            "count": 6,
-            "rateFromPrev": 0.6,
-            "rateFromTop": 0.2222222222222222
+            "count": 8,
+            "rateFromPrev": 0.8,
+            "rateFromTop": 0.3333333333333333
           },
           {
             "stage": "Qual. Realizada",
-            "count": 6,
+            "count": 8,
             "rateFromPrev": 1,
-            "rateFromTop": 0.2222222222222222
+            "rateFromTop": 0.3333333333333333
           },
           {
             "stage": "SAO",
-            "count": 4,
-            "rateFromPrev": 0.6666666666666666,
-            "rateFromTop": 0.14814814814814814
+            "count": 6,
+            "rateFromPrev": 0.75,
+            "rateFromTop": 0.25
           }
         ],
         "opp": [
           {
             "stage": "SAO",
-            "count": 4,
+            "count": 6,
             "rateFromPrev": 1,
             "rateFromTop": 1
           },
           {
             "stage": "Elab. Proposta",
-            "count": 3,
-            "rateFromPrev": 0.75,
-            "rateFromTop": 0.75
+            "count": 5,
+            "rateFromPrev": 0.8333333333333334,
+            "rateFromTop": 0.8333333333333334
           },
           {
             "stage": "Proposta Enviada",
-            "count": 2,
-            "rateFromPrev": 0.6666666666666666,
-            "rateFromTop": 0.5
+            "count": 4,
+            "rateFromPrev": 0.8,
+            "rateFromTop": 0.6666666666666666
           },
           {
             "stage": "Em negociação",
-            "count": 1,
-            "rateFromPrev": 0.5,
-            "rateFromTop": 0.25
+            "count": 3,
+            "rateFromPrev": 0.75,
+            "rateFromTop": 0.5
           },
           {
             "stage": "Proposta Aceita",
-            "count": 0,
-            "rateFromPrev": 0,
-            "rateFromTop": 0
+            "count": 1,
+            "rateFromPrev": 0.3333333333333333,
+            "rateFromTop": 0.16666666666666666
           }
         ]
       },
@@ -8153,43 +9014,43 @@
           },
           {
             "name": "Abordar",
-            "avgDays": 3.78
+            "avgDays": 1.85
           },
           {
             "name": "Em cadência",
-            "avgDays": 0.39
+            "avgDays": 0.19
           },
           {
             "name": "Lead Conectado",
-            "avgDays": 13.69
+            "avgDays": 4.38
           },
           {
             "name": "Qual. Agendada",
-            "avgDays": 2.36
+            "avgDays": 1.77
           },
           {
             "name": "Qual. Realizada",
-            "avgDays": 17.88
+            "avgDays": 14.83
           },
           {
             "name": "SAO",
-            "avgDays": 25.68
+            "avgDays": 17.19
           },
           {
             "name": "Elab. Proposta",
-            "avgDays": 2.88
+            "avgDays": 10.21
           },
           {
             "name": "Proposta Enviada",
-            "avgDays": 26.44
+            "avgDays": 23.72
           },
           {
             "name": "Em negociação",
-            "avgDays": 118.07
+            "avgDays": 64.09
           },
           {
             "name": "Proposta Aceita",
-            "avgDays": null
+            "avgDays": 49.82
           }
         ]
       }
@@ -8199,77 +9060,77 @@
         "sdr": [
           {
             "stage": "Mapeamento",
-            "count": 612,
+            "count": 501,
             "rateFromPrev": 1,
             "rateFromTop": 1
           },
           {
             "stage": "Abordar",
-            "count": 567,
-            "rateFromPrev": 0.9264705882352942,
-            "rateFromTop": 0.9264705882352942
+            "count": 463,
+            "rateFromPrev": 0.9241516966067864,
+            "rateFromTop": 0.9241516966067864
           },
           {
             "stage": "Em cadência",
-            "count": 561,
-            "rateFromPrev": 0.9894179894179894,
-            "rateFromTop": 0.9166666666666666
+            "count": 457,
+            "rateFromPrev": 0.9870410367170627,
+            "rateFromTop": 0.9121756487025948
           },
           {
             "stage": "Lead Conectado",
-            "count": 138,
-            "rateFromPrev": 0.24598930481283424,
-            "rateFromTop": 0.22549019607843138
+            "count": 118,
+            "rateFromPrev": 0.25820568927789933,
+            "rateFromTop": 0.23552894211576847
           },
           {
             "stage": "Qual. Agendada",
-            "count": 58,
-            "rateFromPrev": 0.42028985507246375,
-            "rateFromTop": 0.09477124183006536
+            "count": 44,
+            "rateFromPrev": 0.3728813559322034,
+            "rateFromTop": 0.08782435129740519
           },
           {
             "stage": "Qual. Realizada",
-            "count": 52,
-            "rateFromPrev": 0.896551724137931,
-            "rateFromTop": 0.08496732026143791
+            "count": 38,
+            "rateFromPrev": 0.8636363636363636,
+            "rateFromTop": 0.07584830339321358
           },
           {
             "stage": "SAO",
-            "count": 36,
-            "rateFromPrev": 0.6923076923076923,
-            "rateFromTop": 0.058823529411764705
+            "count": 29,
+            "rateFromPrev": 0.7631578947368421,
+            "rateFromTop": 0.05788423153692615
           }
         ],
         "opp": [
           {
             "stage": "SAO",
-            "count": 36,
+            "count": 29,
             "rateFromPrev": 1,
             "rateFromTop": 1
           },
           {
             "stage": "Elab. Proposta",
-            "count": 23,
-            "rateFromPrev": 0.6388888888888888,
-            "rateFromTop": 0.6388888888888888
+            "count": 19,
+            "rateFromPrev": 0.6551724137931034,
+            "rateFromTop": 0.6551724137931034
           },
           {
             "stage": "Proposta Enviada",
-            "count": 21,
-            "rateFromPrev": 0.9130434782608695,
-            "rateFromTop": 0.5833333333333334
+            "count": 17,
+            "rateFromPrev": 0.8947368421052632,
+            "rateFromTop": 0.5862068965517241
           },
           {
             "stage": "Em negociação",
-            "count": 14,
-            "rateFromPrev": 0.6666666666666666,
-            "rateFromTop": 0.3888888888888889
+            "count": 12,
+            "rateFromPrev": 0.7058823529411765,
+            "rateFromTop": 0.41379310344827586
           },
           {
             "stage": "Proposta Aceita",
-            "count": 10,
-            "rateFromPrev": 0.7142857142857143,
-            "rateFromTop": 0.2777777777777778
+            "count": 8,
+            "rateFromPrev": 0.6666666666666666,
+            "rateFromTop": 0.27586206896551724
           }
         ]
       },
@@ -8281,43 +9142,43 @@
           },
           {
             "name": "Abordar",
-            "avgDays": 5.35
+            "avgDays": 4.99
           },
           {
             "name": "Em cadência",
-            "avgDays": 0.32
+            "avgDays": 0.3
           },
           {
             "name": "Lead Conectado",
-            "avgDays": 11.28
+            "avgDays": 11.64
           },
           {
             "name": "Qual. Agendada",
-            "avgDays": 5.67
+            "avgDays": 2.68
           },
           {
             "name": "Qual. Realizada",
-            "avgDays": 5.53
+            "avgDays": 5.59
           },
           {
             "name": "SAO",
-            "avgDays": 6.53
+            "avgDays": 7.48
           },
           {
             "name": "Elab. Proposta",
-            "avgDays": 30.89
+            "avgDays": 27.96
           },
           {
             "name": "Proposta Enviada",
-            "avgDays": 23.67
+            "avgDays": 22.18
           },
           {
             "name": "Em negociação",
-            "avgDays": 39.03
+            "avgDays": 34.61
           },
           {
             "name": "Proposta Aceita",
-            "avgDays": 22.33
+            "avgDays": 25.05
           }
         ]
       }
@@ -8327,77 +9188,77 @@
         "sdr": [
           {
             "stage": "Mapeamento",
-            "count": 719,
+            "count": 580,
             "rateFromPrev": 1,
             "rateFromTop": 1
           },
           {
             "stage": "Abordar",
-            "count": 671,
-            "rateFromPrev": 0.933240611961057,
-            "rateFromTop": 0.933240611961057
+            "count": 533,
+            "rateFromPrev": 0.9189655172413793,
+            "rateFromTop": 0.9189655172413793
           },
           {
             "stage": "Em cadência",
-            "count": 667,
-            "rateFromPrev": 0.9940387481371088,
-            "rateFromTop": 0.9276773296244785
+            "count": 529,
+            "rateFromPrev": 0.9924953095684803,
+            "rateFromTop": 0.9120689655172414
           },
           {
             "stage": "Lead Conectado",
-            "count": 239,
-            "rateFromPrev": 0.3583208395802099,
-            "rateFromTop": 0.33240611961057026
+            "count": 188,
+            "rateFromPrev": 0.3553875236294896,
+            "rateFromTop": 0.32413793103448274
           },
           {
             "stage": "Qual. Agendada",
-            "count": 81,
-            "rateFromPrev": 0.3389121338912134,
-            "rateFromTop": 0.11265646731571627
+            "count": 58,
+            "rateFromPrev": 0.30851063829787234,
+            "rateFromTop": 0.1
           },
           {
             "stage": "Qual. Realizada",
-            "count": 74,
-            "rateFromPrev": 0.9135802469135802,
-            "rateFromTop": 0.10292072322670376
+            "count": 50,
+            "rateFromPrev": 0.8620689655172413,
+            "rateFromTop": 0.08620689655172414
           },
           {
             "stage": "SAO",
-            "count": 36,
-            "rateFromPrev": 0.4864864864864865,
-            "rateFromTop": 0.05006954102920723
+            "count": 32,
+            "rateFromPrev": 0.64,
+            "rateFromTop": 0.05517241379310345
           }
         ],
         "opp": [
           {
             "stage": "SAO",
-            "count": 36,
+            "count": 32,
             "rateFromPrev": 1,
             "rateFromTop": 1
           },
           {
             "stage": "Elab. Proposta",
-            "count": 22,
-            "rateFromPrev": 0.6111111111111112,
-            "rateFromTop": 0.6111111111111112
+            "count": 20,
+            "rateFromPrev": 0.625,
+            "rateFromTop": 0.625
           },
           {
             "stage": "Proposta Enviada",
-            "count": 18,
-            "rateFromPrev": 0.8181818181818182,
-            "rateFromTop": 0.5
+            "count": 17,
+            "rateFromPrev": 0.85,
+            "rateFromTop": 0.53125
           },
           {
             "stage": "Em negociação",
-            "count": 9,
-            "rateFromPrev": 0.5,
+            "count": 8,
+            "rateFromPrev": 0.47058823529411764,
             "rateFromTop": 0.25
           },
           {
             "stage": "Proposta Aceita",
             "count": 2,
-            "rateFromPrev": 0.2222222222222222,
-            "rateFromTop": 0.05555555555555555
+            "rateFromPrev": 0.25,
+            "rateFromTop": 0.0625
           }
         ]
       },
@@ -8409,27 +9270,27 @@
           },
           {
             "name": "Abordar",
-            "avgDays": 4.42
+            "avgDays": 4.34
           },
           {
             "name": "Em cadência",
-            "avgDays": 0.37
+            "avgDays": 0.43
           },
           {
             "name": "Lead Conectado",
-            "avgDays": 15.25
+            "avgDays": 14.15
           },
           {
             "name": "Qual. Agendada",
-            "avgDays": 10.19
+            "avgDays": 12.09
           },
           {
             "name": "Qual. Realizada",
-            "avgDays": 12.1
+            "avgDays": 12.75
           },
           {
             "name": "SAO",
-            "avgDays": 11.91
+            "avgDays": 11.5
           },
           {
             "name": "Elab. Proposta",
@@ -8437,15 +9298,15 @@
           },
           {
             "name": "Proposta Enviada",
-            "avgDays": 11.73
+            "avgDays": 9.62
           },
           {
             "name": "Em negociação",
-            "avgDays": 37.47
+            "avgDays": 17.59
           },
           {
             "name": "Proposta Aceita",
-            "avgDays": 22
+            "avgDays": 26.96
           }
         ]
       }
@@ -8463,6 +9324,7 @@
     ],
     "evs": [
       "Breno Haus",
+      "Bruno Fernandes",
       "Larissa Martins da Cruz",
       "Luciano Moreira",
       "Marcelo Silva",
@@ -8476,13 +9338,13 @@
     ]
   },
   "debug": {
-    "cortexDealsCount": 418,
-    "baselineDealsCount": 1639,
+    "cortexDealsCount": 468,
+    "baselineDealsCount": 1360,
     "cortexCompaniesCount": 16,
     "baselineCompaniesCount": 1456,
-    "ownersResolvedCount": 159,
+    "ownersResolvedCount": 161,
     "cortexDealsWithoutPorte": 0,
-    "cortexDealsWithoutSetor": 418,
+    "cortexDealsWithoutSetor": 468,
     "portesDetected": [
       "P",
       "M",
