@@ -1,10 +1,10 @@
 {
   "meta": {
-    "updatedAt": "2026-08-21T11:00:34.023Z",
+    "updatedAt": "2026-08-22T11:00:37.086Z",
     "campaignStartDate": "2026-04-01",
     "campaignDurationDays": 365,
-    "daysElapsed": 142,
-    "maturityPct": 38.9,
+    "daysElapsed": 143,
+    "maturityPct": 39.2,
     "companiesTotal": 16,
     "availablePortes": [
       "P",
@@ -10886,77 +10886,77 @@
         "sdr": [
           {
             "stage": "Mapeamento",
-            "count": 932,
+            "count": 809,
             "rateFromPrev": 1,
             "rateFromTop": 1
           },
           {
             "stage": "Abordar",
-            "count": 870,
-            "rateFromPrev": 0.9334763948497854,
-            "rateFromTop": 0.9334763948497854
+            "count": 743,
+            "rateFromPrev": 0.9184177997527813,
+            "rateFromTop": 0.9184177997527813
           },
           {
             "stage": "Em cadência",
-            "count": 862,
-            "rateFromPrev": 0.9908045977011494,
-            "rateFromTop": 0.924892703862661
+            "count": 737,
+            "rateFromPrev": 0.9919246298788694,
+            "rateFromTop": 0.9110012360939431
           },
           {
             "stage": "Lead Conectado",
-            "count": 272,
-            "rateFromPrev": 0.31554524361948955,
-            "rateFromTop": 0.2918454935622318
+            "count": 256,
+            "rateFromPrev": 0.3473541383989145,
+            "rateFromTop": 0.3164400494437577
           },
           {
             "stage": "Qual. Agendada",
-            "count": 99,
-            "rateFromPrev": 0.3639705882352941,
-            "rateFromTop": 0.10622317596566523
+            "count": 95,
+            "rateFromPrev": 0.37109375,
+            "rateFromTop": 0.11742892459826947
           },
           {
             "stage": "Qual. Realizada",
-            "count": 88,
-            "rateFromPrev": 0.8888888888888888,
-            "rateFromTop": 0.0944206008583691
+            "count": 82,
+            "rateFromPrev": 0.8631578947368421,
+            "rateFromTop": 0.10135970333745364
           },
           {
             "stage": "SAO",
-            "count": 44,
-            "rateFromPrev": 0.5,
-            "rateFromTop": 0.04721030042918455
+            "count": 52,
+            "rateFromPrev": 0.6341463414634146,
+            "rateFromTop": 0.06427688504326329
           }
         ],
         "opp": [
           {
             "stage": "SAO",
-            "count": 44,
+            "count": 52,
             "rateFromPrev": 1,
             "rateFromTop": 1
           },
           {
             "stage": "Elab. Proposta",
-            "count": 27,
-            "rateFromPrev": 0.6136363636363636,
-            "rateFromTop": 0.6136363636363636
+            "count": 39,
+            "rateFromPrev": 0.75,
+            "rateFromTop": 0.75
           },
           {
             "stage": "Proposta Enviada",
-            "count": 24,
-            "rateFromPrev": 0.8888888888888888,
-            "rateFromTop": 0.5454545454545454
+            "count": 33,
+            "rateFromPrev": 0.8461538461538461,
+            "rateFromTop": 0.6346153846153846
           },
           {
             "stage": "Em negociação",
-            "count": 14,
-            "rateFromPrev": 0.5833333333333334,
-            "rateFromTop": 0.3181818181818182
+            "count": 18,
+            "rateFromPrev": 0.5454545454545454,
+            "rateFromTop": 0.34615384615384615
           },
           {
             "stage": "Proposta Aceita",
-            "count": 8,
-            "rateFromPrev": 0.5714285714285714,
-            "rateFromTop": 0.18181818181818182
+            "count": 7,
+            "rateFromPrev": 0.3888888888888889,
+            "rateFromTop": 0.1346153846153846
           }
         ]
       },
@@ -10968,43 +10968,43 @@
           },
           {
             "name": "Abordar",
-            "avgDays": 5.05
+            "avgDays": 4.71
           },
           {
             "name": "Em cadência",
-            "avgDays": 0.38
+            "avgDays": 0.29
           },
           {
             "name": "Lead Conectado",
-            "avgDays": 11.73
+            "avgDays": 12.3
           },
           {
             "name": "Qual. Agendada",
-            "avgDays": 8.03
+            "avgDays": 7.29
           },
           {
             "name": "Qual. Realizada",
-            "avgDays": 8.36
+            "avgDays": 9.93
           },
           {
             "name": "SAO",
-            "avgDays": 6.05
+            "avgDays": 11.11
           },
           {
             "name": "Elab. Proposta",
-            "avgDays": 17.73
+            "avgDays": 21.14
           },
           {
             "name": "Proposta Enviada",
-            "avgDays": 17.73
+            "avgDays": 14.93
           },
           {
             "name": "Em negociação",
-            "avgDays": 19.92
+            "avgDays": 36.87
           },
           {
             "name": "Proposta Aceita",
-            "avgDays": 44.53
+            "avgDays": 16.47
           }
         ]
       }
@@ -11014,327 +11014,71 @@
         "sdr": [
           {
             "stage": "Mapeamento",
-            "count": 10,
+            "count": 17,
             "rateFromPrev": 1,
             "rateFromTop": 1
           },
           {
             "stage": "Abordar",
-            "count": 10,
-            "rateFromPrev": 1,
-            "rateFromTop": 1
+            "count": 13,
+            "rateFromPrev": 0.7647058823529411,
+            "rateFromTop": 0.7647058823529411
           },
           {
             "stage": "Em cadência",
-            "count": 10,
+            "count": 13,
+            "rateFromPrev": 1,
+            "rateFromTop": 0.7647058823529411
+          },
+          {
+            "stage": "Lead Conectado",
+            "count": 8,
+            "rateFromPrev": 0.6153846153846154,
+            "rateFromTop": 0.47058823529411764
+          },
+          {
+            "stage": "Qual. Agendada",
+            "count": 6,
+            "rateFromPrev": 0.75,
+            "rateFromTop": 0.35294117647058826
+          },
+          {
+            "stage": "Qual. Realizada",
+            "count": 6,
+            "rateFromPrev": 1,
+            "rateFromTop": 0.35294117647058826
+          },
+          {
+            "stage": "SAO",
+            "count": 4,
+            "rateFromPrev": 0.6666666666666666,
+            "rateFromTop": 0.23529411764705882
+          }
+        ],
+        "opp": [
+          {
+            "stage": "SAO",
+            "count": 4,
             "rateFromPrev": 1,
             "rateFromTop": 1
           },
           {
-            "stage": "Lead Conectado",
-            "count": 5,
-            "rateFromPrev": 0.5,
+            "stage": "Elab. Proposta",
+            "count": 3,
+            "rateFromPrev": 0.75,
+            "rateFromTop": 0.75
+          },
+          {
+            "stage": "Proposta Enviada",
+            "count": 2,
+            "rateFromPrev": 0.6666666666666666,
             "rateFromTop": 0.5
           },
           {
-            "stage": "Qual. Agendada",
-            "count": 4,
-            "rateFromPrev": 0.8,
-            "rateFromTop": 0.4
-          },
-          {
-            "stage": "Qual. Realizada",
-            "count": 4,
-            "rateFromPrev": 1,
-            "rateFromTop": 0.4
-          },
-          {
-            "stage": "SAO",
-            "count": 3,
-            "rateFromPrev": 0.75,
-            "rateFromTop": 0.3
-          }
-        ],
-        "opp": [
-          {
-            "stage": "SAO",
-            "count": 3,
-            "rateFromPrev": 1,
-            "rateFromTop": 1
-          },
-          {
-            "stage": "Elab. Proposta",
-            "count": 3,
-            "rateFromPrev": 1,
-            "rateFromTop": 1
-          },
-          {
-            "stage": "Proposta Enviada",
-            "count": 3,
-            "rateFromPrev": 1,
-            "rateFromTop": 1
-          },
-          {
             "stage": "Em negociação",
-            "count": 3,
-            "rateFromPrev": 1,
-            "rateFromTop": 1
-          },
-          {
-            "stage": "Proposta Aceita",
-            "count": 2,
-            "rateFromPrev": 0.6666666666666666,
-            "rateFromTop": 0.6666666666666666
-          }
-        ]
-      },
-      "velocity": {
-        "stages": [
-          {
-            "name": "Mapeamento",
-            "avgDays": null
-          },
-          {
-            "name": "Abordar",
-            "avgDays": 5.48
-          },
-          {
-            "name": "Em cadência",
-            "avgDays": 0
-          },
-          {
-            "name": "Lead Conectado",
-            "avgDays": 9.42
-          },
-          {
-            "name": "Qual. Agendada",
-            "avgDays": 0
-          },
-          {
-            "name": "Qual. Realizada",
-            "avgDays": 6.83
-          },
-          {
-            "name": "SAO",
-            "avgDays": 3.5
-          },
-          {
-            "name": "Elab. Proposta",
-            "avgDays": 17.45
-          },
-          {
-            "name": "Proposta Enviada",
-            "avgDays": 26
-          },
-          {
-            "name": "Em negociação",
-            "avgDays": 33.73
-          },
-          {
-            "name": "Proposta Aceita",
-            "avgDays": 80.94
-          }
-        ]
-      }
-    },
-    "M": {
-      "funnel": {
-        "sdr": [
-          {
-            "stage": "Mapeamento",
-            "count": 305,
-            "rateFromPrev": 1,
-            "rateFromTop": 1
-          },
-          {
-            "stage": "Abordar",
-            "count": 281,
-            "rateFromPrev": 0.921311475409836,
-            "rateFromTop": 0.921311475409836
-          },
-          {
-            "stage": "Em cadência",
-            "count": 277,
-            "rateFromPrev": 0.9857651245551602,
-            "rateFromTop": 0.9081967213114754
-          },
-          {
-            "stage": "Lead Conectado",
-            "count": 55,
-            "rateFromPrev": 0.19855595667870035,
-            "rateFromTop": 0.18032786885245902
-          },
-          {
-            "stage": "Qual. Agendada",
-            "count": 28,
-            "rateFromPrev": 0.509090909090909,
-            "rateFromTop": 0.09180327868852459
-          },
-          {
-            "stage": "Qual. Realizada",
-            "count": 25,
-            "rateFromPrev": 0.8928571428571429,
-            "rateFromTop": 0.08196721311475409
-          },
-          {
-            "stage": "SAO",
-            "count": 17,
-            "rateFromPrev": 0.68,
-            "rateFromTop": 0.05573770491803279
-          }
-        ],
-        "opp": [
-          {
-            "stage": "SAO",
-            "count": 17,
-            "rateFromPrev": 1,
-            "rateFromTop": 1
-          },
-          {
-            "stage": "Elab. Proposta",
-            "count": 11,
-            "rateFromPrev": 0.6470588235294118,
-            "rateFromTop": 0.6470588235294118
-          },
-          {
-            "stage": "Proposta Enviada",
-            "count": 10,
-            "rateFromPrev": 0.9090909090909091,
-            "rateFromTop": 0.5882352941176471
-          },
-          {
-            "stage": "Em negociação",
-            "count": 7,
-            "rateFromPrev": 0.7,
-            "rateFromTop": 0.4117647058823529
-          },
-          {
-            "stage": "Proposta Aceita",
-            "count": 6,
-            "rateFromPrev": 0.8571428571428571,
-            "rateFromTop": 0.35294117647058826
-          }
-        ]
-      },
-      "velocity": {
-        "stages": [
-          {
-            "name": "Mapeamento",
-            "avgDays": null
-          },
-          {
-            "name": "Abordar",
-            "avgDays": 5.6
-          },
-          {
-            "name": "Em cadência",
-            "avgDays": 0.37
-          },
-          {
-            "name": "Lead Conectado",
-            "avgDays": 10.53
-          },
-          {
-            "name": "Qual. Agendada",
-            "avgDays": 8.47
-          },
-          {
-            "name": "Qual. Realizada",
-            "avgDays": 6.67
-          },
-          {
-            "name": "SAO",
-            "avgDays": 6.07
-          },
-          {
-            "name": "Elab. Proposta",
-            "avgDays": 14.86
-          },
-          {
-            "name": "Proposta Enviada",
-            "avgDays": 20.18
-          },
-          {
-            "name": "Em negociação",
-            "avgDays": 18.43
-          },
-          {
-            "name": "Proposta Aceita",
-            "avgDays": 32.39
-          }
-        ]
-      }
-    },
-    "G+": {
-      "funnel": {
-        "sdr": [
-          {
-            "stage": "Mapeamento",
-            "count": 617,
-            "rateFromPrev": 1,
-            "rateFromTop": 1
-          },
-          {
-            "stage": "Abordar",
-            "count": 579,
-            "rateFromPrev": 0.9384116693679092,
-            "rateFromTop": 0.9384116693679092
-          },
-          {
-            "stage": "Em cadência",
-            "count": 575,
-            "rateFromPrev": 0.9930915371329879,
-            "rateFromTop": 0.9319286871961102
-          },
-          {
-            "stage": "Lead Conectado",
-            "count": 212,
-            "rateFromPrev": 0.36869565217391304,
-            "rateFromTop": 0.34359805510534847
-          },
-          {
-            "stage": "Qual. Agendada",
-            "count": 67,
-            "rateFromPrev": 0.3160377358490566,
-            "rateFromTop": 0.1085899513776337
-          },
-          {
-            "stage": "Qual. Realizada",
-            "count": 59,
-            "rateFromPrev": 0.8805970149253731,
-            "rateFromTop": 0.09562398703403566
-          },
-          {
-            "stage": "SAO",
-            "count": 24,
-            "rateFromPrev": 0.4067796610169492,
-            "rateFromTop": 0.03889789303079417
-          }
-        ],
-        "opp": [
-          {
-            "stage": "SAO",
-            "count": 24,
-            "rateFromPrev": 1,
-            "rateFromTop": 1
-          },
-          {
-            "stage": "Elab. Proposta",
-            "count": 13,
-            "rateFromPrev": 0.5416666666666666,
-            "rateFromTop": 0.5416666666666666
-          },
-          {
-            "stage": "Proposta Enviada",
-            "count": 11,
-            "rateFromPrev": 0.8461538461538461,
-            "rateFromTop": 0.4583333333333333
-          },
-          {
-            "stage": "Em negociação",
-            "count": 4,
-            "rateFromPrev": 0.36363636363636365,
-            "rateFromTop": 0.16666666666666666
+            "count": 1,
+            "rateFromPrev": 0.5,
+            "rateFromTop": 0.25
           },
           {
             "stage": "Proposta Aceita",
@@ -11352,43 +11096,299 @@
           },
           {
             "name": "Abordar",
-            "avgDays": 4.78
+            "avgDays": 2
           },
           {
             "name": "Em cadência",
-            "avgDays": 0.38
+            "avgDays": 0.29
           },
           {
             "name": "Lead Conectado",
-            "avgDays": 12.09
+            "avgDays": 5.74
           },
           {
             "name": "Qual. Agendada",
-            "avgDays": 8.32
+            "avgDays": 2.31
           },
           {
             "name": "Qual. Realizada",
-            "avgDays": 9.18
+            "avgDays": 15.92
           },
           {
             "name": "SAO",
-            "avgDays": 6.35
+            "avgDays": 25.68
           },
           {
             "name": "Elab. Proposta",
-            "avgDays": 20.21
+            "avgDays": 2.88
           },
           {
             "name": "Proposta Enviada",
-            "avgDays": 13.25
+            "avgDays": 26.44
           },
           {
             "name": "Em negociação",
-            "avgDays": 9.59
+            "avgDays": 118.07
           },
           {
             "name": "Proposta Aceita",
             "avgDays": null
+          }
+        ]
+      }
+    },
+    "M": {
+      "funnel": {
+        "sdr": [
+          {
+            "stage": "Mapeamento",
+            "count": 380,
+            "rateFromPrev": 1,
+            "rateFromTop": 1
+          },
+          {
+            "stage": "Abordar",
+            "count": 353,
+            "rateFromPrev": 0.9289473684210526,
+            "rateFromTop": 0.9289473684210526
+          },
+          {
+            "stage": "Em cadência",
+            "count": 351,
+            "rateFromPrev": 0.9943342776203966,
+            "rateFromTop": 0.9236842105263158
+          },
+          {
+            "stage": "Lead Conectado",
+            "count": 94,
+            "rateFromPrev": 0.2678062678062678,
+            "rateFromTop": 0.24736842105263157
+          },
+          {
+            "stage": "Qual. Agendada",
+            "count": 35,
+            "rateFromPrev": 0.3723404255319149,
+            "rateFromTop": 0.09210526315789473
+          },
+          {
+            "stage": "Qual. Realizada",
+            "count": 31,
+            "rateFromPrev": 0.8857142857142857,
+            "rateFromTop": 0.08157894736842106
+          },
+          {
+            "stage": "SAO",
+            "count": 22,
+            "rateFromPrev": 0.7096774193548387,
+            "rateFromTop": 0.05789473684210526
+          }
+        ],
+        "opp": [
+          {
+            "stage": "SAO",
+            "count": 22,
+            "rateFromPrev": 1,
+            "rateFromTop": 1
+          },
+          {
+            "stage": "Elab. Proposta",
+            "count": 15,
+            "rateFromPrev": 0.6818181818181818,
+            "rateFromTop": 0.6818181818181818
+          },
+          {
+            "stage": "Proposta Enviada",
+            "count": 14,
+            "rateFromPrev": 0.9333333333333333,
+            "rateFromTop": 0.6363636363636364
+          },
+          {
+            "stage": "Em negociação",
+            "count": 9,
+            "rateFromPrev": 0.6428571428571429,
+            "rateFromTop": 0.4090909090909091
+          },
+          {
+            "stage": "Proposta Aceita",
+            "count": 6,
+            "rateFromPrev": 0.6666666666666666,
+            "rateFromTop": 0.2727272727272727
+          }
+        ]
+      },
+      "velocity": {
+        "stages": [
+          {
+            "name": "Mapeamento",
+            "avgDays": null
+          },
+          {
+            "name": "Abordar",
+            "avgDays": 5.18
+          },
+          {
+            "name": "Em cadência",
+            "avgDays": 0.24
+          },
+          {
+            "name": "Lead Conectado",
+            "avgDays": 13.06
+          },
+          {
+            "name": "Qual. Agendada",
+            "avgDays": 2.61
+          },
+          {
+            "name": "Qual. Realizada",
+            "avgDays": 5.96
+          },
+          {
+            "name": "SAO",
+            "avgDays": 7.25
+          },
+          {
+            "name": "Elab. Proposta",
+            "avgDays": 29.88
+          },
+          {
+            "name": "Proposta Enviada",
+            "avgDays": 20.43
+          },
+          {
+            "name": "Em negociação",
+            "avgDays": 41.6
+          },
+          {
+            "name": "Proposta Aceita",
+            "avgDays": 14.39
+          }
+        ]
+      }
+    },
+    "G+": {
+      "funnel": {
+        "sdr": [
+          {
+            "stage": "Mapeamento",
+            "count": 412,
+            "rateFromPrev": 1,
+            "rateFromTop": 1
+          },
+          {
+            "stage": "Abordar",
+            "count": 377,
+            "rateFromPrev": 0.9150485436893204,
+            "rateFromTop": 0.9150485436893204
+          },
+          {
+            "stage": "Em cadência",
+            "count": 373,
+            "rateFromPrev": 0.9893899204244032,
+            "rateFromTop": 0.9053398058252428
+          },
+          {
+            "stage": "Lead Conectado",
+            "count": 154,
+            "rateFromPrev": 0.4128686327077748,
+            "rateFromTop": 0.3737864077669903
+          },
+          {
+            "stage": "Qual. Agendada",
+            "count": 54,
+            "rateFromPrev": 0.35064935064935066,
+            "rateFromTop": 0.13106796116504854
+          },
+          {
+            "stage": "Qual. Realizada",
+            "count": 45,
+            "rateFromPrev": 0.8333333333333334,
+            "rateFromTop": 0.10922330097087378
+          },
+          {
+            "stage": "SAO",
+            "count": 26,
+            "rateFromPrev": 0.5777777777777777,
+            "rateFromTop": 0.06310679611650485
+          }
+        ],
+        "opp": [
+          {
+            "stage": "SAO",
+            "count": 26,
+            "rateFromPrev": 1,
+            "rateFromTop": 1
+          },
+          {
+            "stage": "Elab. Proposta",
+            "count": 21,
+            "rateFromPrev": 0.8076923076923077,
+            "rateFromTop": 0.8076923076923077
+          },
+          {
+            "stage": "Proposta Enviada",
+            "count": 17,
+            "rateFromPrev": 0.8095238095238095,
+            "rateFromTop": 0.6538461538461539
+          },
+          {
+            "stage": "Em negociação",
+            "count": 8,
+            "rateFromPrev": 0.47058823529411764,
+            "rateFromTop": 0.3076923076923077
+          },
+          {
+            "stage": "Proposta Aceita",
+            "count": 1,
+            "rateFromPrev": 0.125,
+            "rateFromTop": 0.038461538461538464
+          }
+        ]
+      },
+      "velocity": {
+        "stages": [
+          {
+            "name": "Mapeamento",
+            "avgDays": null
+          },
+          {
+            "name": "Abordar",
+            "avgDays": 4.36
+          },
+          {
+            "name": "Em cadência",
+            "avgDays": 0.33
+          },
+          {
+            "name": "Lead Conectado",
+            "avgDays": 12.18
+          },
+          {
+            "name": "Qual. Agendada",
+            "avgDays": 10.88
+          },
+          {
+            "name": "Qual. Realizada",
+            "avgDays": 11.86
+          },
+          {
+            "name": "SAO",
+            "avgDays": 12.14
+          },
+          {
+            "name": "Elab. Proposta",
+            "avgDays": 17.51
+          },
+          {
+            "name": "Proposta Enviada",
+            "avgDays": 9.04
+          },
+          {
+            "name": "Em negociação",
+            "avgDays": 19.19
+          },
+          {
+            "name": "Proposta Aceita",
+            "avgDays": 28.99
           }
         ]
       }
@@ -11422,7 +11422,7 @@
   },
   "debug": {
     "cortexDealsCount": 558,
-    "baselineDealsCount": 1116,
+    "baselineDealsCount": 931,
     "cortexCompaniesCount": 16,
     "baselineCompaniesCount": 1453,
     "ownersResolvedCount": 156,
